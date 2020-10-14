@@ -8,7 +8,10 @@
 //AMHM Start
 #include "../../include/sim_api.h"
 #define ToUnsignedInt(X) *((unsigned long long*)(&X))
-double ber[8]={0.0000001,0.0000001,0.0000001,0.0000001,0.0000001,0.0000001,0.0000001,0.0000001}; // FI Uniform 0.01 sometimes crash!
+//double ber[8]={0.0000001,0.0000001,0.0000001,0.0000001,0.0000001,0.0000001,0.0000001,0.0000001}; // FI Uniform 0.01 sometimes crash!
+//double ber[8]={0.000001,0.000001,0.000001,0.000001,0.000001,0.000001,0.000001,0.000001}; // FI Uniform 0.01 sometimes crash!
+double ber[8]={0.00001,0.00001,0.00001,0.00001,0.00001,0.00001,0.00001,0.00001}; // FI Uniform 0.01 sometimes crash!
+//double ber[8]={0,0,0,0,0,0,0,0}; // FI Uniform 0.01 sometimes crash!
 //AMHM End
 
 #include <time.h>
