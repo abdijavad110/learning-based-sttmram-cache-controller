@@ -1,0 +1,3708 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="100">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <df root="." name="0">
+      <df name="boost_1_59_0">
+        <df name="bin.v2">
+          <df name="libs">
+            <df name="atomic">
+              <df name="build">
+                <df name="gcc-4.8">
+                  <df name="release">
+                    <df name="link-static">
+                      <df name="threading-multi">
+                      </df>
+                    </df>
+                    <df name="threading-multi">
+                    </df>
+                  </df>
+                </df>
+              </df>
+            </df>
+            <df name="chrono">
+              <df name="build">
+                <df name="gcc-4.8">
+                  <df name="release">
+                    <df name="link-static">
+                      <df name="threading-multi">
+                      </df>
+                    </df>
+                    <df name="threading-multi">
+                    </df>
+                  </df>
+                </df>
+              </df>
+            </df>
+            <df name="container">
+              <df name="build">
+                <df name="gcc-4.8">
+                  <df name="release">
+                    <df name="link-static">
+                      <df name="threading-multi">
+                      </df>
+                    </df>
+                    <df name="threading-multi">
+                    </df>
+                  </df>
+                </df>
+              </df>
+            </df>
+            <df name="context">
+              <df name="build">
+                <df name="gcc-4.8">
+                  <df name="release">
+                    <df name="link-static">
+                      <df name="threading-multi">
+                        <df name="asm">
+                        </df>
+                        <df name="posix">
+                        </df>
+                      </df>
+                    </df>
+                    <df name="threading-multi">
+                      <df name="asm">
+                      </df>
+                      <df name="posix">
+                      </df>
+                    </df>
+                  </df>
+                </df>
+              </df>
+            </df>
+            <df name="coroutine">
+              <df name="build">
+                <df name="gcc-4.8">
+                  <df name="release">
+                    <df name="link-static">
+                      <df name="threading-multi">
+                        <df name="detail">
+                        </df>
+                        <df name="posix">
+                        </df>
+                      </df>
+                    </df>
+                    <df name="threading-multi">
+                      <df name="detail">
+                      </df>
+                      <df name="posix">
+                      </df>
+                    </df>
+                  </df>
+                </df>
+              </df>
+            </df>
+            <df name="date_time">
+              <df name="build">
+                <df name="gcc-4.8">
+                  <df name="release">
+                    <df name="link-static">
+                      <df name="threading-multi">
+                        <df name="gregorian">
+                        </df>
+                      </df>
+                    </df>
+                    <df name="threading-multi">
+                      <df name="gregorian">
+                      </df>
+                    </df>
+                  </df>
+                </df>
+              </df>
+            </df>
+            <df name="exception">
+              <df name="build">
+                <df name="gcc-4.8">
+                  <df name="release">
+                    <df name="link-static">
+                      <df name="threading-multi">
+                      </df>
+                    </df>
+                  </df>
+                </df>
+              </df>
+            </df>
+            <df name="filesystem">
+              <df name="build">
+                <df name="gcc-4.8">
+                  <df name="release">
+                    <df name="link-static">
+                      <df name="threading-multi">
+                      </df>
+                    </df>
+                    <df name="threading-multi">
+                    </df>
+                  </df>
+                </df>
+              </df>
+            </df>
+            <df name="graph">
+              <df name="build">
+                <df name="gcc-4.8">
+                  <df name="release">
+                    <df name="link-static">
+                      <df name="threading-multi">
+                      </df>
+                    </df>
+                    <df name="threading-multi">
+                    </df>
+                  </df>
+                </df>
+              </df>
+            </df>
+            <df name="iostreams">
+              <df name="build">
+                <df name="gcc-4.8">
+                  <df name="release">
+                    <df name="link-static">
+                      <df name="threading-multi">
+                      </df>
+                    </df>
+                    <df name="threading-multi">
+                    </df>
+                  </df>
+                </df>
+              </df>
+            </df>
+            <df name="locale">
+              <df name="build">
+                <df name="gcc-4.8">
+                  <df name="debug">
+                  </df>
+                  <df name="release">
+                    <df name="link-static">
+                      <df name="threading-multi">
+                        <df name="encoding">
+                        </df>
+                        <df name="posix">
+                        </df>
+                        <df name="shared">
+                        </df>
+                        <df name="std">
+                        </df>
+                        <df name="util">
+                        </df>
+                      </df>
+                    </df>
+                    <df name="threading-multi">
+                      <df name="encoding">
+                      </df>
+                      <df name="posix">
+                      </df>
+                      <df name="shared">
+                      </df>
+                      <df name="std">
+                      </df>
+                      <df name="util">
+                      </df>
+                    </df>
+                  </df>
+                </df>
+              </df>
+            </df>
+            <df name="log">
+              <df name="build">
+                <df name="gcc-4.8">
+                  <df name="release">
+                    <df name="link-static">
+                      <df name="log-api-unix">
+                        <df name="threading-multi">
+                        </df>
+                      </df>
+                    </df>
+                    <df name="log-api-unix">
+                      <df name="threading-multi">
+                      </df>
+                    </df>
+                  </df>
+                </df>
+              </df>
+              <df name="config">
+                <df name="visibility">
+                  <df name="gcc-4.8">
+                    <df name="debug">
+                      <df name="pch-off">
+                      </df>
+                    </df>
+                  </df>
+                </df>
+                <df name="x86-ext">
+                  <df name="gcc-4.8">
+                    <df name="debug">
+                      <df name="pch-off">
+                      </df>
+                    </df>
+                  </df>
+                </df>
+              </df>
+            </df>
+            <df name="math">
+              <df name="build">
+                <df name="gcc-4.8">
+                  <df name="release">
+                    <df name="link-static">
+                      <df name="threading-multi">
+                      </df>
+                    </df>
+                    <df name="threading-multi">
+                    </df>
+                  </df>
+                </df>
+              </df>
+              <df name="config">
+                <df name="gcc-4.8">
+                  <df name="debug">
+                  </df>
+                  <df name="release">
+                    <df name="link-static">
+                      <df name="threading-multi">
+                      </df>
+                    </df>
+                    <df name="threading-multi">
+                    </df>
+                  </df>
+                </df>
+              </df>
+            </df>
+            <df name="program_options">
+              <df name="build">
+                <df name="gcc-4.8">
+                  <df name="release">
+                    <df name="link-static">
+                      <df name="threading-multi">
+                      </df>
+                    </df>
+                    <df name="threading-multi">
+                    </df>
+                  </df>
+                </df>
+              </df>
+            </df>
+            <df name="python">
+              <df name="build">
+                <df name="gcc-4.8">
+                  <df name="release">
+                    <df name="link-static">
+                      <df name="threading-multi">
+                        <df name="converter">
+                        </df>
+                        <df name="object">
+                        </df>
+                      </df>
+                    </df>
+                    <df name="threading-multi">
+                      <df name="converter">
+                      </df>
+                      <df name="object">
+                      </df>
+                    </df>
+                  </df>
+                </df>
+              </df>
+            </df>
+            <df name="random">
+              <df name="build">
+                <df name="gcc-4.8">
+                  <df name="release">
+                    <df name="link-static">
+                      <df name="threading-multi">
+                      </df>
+                    </df>
+                    <df name="threading-multi">
+                    </df>
+                  </df>
+                </df>
+              </df>
+            </df>
+            <df name="regex">
+              <df name="build">
+                <df name="gcc-4.8">
+                  <df name="debug">
+                  </df>
+                  <df name="release">
+                    <df name="link-static">
+                      <df name="threading-multi">
+                      </df>
+                    </df>
+                    <df name="threading-multi">
+                    </df>
+                  </df>
+                </df>
+              </df>
+            </df>
+            <df name="serialization">
+              <df name="build">
+                <df name="gcc-4.8">
+                  <df name="release">
+                    <df name="link-static">
+                      <df name="threading-multi">
+                      </df>
+                    </df>
+                    <df name="threading-multi">
+                    </df>
+                  </df>
+                </df>
+              </df>
+            </df>
+            <df name="signals">
+              <df name="build">
+                <df name="gcc-4.8">
+                  <df name="release">
+                    <df name="link-static">
+                      <df name="threading-multi">
+                      </df>
+                    </df>
+                    <df name="threading-multi">
+                    </df>
+                  </df>
+                </df>
+              </df>
+            </df>
+            <df name="system">
+              <df name="build">
+                <df name="gcc-4.8">
+                  <df name="debug">
+                    <df name="threading-multi">
+                    </df>
+                  </df>
+                  <df name="release">
+                    <df name="link-static">
+                      <df name="threading-multi">
+                      </df>
+                    </df>
+                    <df name="threading-multi">
+                    </df>
+                  </df>
+                </df>
+              </df>
+            </df>
+            <df name="test">
+              <df name="build">
+                <df name="gcc-4.8">
+                  <df name="release">
+                    <df name="link-static">
+                      <df name="threading-multi">
+                      </df>
+                    </df>
+                    <df name="threading-multi">
+                    </df>
+                  </df>
+                </df>
+              </df>
+            </df>
+            <df name="thread">
+              <df name="build">
+                <df name="gcc-4.8">
+                  <df name="debug">
+                    <df name="threading-multi">
+                    </df>
+                  </df>
+                  <df name="release">
+                    <df name="link-static">
+                      <df name="threading-multi">
+                        <df name="pthread">
+                        </df>
+                      </df>
+                    </df>
+                    <df name="threading-multi">
+                      <df name="pthread">
+                      </df>
+                    </df>
+                  </df>
+                </df>
+              </df>
+            </df>
+            <df name="timer">
+              <df name="build">
+                <df name="gcc-4.8">
+                  <df name="release">
+                    <df name="link-static">
+                      <df name="threading-multi">
+                      </df>
+                    </df>
+                    <df name="threading-multi">
+                    </df>
+                  </df>
+                </df>
+              </df>
+            </df>
+            <df name="wave">
+              <df name="build">
+                <df name="gcc-4.8">
+                  <df name="release">
+                    <df name="link-static">
+                      <df name="threading-multi">
+                        <df name="cpplexer">
+                          <df name="re2clex">
+                          </df>
+                        </df>
+                      </df>
+                    </df>
+                    <df name="threading-multi">
+                      <df name="cpplexer">
+                        <df name="re2clex">
+                        </df>
+                      </df>
+                    </df>
+                  </df>
+                </df>
+              </df>
+            </df>
+          </df>
+          <df name="standalone">
+            <df name="ac">
+              <df name="gcc-4.8">
+                <df name="release">
+                  <df name="link-static">
+                    <df name="threading-multi">
+                    </df>
+                  </df>
+                  <df name="threading-multi">
+                  </df>
+                </df>
+              </df>
+            </df>
+          </df>
+        </df>
+        <df name="libs">
+          <df name="config">
+            <df name="checks">
+              <df name="architecture">
+                <df name="bin">
+                  <df name="gcc-4.8">
+                    <df name="debug">
+                    </df>
+                  </df>
+                </df>
+              </df>
+            </df>
+          </df>
+          <df name="math">
+            <df name="dot_net_example">
+              <df name="Setupdistex">
+                <df name="Release">
+                </df>
+              </df>
+            </df>
+            <df name="performance">
+            </df>
+          </df>
+          <df name="multiprecision">
+            <df name="performance">
+            </df>
+          </df>
+          <df name="serialization">
+            <df name="test">
+            </df>
+          </df>
+          <df name="sort">
+            <df name="doc">
+              <df name="doxygen">
+              </df>
+            </df>
+            <df name="test">
+            </df>
+          </df>
+        </df>
+      </df>
+      <df name="common">
+        <df name="config">
+          <in>config.cpp</in>
+          <in>config.hpp</in>
+          <in>config_exceptions.hpp</in>
+          <in>config_file.cpp</in>
+          <in>config_file.hpp</in>
+          <in>config_file_grammar.hpp</in>
+          <in>key.cpp</in>
+          <in>key.hpp</in>
+          <in>section.cpp</in>
+          <in>section.hpp</in>
+        </df>
+        <df name="core">
+          <df name="memory_subsystem">
+            <df name="cache">
+              <in>cache.cc</in>
+              <in>cache.h</in>
+              <in>cache_base.cc</in>
+              <in>cache_base.h</in>
+              <in>cache_block_info.cc</in>
+              <in>cache_block_info.h</in>
+              <in>cache_set.cc</in>
+              <in>cache_set.h</in>
+              <in>cache_set_lru.cc</in>
+              <in>cache_set_lru.h</in>
+              <in>cache_set_mru.cc</in>
+              <in>cache_set_mru.h</in>
+              <in>cache_set_nmru.cc</in>
+              <in>cache_set_nmru.h</in>
+              <in>cache_set_nru.cc</in>
+              <in>cache_set_nru.h</in>
+              <in>cache_set_plru.cc</in>
+              <in>cache_set_plru.h</in>
+              <in>cache_set_random.cc</in>
+              <in>cache_set_random.h</in>
+              <in>cache_set_round_robin.cc</in>
+              <in>cache_set_round_robin.h</in>
+              <in>cache_set_srrip.cc</in>
+              <in>cache_set_srrip.h</in>
+              <in>cache_state.h</in>
+              <in>pr_l1_cache_block_info.h</in>
+              <in>pr_l2_cache_block_info.cc</in>
+              <in>pr_l2_cache_block_info.h</in>
+              <in>req_queue_list_template.h</in>
+              <in>shared_cache_block_info.cc</in>
+              <in>shared_cache_block_info.h</in>
+            </df>
+            <df name="cheetah">
+              <in>cheetah_manager.cc</in>
+              <in>cheetah_manager.h</in>
+              <in>cheetah_model.cc</in>
+              <in>cheetah_model.h</in>
+              <in>saclru.cc</in>
+              <in>saclru.h</in>
+              <in>util.cc</in>
+              <in>util.h</in>
+            </df>
+            <df name="directory_schemes">
+              <in>coherency_protocol.h</in>
+              <in>directory.cc</in>
+              <in>directory.h</in>
+              <in>directory_block_info.h</in>
+              <in>directory_entry.h</in>
+              <in>directory_entry_limited_no_broadcast.h</in>
+              <in>directory_entry_limitless.h</in>
+              <in>directory_state.h</in>
+            </df>
+            <df name="dram">
+              <in>dram_cache.cc</in>
+              <in>dram_cache.h</in>
+              <in>dram_cntlr_interface.cc</in>
+              <in>dram_cntlr_interface.h</in>
+            </df>
+            <df name="fast_nehalem">
+              <in>fast_cache.h</in>
+              <in>memory_manager.cc</in>
+              <in>memory_manager.h</in>
+            </df>
+            <df name="parametric_dram_directory_msi">
+              <in>cache_atd.cc</in>
+              <in>cache_atd.h</in>
+              <in>cache_cntlr.cc</in>
+              <in>cache_cntlr.h</in>
+              <in>ghb_prefetcher.cc</in>
+              <in>ghb_prefetcher.h</in>
+              <in>memory_manager.cc</in>
+              <in>memory_manager.h</in>
+              <in>nuca_cache.cc</in>
+              <in>nuca_cache.h</in>
+              <in>prefetcher.cc</in>
+              <in>prefetcher.h</in>
+              <in>simple_prefetcher.cc</in>
+              <in>simple_prefetcher.h</in>
+              <in>tlb.cc</in>
+              <in>tlb.h</in>
+            </df>
+            <df name="pr_l1_pr_l2_dram_directory_msi">
+              <in>dram_cntlr.cc</in>
+              <in>dram_cntlr.h</in>
+              <in>dram_directory_cache.cc</in>
+              <in>dram_directory_cache.h</in>
+              <in>dram_directory_cntlr.cc</in>
+              <in>dram_directory_cntlr.h</in>
+              <in>req_queue_list.h</in>
+              <in>shmem_msg.cc</in>
+              <in>shmem_msg.h</in>
+              <in>shmem_perf.cc</in>
+              <in>shmem_perf.h</in>
+              <in>shmem_req.cc</in>
+              <in>shmem_req.h</in>
+            </df>
+            <in>address_home_lookup.cc</in>
+            <in>address_home_lookup.h</in>
+            <in>mem_component.cc</in>
+            <in>mem_component.h</in>
+            <in>memory_manager_base.cc</in>
+            <in>memory_manager_base.h</in>
+            <in>memory_manager_fast.h</in>
+          </df>
+          <in>bbv_count.cc</in>
+          <in>bbv_count.h</in>
+          <in>core.cc</in>
+          <in>core.h</in>
+          <in>syscall_model.cc</in>
+          <in>syscall_model.h</in>
+          <in>thread.cc</in>
+          <in>thread.h</in>
+          <in>topology_info.cc</in>
+          <in>topology_info.h</in>
+        </df>
+        <df name="fault_injection">
+          <in>fault_injection.cc</in>
+          <in>fault_injection.h</in>
+          <in>fault_injector_random.cc</in>
+          <in>fault_injector_random.h</in>
+        </df>
+        <df name="misc">
+          <in>FSBAllocator.hh</in>
+          <in>_thread.h</in>
+          <in>allocator.h</in>
+          <in>average.h</in>
+          <in>barrier.cc</in>
+          <in>barrier.h</in>
+          <in>basic_hash.cc</in>
+          <in>basic_hash.h</in>
+          <in>bit_vector.cc</in>
+          <in>bit_vector.h</in>
+          <in>bottlegraph.cc</in>
+          <in>bottlegraph.h</in>
+          <in>callstack.cc</in>
+          <in>callstack.h</in>
+          <in>checksum.cc</in>
+          <in>checksum.h</in>
+          <in>circular_log.cc</in>
+          <in>circular_log.h</in>
+          <in>circular_queue.h</in>
+          <in>cond.cc</in>
+          <in>cond.h</in>
+          <in>config.cc</in>
+          <in>config.h</in>
+          <in>cpuid.h</in>
+          <in>distribution.h</in>
+          <in>fixed_point.h</in>
+          <in>fixed_types.h</in>
+          <in>fxsupport.cc</in>
+          <in>fxsupport.h</in>
+          <in>handle_args.cc</in>
+          <in>handle_args.h</in>
+          <in>hash_map_set.h</in>
+          <in>itostr.h</in>
+          <in>lock.h</in>
+          <in>locked_hash.cc</in>
+          <in>locked_hash.h</in>
+          <in>lockfree_hash.cc</in>
+          <in>lockfree_hash.h</in>
+          <in>log.cc</in>
+          <in>log.h</in>
+          <in>logmem.cc</in>
+          <in>logmem.h</in>
+          <in>memguard.cc</in>
+          <in>memguard.h</in>
+          <in>modulo_num.cc</in>
+          <in>modulo_num.h</in>
+          <in>moving_average.h</in>
+          <in>mt_circular_queue.h</in>
+          <in>os_compat.h</in>
+          <in>packetize.cc</in>
+          <in>packetize.h</in>
+          <in>progress.cc</in>
+          <in>progress.h</in>
+          <in>pthread_lock.cc</in>
+          <in>pthread_lock.h</in>
+          <in>pthread_thread.cc</in>
+          <in>pthread_thread.h</in>
+          <in>pthread_tls.cc</in>
+          <in>random.h</in>
+          <in>rng.h</in>
+          <in>selock.cc</in>
+          <in>selock.h</in>
+          <in>semaphore.cc</in>
+          <in>semaphore.h</in>
+          <in>setlock.cc</in>
+          <in>setlock.h</in>
+          <in>spin_loop_detector.cc</in>
+          <in>spin_loop_detector.h</in>
+          <in>spinlock.h</in>
+          <in>stable_iterator.h</in>
+          <in>stats.cc</in>
+          <in>stats.h</in>
+          <in>subsecond_time.cc</in>
+          <in>subsecond_time.h</in>
+          <in>subsecond_time_c.cc</in>
+          <in>subsecond_time_c.h</in>
+          <in>syscall_strings.cc</in>
+          <in>syscall_strings.h</in>
+          <in>tags.cc</in>
+          <in>tags.h</in>
+          <in>timer.cc</in>
+          <in>timer.h</in>
+          <in>tls.cc</in>
+          <in>tls.h</in>
+          <in>utils.cc</in>
+          <in>utils.h</in>
+        </df>
+        <df name="network">
+          <in>network.cc</in>
+          <in>network.h</in>
+          <in>network_model.cc</in>
+          <in>network_model.h</in>
+          <in>network_model_bus.cc</in>
+          <in>network_model_bus.h</in>
+          <in>network_model_emesh_hop_by_hop.cc</in>
+          <in>network_model_emesh_hop_by_hop.h</in>
+          <in>network_model_emesh_hop_counter.cc</in>
+          <in>network_model_emesh_hop_counter.h</in>
+          <in>network_model_magic.cc</in>
+          <in>network_model_magic.h</in>
+          <in>network_types.h</in>
+          <in>packet_type.cc</in>
+          <in>packet_type.h</in>
+        </df>
+        <df name="performance_model">
+          <df name="branch_predictors">
+            <in>branch_predictor_return_value.cc</in>
+            <in>branch_predictor_return_value.h</in>
+            <in>btb.h</in>
+            <in>global_predictor.h</in>
+            <in>ibtb.h</in>
+            <in>lpb.h</in>
+            <in>one_bit_branch_predictor.cc</in>
+            <in>one_bit_branch_predictor.h</in>
+            <in>pentium_m_bimodal_table.h</in>
+            <in>pentium_m_branch_predictor.cc</in>
+            <in>pentium_m_branch_predictor.h</in>
+            <in>pentium_m_branch_target_buffer.h</in>
+            <in>pentium_m_global_predictor.h</in>
+            <in>pentium_m_indirect_branch_target_buffer.h</in>
+            <in>pentium_m_loop_branch_predictor.h</in>
+            <in>saturating_predictor.h</in>
+            <in>simple_bimodal_table.h</in>
+          </df>
+          <df name="instruction_tracers">
+            <in>instruction_tracer.cc</in>
+            <in>instruction_tracer.h</in>
+            <in>instruction_tracer_fpstats.cc</in>
+            <in>instruction_tracer_fpstats.h</in>
+            <in>instruction_tracer_print.cc</in>
+            <in>instruction_tracer_print.h</in>
+            <in>loop_profiler.cc</in>
+            <in>loop_profiler.h</in>
+            <in>loop_tracer.cc</in>
+            <in>loop_tracer.h</in>
+          </df>
+          <df name="performance_models">
+            <df name="core_model">
+              <in>core_model.cc</in>
+              <in>core_model.h</in>
+              <in>core_model_nehalem.cc</in>
+              <in>core_model_nehalem.h</in>
+              <in>dynamic_micro_op_nehalem.cc</in>
+              <in>dynamic_micro_op_nehalem.h</in>
+            </df>
+            <df name="interval_performance_model">
+              <in>interval_contention.h</in>
+              <in>interval_contention_nehalem.cc</in>
+              <in>interval_contention_nehalem.h</in>
+              <in>interval_timer.cc</in>
+              <in>interval_timer.h</in>
+              <in>tools.h</in>
+              <in>windows.cc</in>
+              <in>windows.h</in>
+            </df>
+            <df name="micro_op">
+              <in>dynamic_micro_op.cc</in>
+              <in>dynamic_micro_op.h</in>
+              <in>instruction_decoder.cc</in>
+              <in>instruction_decoder.h</in>
+              <in>memory_access.h</in>
+              <in>memory_dependencies.cc</in>
+              <in>memory_dependencies.h</in>
+              <in>micro_op.cc</in>
+              <in>micro_op.h</in>
+              <in>register_dependencies.cc</in>
+              <in>register_dependencies.h</in>
+            </df>
+            <df name="rob_performance_model">
+              <in>rob_contention.h</in>
+              <in>rob_contention_nehalem.cc</in>
+              <in>rob_contention_nehalem.h</in>
+              <in>rob_smt_timer.cc</in>
+              <in>rob_smt_timer.h</in>
+              <in>rob_timer.cc</in>
+              <in>rob_timer.h</in>
+              <in>smt_timer.cc</in>
+              <in>smt_timer.h</in>
+            </df>
+            <in>interval_performance_model.cc</in>
+            <in>interval_performance_model.h</in>
+            <in>micro_op_performance_model.cc</in>
+            <in>micro_op_performance_model.h</in>
+            <in>oneipc_performance_model.cc</in>
+            <in>oneipc_performance_model.h</in>
+            <in>rob_performance_model.cc</in>
+            <in>rob_performance_model.h</in>
+            <in>rob_smt_performance_model.cc</in>
+            <in>rob_smt_performance_model.h</in>
+          </df>
+          <in>branch_predictor.cc</in>
+          <in>branch_predictor.h</in>
+          <in>cache_perf_model.cc</in>
+          <in>cache_perf_model.h</in>
+          <in>cache_perf_model_parallel.h</in>
+          <in>cache_perf_model_sequential.h</in>
+          <in>contention_model.cc</in>
+          <in>contention_model.h</in>
+          <in>dram_directory_perf_model.h</in>
+          <in>dram_directory_perf_model_base.cc</in>
+          <in>dram_directory_perf_model_base.h</in>
+          <in>dram_perf_model.cc</in>
+          <in>dram_perf_model.h</in>
+          <in>dram_perf_model_constant.cc</in>
+          <in>dram_perf_model_constant.h</in>
+          <in>dram_perf_model_normal.cc</in>
+          <in>dram_perf_model_normal.h</in>
+          <in>dram_perf_model_readwrite.cc</in>
+          <in>dram_perf_model_readwrite.h</in>
+          <in>dynamic_instruction.cc</in>
+          <in>dynamic_instruction.h</in>
+          <in>fastforward_performance_model.cc</in>
+          <in>fastforward_performance_model.h</in>
+          <in>hit_where.cc</in>
+          <in>hit_where.h</in>
+          <in>instruction.cc</in>
+          <in>instruction.h</in>
+          <in>mmu_perf_model.h</in>
+          <in>mmu_perf_model_base.cc</in>
+          <in>mmu_perf_model_base.h</in>
+          <in>operand.h</in>
+          <in>performance_model.cc</in>
+          <in>performance_model.h</in>
+          <in>queue_model.cc</in>
+          <in>queue_model.h</in>
+          <in>queue_model_basic.cc</in>
+          <in>queue_model_basic.h</in>
+          <in>queue_model_contention.cc</in>
+          <in>queue_model_contention.h</in>
+          <in>queue_model_history_list.cc</in>
+          <in>queue_model_history_list.h</in>
+          <in>queue_model_windowed_mg1.cc</in>
+          <in>queue_model_windowed_mg1.h</in>
+          <in>shmem_perf_model.cc</in>
+          <in>shmem_perf_model.h</in>
+        </df>
+        <df name="sampling">
+          <in>instr_count_sampling.h</in>
+          <in>periodic_sampling.cc</in>
+          <in>periodic_sampling.h</in>
+          <in>sampling_algorithm.cc</in>
+          <in>sampling_algorithm.h</in>
+          <in>sampling_manager.cc</in>
+          <in>sampling_manager.h</in>
+          <in>sampling_provider.cc</in>
+          <in>sampling_provider.h</in>
+        </df>
+        <df name="scheduler">
+          <in>scheduler.cc</in>
+          <in>scheduler.h</in>
+          <in>scheduler_big_small.cc</in>
+          <in>scheduler_big_small.h</in>
+          <in>scheduler_dynamic.cc</in>
+          <in>scheduler_dynamic.h</in>
+          <in>scheduler_pinned.cc</in>
+          <in>scheduler_pinned.h</in>
+          <in>scheduler_pinned_base.cc</in>
+          <in>scheduler_pinned_base.h</in>
+          <in>scheduler_roaming.cc</in>
+          <in>scheduler_roaming.h</in>
+          <in>scheduler_sequential.cc</in>
+          <in>scheduler_sequential.h</in>
+          <in>scheduler_static.cc</in>
+          <in>scheduler_static.h</in>
+        </df>
+        <df name="scripting">
+          <in>hooks_py.cc</in>
+          <in>hooks_py.h</in>
+          <in>py_bbv.cc</in>
+          <in>py_config.cc</in>
+          <in>py_control.cc</in>
+          <in>py_dvfs.cc</in>
+          <in>py_hooks.cc</in>
+          <in>py_mem.cc</in>
+          <in>py_stats.cc</in>
+          <in>py_thread.cc</in>
+        </df>
+        <df name="system">
+          <in>barrier_sync_client.cc</in>
+          <in>barrier_sync_client.h</in>
+          <in>barrier_sync_server.cc</in>
+          <in>barrier_sync_server.h</in>
+          <in>cache_efficiency_tracker.h</in>
+          <in>clock_skew_minimization_object.cc</in>
+          <in>clock_skew_minimization_object.h</in>
+          <in>core_manager.cc</in>
+          <in>core_manager.h</in>
+          <in>core_thread.cc</in>
+          <in>core_thread.h</in>
+          <in>dvfs_manager.cc</in>
+          <in>dvfs_manager.h</in>
+          <in>fastforward_performance_manager.cc</in>
+          <in>fastforward_performance_manager.h</in>
+          <in>hooks_manager.cc</in>
+          <in>hooks_manager.h</in>
+          <in>hooks_manager_init.cc</in>
+          <in>inst_mode.cc</in>
+          <in>inst_mode.h</in>
+          <in>magic_client.cc</in>
+          <in>magic_client.h</in>
+          <in>magic_server.cc</in>
+          <in>magic_server.h</in>
+          <in>memory_tracker.cc</in>
+          <in>memory_tracker.h</in>
+          <in>pthread_emu.cc</in>
+          <in>pthread_emu.h</in>
+          <in>routine_tracer.cc</in>
+          <in>routine_tracer.h</in>
+          <in>routine_tracer_funcstats.cc</in>
+          <in>routine_tracer_funcstats.h</in>
+          <in>routine_tracer_ondemand.cc</in>
+          <in>routine_tracer_ondemand.h</in>
+          <in>routine_tracer_print.cc</in>
+          <in>routine_tracer_print.h</in>
+          <in>sim_thread.cc</in>
+          <in>sim_thread.h</in>
+          <in>sim_thread_manager.cc</in>
+          <in>sim_thread_manager.h</in>
+          <in>simulator.cc</in>
+          <in>simulator.h</in>
+          <in>sync_client.cc</in>
+          <in>sync_client.h</in>
+          <in>sync_server.cc</in>
+          <in>sync_server.h</in>
+          <in>syscall_server.cc</in>
+          <in>syscall_server.h</in>
+          <in>thread_manager.cc</in>
+          <in>thread_manager.h</in>
+          <in>thread_stats_manager.cc</in>
+          <in>thread_stats_manager.h</in>
+        </df>
+        <df name="trace_frontend">
+          <in>trace_manager.cc</in>
+          <in>trace_manager.h</in>
+          <in>trace_thread.cc</in>
+          <in>trace_thread.h</in>
+        </df>
+        <df name="transport">
+          <in>smtransport.cc</in>
+          <in>smtransport.h</in>
+          <in>transport.cc</in>
+          <in>transport.h</in>
+        </df>
+        <df name="user">
+          <in>sync_api.cc</in>
+          <in>sync_api.h</in>
+        </df>
+      </df>
+      <df name="config">
+      </df>
+      <df name="include">
+        <df name="linux">
+          <in>perf_event.h</in>
+          <in>perf_event_2.6.32.h</in>
+        </df>
+        <in>sim_api.h</in>
+      </df>
+      <df name="lib">
+      </df>
+      <df name="mcpat">
+        <df name="patches">
+        </df>
+      </df>
+      <df name="pin">
+        <df name="follow_execv">
+          <in>follow_execv.cc</in>
+        </df>
+        <df name="lite">
+          <in>handle_syscalls.cc</in>
+          <in>handle_syscalls.h</in>
+          <in>memory_modeling.cc</in>
+          <in>memory_modeling.h</in>
+          <in>routine_replace.cc</in>
+          <in>routine_replace.h</in>
+        </df>
+        <in>codecache_trace.cc</in>
+        <in>codecache_trace.h</in>
+        <in>inst_mode.cc</in>
+        <in>inst_mode_macros.h</in>
+        <in>instruction_modeling.cc</in>
+        <in>instruction_modeling.h</in>
+        <in>local_storage.cc</in>
+        <in>local_storage.h</in>
+        <in>pin_exceptions.cc</in>
+        <in>pin_exceptions.h</in>
+        <in>pin_lock.cc</in>
+        <in>pin_lock.h</in>
+        <in>pin_sim.cc</in>
+        <in>pin_thread.cc</in>
+        <in>pin_thread.h</in>
+        <in>pin_tls.cc</in>
+        <in>spin_loop_detection.cc</in>
+        <in>spin_loop_detection.h</in>
+        <in>toolreg.cc</in>
+        <in>toolreg.h</in>
+        <in>trace_rtn.cc</in>
+        <in>trace_rtn.h</in>
+      </df>
+      <df name="pin_kit">
+        <df name="doc">
+          <df name="html">
+          </df>
+        </df>
+        <df name="extras">
+          <df name="components">
+            <df name="include">
+              <df name="asm">
+                <in>gas-ia64.h</in>
+                <in>gas-x86.h</in>
+                <in>masm-x86.h</in>
+                <in>nasm-x86.h</in>
+                <in>unix-intel64.h</in>
+                <in>windows-intel64.h</in>
+              </df>
+              <df name="atomic">
+                <df name="private">
+                  <df name="ia32">
+                    <in>ops-impl-ia32-asm.hpp</in>
+                    <in>ops-impl.hpp</in>
+                  </df>
+                  <df name="ia64">
+                    <in>ops-impl-ia64-asm.hpp</in>
+                    <in>ops-impl.hpp</in>
+                  </df>
+                  <df name="intel64">
+                    <in>ops-impl-intel64-asm.hpp</in>
+                    <in>ops-impl.hpp</in>
+                  </df>
+                  <in>backoff-impl.hpp</in>
+                  <in>ops-common-impl.hpp</in>
+                </df>
+                <in>config.hpp</in>
+                <in>exponential-backoff.hpp</in>
+                <in>fixed-lifo.hpp</in>
+                <in>fixed-multimap.hpp</in>
+                <in>fixed-multiset.hpp</in>
+                <in>idset.hpp</in>
+                <in>lifo-ctr.hpp</in>
+                <in>lifo-ptr.hpp</in>
+                <in>nullstats.hpp</in>
+                <in>ops-enum.hpp</in>
+                <in>ops.hpp</in>
+              </df>
+              <df name="barecrt">
+                <df name="bsd-intel64">
+                  <in>resource.hpp</in>
+                  <in>signal-types.hpp</in>
+                </df>
+                <df name="linux-ia32">
+                  <in>resource.hpp</in>
+                  <in>signal-types.hpp</in>
+                </df>
+                <df name="linux-ia64">
+                  <in>resource.hpp</in>
+                  <in>signal-types.hpp</in>
+                </df>
+                <df name="linux-intel64">
+                  <in>resource.hpp</in>
+                  <in>signal-types.hpp</in>
+                </df>
+                <df name="mac-ia32">
+                  <in>resource.hpp</in>
+                  <in>signal-types.hpp</in>
+                </df>
+                <df name="mac-intel64">
+                  <in>resource.hpp</in>
+                  <in>signal-types.hpp</in>
+                </df>
+                <in>futex.hpp</in>
+                <in>process.hpp</in>
+                <in>signal-mac.hpp</in>
+                <in>signal.hpp</in>
+                <in>sigset128.hpp</in>
+                <in>sigset32.hpp</in>
+                <in>sigset64.hpp</in>
+                <in>time.hpp</in>
+                <in>types.hpp</in>
+              </df>
+              <df name="debugger-protocol">
+                <in>event-linux.hpp</in>
+                <in>event-mac.hpp</in>
+                <in>event-windows.hpp</in>
+                <in>forward.hpp</in>
+                <in>image-linux.hpp</in>
+                <in>image-mac.hpp</in>
+                <in>image-windows.hpp</in>
+                <in>regs-gdb-linux-avx32.hpp</in>
+                <in>regs-gdb-linux-avx64.hpp</in>
+                <in>regs-gdb-linux-ia32.hpp</in>
+                <in>regs-gdb-linux-intel64.hpp</in>
+                <in>regs-gdb-mac-ia32.hpp</in>
+                <in>regs-gdb-mac-intel64.hpp</in>
+                <in>regs-windows-ia32.hpp</in>
+                <in>regs-windows-intel64.hpp</in>
+                <in>thread-linux.hpp</in>
+                <in>thread-mac.hpp</in>
+                <in>thread-windows.hpp</in>
+              </df>
+              <df name="fund">
+                <in>config-hostos.h</in>
+                <in>config-targetos.h</in>
+                <in>config.h</in>
+              </df>
+              <df name="sync">
+                <in>backoff-or-yield.hpp</in>
+                <in>config.hpp</in>
+                <in>documentation.hpp</in>
+                <in>os-barecrt-linux.hpp</in>
+                <in>os-barecrt-time.hpp</in>
+                <in>os-barecrt.hpp</in>
+                <in>os-posix-time.hpp</in>
+                <in>os-posix.hpp</in>
+                <in>reader-writer-lock-futex.hpp</in>
+                <in>reader-writer-lock-spin.hpp</in>
+                <in>reader-writer-lock.hpp</in>
+                <in>semaphore-event.hpp</in>
+                <in>semaphore-futex.hpp</in>
+                <in>semaphore-spin.hpp</in>
+                <in>semaphore.hpp</in>
+                <in>simple-lock-futex.hpp</in>
+                <in>simple-lock-spin.hpp</in>
+                <in>simple-lock.hpp</in>
+              </df>
+              <df name="util">
+                <in>data.hpp</in>
+                <in>intel-fp.hpp</in>
+                <in>locker.hpp</in>
+                <in>numberbits.hpp</in>
+                <in>quote-argument-ms.hpp</in>
+                <in>range.hpp</in>
+                <in>regvalue.hpp</in>
+                <in>round.hpp</in>
+                <in>scoped-array.hpp</in>
+                <in>scoped-ptr.hpp</in>
+                <in>singleton.hpp</in>
+                <in>strings.hpp</in>
+              </df>
+              <in>asm.h</in>
+              <in>atomic.hpp</in>
+              <in>barecrt.hpp</in>
+              <in>debugger-protocol.hpp</in>
+              <in>fund.hpp</in>
+              <in>sync.hpp</in>
+              <in>util.hpp</in>
+            </df>
+            <df name="lib">
+              <df name="ia32">
+              </df>
+              <df name="intel64">
+              </df>
+            </df>
+          </df>
+          <df name="xed-ia32">
+            <df name="bin">
+            </df>
+            <df name="doc">
+              <df name="ref-manual">
+                <df name="html">
+                </df>
+              </df>
+            </df>
+            <df name="examples">
+              <in>udhelp.H</in>
+              <in>udhelp.cpp</in>
+              <in>xed-disas-elf.H</in>
+              <in>xed-disas-elf.cpp</in>
+              <in>xed-disas-hex.H</in>
+              <in>xed-disas-hex.cpp</in>
+              <in>xed-disas-macho.H</in>
+              <in>xed-disas-macho.cpp</in>
+              <in>xed-disas-pecoff.H</in>
+              <in>xed-disas-pecoff.cpp</in>
+              <in>xed-disas-raw.H</in>
+              <in>xed-disas-raw.cpp</in>
+              <in>xed-dll-discovery.c</in>
+              <in>xed-dot-prep.c</in>
+              <in>xed-dot-prep.h</in>
+              <in>xed-dot.c</in>
+              <in>xed-dot.h</in>
+              <in>xed-enc-lang.H</in>
+              <in>xed-enc-lang.cpp</in>
+              <in>xed-ex-agen.c</in>
+              <in>xed-ex-ild.c</in>
+              <in>xed-ex-ild2.c</in>
+              <in>xed-ex1.cpp</in>
+              <in>xed-ex2.cpp</in>
+              <in>xed-ex3.cpp</in>
+              <in>xed-ex4.c</in>
+              <in>xed-ex5-enc.c</in>
+              <in>xed-ex6.c</in>
+              <in>xed-ex7.c</in>
+              <in>xed-ex8.c</in>
+              <in>xed-examples-ostreams.H</in>
+              <in>xed-examples-ostreams.cpp</in>
+              <in>xed-examples-util.c</in>
+              <in>xed-examples-util.h</in>
+              <in>xed-min.c</in>
+              <in>xed-size.c</in>
+              <in>xed-symbol-table.H</in>
+              <in>xed-symbol-table.cpp</in>
+              <in>xed-tables.c</in>
+              <in>xed-tester.cpp</in>
+              <in>xed.cpp</in>
+            </df>
+            <df name="extlib">
+            </df>
+            <df name="include">
+              <in>xed-address-width-enum.h</in>
+              <in>xed-agen.h</in>
+              <in>xed-attribute-enum.h</in>
+              <in>xed-attributes.h</in>
+              <in>xed-build-defines.h</in>
+              <in>xed-category-enum.h</in>
+              <in>xed-chip-enum.h</in>
+              <in>xed-common-defs.h</in>
+              <in>xed-common-hdrs.h</in>
+              <in>xed-convert-table-init.h</in>
+              <in>xed-decode.h</in>
+              <in>xed-decoded-inst-api.h</in>
+              <in>xed-decoded-inst.h</in>
+              <in>xed-disas.h</in>
+              <in>xed-encode.h</in>
+              <in>xed-encoder-gen-defs.h</in>
+              <in>xed-encoder-hl.h</in>
+              <in>xed-encoder-iforms.h</in>
+              <in>xed-error-enum.h</in>
+              <in>xed-exception-enum.h</in>
+              <in>xed-extension-enum.h</in>
+              <in>xed-flag-action-enum.h</in>
+              <in>xed-flag-enum.h</in>
+              <in>xed-flags.h</in>
+              <in>xed-format-options.h</in>
+              <in>xed-gen-table-defs.h</in>
+              <in>xed-get-time.h</in>
+              <in>xed-iclass-enum.h</in>
+              <in>xed-iform-enum.h</in>
+              <in>xed-iform-map.h</in>
+              <in>xed-iformfl-enum.h</in>
+              <in>xed-ild.h</in>
+              <in>xed-immdis.h</in>
+              <in>xed-immed.h</in>
+              <in>xed-init-pointer-names.h</in>
+              <in>xed-init.h</in>
+              <in>xed-inst.h</in>
+              <in>xed-interface.h</in>
+              <in>xed-isa-set-enum.h</in>
+              <in>xed-isa-set.h</in>
+              <in>xed-machine-mode-enum.h</in>
+              <in>xed-nonterminal-enum.h</in>
+              <in>xed-operand-accessors.h</in>
+              <in>xed-operand-action-enum.h</in>
+              <in>xed-operand-action.h</in>
+              <in>xed-operand-convert-enum.h</in>
+              <in>xed-operand-ctype-enum.h</in>
+              <in>xed-operand-ctype-map.h</in>
+              <in>xed-operand-element-type-enum.h</in>
+              <in>xed-operand-element-xtype-enum.h</in>
+              <in>xed-operand-enum.h</in>
+              <in>xed-operand-storage.h</in>
+              <in>xed-operand-type-enum.h</in>
+              <in>xed-operand-values-interface.h</in>
+              <in>xed-operand-visibility-enum.h</in>
+              <in>xed-operand-width-enum.h</in>
+              <in>xed-portability.h</in>
+              <in>xed-print-info.h</in>
+              <in>xed-reg-class-enum.h</in>
+              <in>xed-reg-class.h</in>
+              <in>xed-reg-enum.h</in>
+              <in>xed-reg-role-enum.h</in>
+              <in>xed-state.h</in>
+              <in>xed-syntax-enum.h</in>
+              <in>xed-types.h</in>
+              <in>xed-util.h</in>
+              <in>xed-version.h</in>
+            </df>
+            <df name="lib">
+            </df>
+            <df name="misc">
+            </df>
+          </df>
+          <df name="xed-intel64">
+            <df name="bin">
+            </df>
+            <df name="doc">
+              <df name="ref-manual">
+                <df name="html">
+                </df>
+              </df>
+            </df>
+            <df name="examples">
+              <in>udhelp.H</in>
+              <in>udhelp.cpp</in>
+              <in>xed-disas-elf.H</in>
+              <in>xed-disas-elf.cpp</in>
+              <in>xed-disas-hex.H</in>
+              <in>xed-disas-hex.cpp</in>
+              <in>xed-disas-macho.H</in>
+              <in>xed-disas-macho.cpp</in>
+              <in>xed-disas-pecoff.H</in>
+              <in>xed-disas-pecoff.cpp</in>
+              <in>xed-disas-raw.H</in>
+              <in>xed-disas-raw.cpp</in>
+              <in>xed-dll-discovery.c</in>
+              <in>xed-dot-prep.c</in>
+              <in>xed-dot-prep.h</in>
+              <in>xed-dot.c</in>
+              <in>xed-dot.h</in>
+              <in>xed-enc-lang.H</in>
+              <in>xed-enc-lang.cpp</in>
+              <in>xed-ex-agen.c</in>
+              <in>xed-ex-ild.c</in>
+              <in>xed-ex-ild2.c</in>
+              <in>xed-ex1.cpp</in>
+              <in>xed-ex2.cpp</in>
+              <in>xed-ex3.cpp</in>
+              <in>xed-ex4.c</in>
+              <in>xed-ex5-enc.c</in>
+              <in>xed-ex6.c</in>
+              <in>xed-ex7.c</in>
+              <in>xed-ex8.c</in>
+              <in>xed-examples-ostreams.H</in>
+              <in>xed-examples-ostreams.cpp</in>
+              <in>xed-examples-util.c</in>
+              <in>xed-examples-util.h</in>
+              <in>xed-min.c</in>
+              <in>xed-size.c</in>
+              <in>xed-symbol-table.H</in>
+              <in>xed-symbol-table.cpp</in>
+              <in>xed-tables.c</in>
+              <in>xed-tester.cpp</in>
+              <in>xed.cpp</in>
+            </df>
+            <df name="extlib">
+            </df>
+            <df name="include">
+              <in>xed-address-width-enum.h</in>
+              <in>xed-agen.h</in>
+              <in>xed-attribute-enum.h</in>
+              <in>xed-attributes.h</in>
+              <in>xed-build-defines.h</in>
+              <in>xed-category-enum.h</in>
+              <in>xed-chip-enum.h</in>
+              <in>xed-common-defs.h</in>
+              <in>xed-common-hdrs.h</in>
+              <in>xed-convert-table-init.h</in>
+              <in>xed-decode.h</in>
+              <in>xed-decoded-inst-api.h</in>
+              <in>xed-decoded-inst.h</in>
+              <in>xed-disas.h</in>
+              <in>xed-encode.h</in>
+              <in>xed-encoder-gen-defs.h</in>
+              <in>xed-encoder-hl.h</in>
+              <in>xed-encoder-iforms.h</in>
+              <in>xed-error-enum.h</in>
+              <in>xed-exception-enum.h</in>
+              <in>xed-extension-enum.h</in>
+              <in>xed-flag-action-enum.h</in>
+              <in>xed-flag-enum.h</in>
+              <in>xed-flags.h</in>
+              <in>xed-format-options.h</in>
+              <in>xed-gen-table-defs.h</in>
+              <in>xed-get-time.h</in>
+              <in>xed-iclass-enum.h</in>
+              <in>xed-iform-enum.h</in>
+              <in>xed-iform-map.h</in>
+              <in>xed-iformfl-enum.h</in>
+              <in>xed-ild.h</in>
+              <in>xed-immdis.h</in>
+              <in>xed-immed.h</in>
+              <in>xed-init-pointer-names.h</in>
+              <in>xed-init.h</in>
+              <in>xed-inst.h</in>
+              <in>xed-interface.h</in>
+              <in>xed-isa-set-enum.h</in>
+              <in>xed-isa-set.h</in>
+              <in>xed-machine-mode-enum.h</in>
+              <in>xed-nonterminal-enum.h</in>
+              <in>xed-operand-accessors.h</in>
+              <in>xed-operand-action-enum.h</in>
+              <in>xed-operand-action.h</in>
+              <in>xed-operand-convert-enum.h</in>
+              <in>xed-operand-ctype-enum.h</in>
+              <in>xed-operand-ctype-map.h</in>
+              <in>xed-operand-element-type-enum.h</in>
+              <in>xed-operand-element-xtype-enum.h</in>
+              <in>xed-operand-enum.h</in>
+              <in>xed-operand-storage.h</in>
+              <in>xed-operand-type-enum.h</in>
+              <in>xed-operand-values-interface.h</in>
+              <in>xed-operand-visibility-enum.h</in>
+              <in>xed-operand-width-enum.h</in>
+              <in>xed-portability.h</in>
+              <in>xed-print-info.h</in>
+              <in>xed-reg-class-enum.h</in>
+              <in>xed-reg-class.h</in>
+              <in>xed-reg-enum.h</in>
+              <in>xed-reg-role-enum.h</in>
+              <in>xed-state.h</in>
+              <in>xed-syntax-enum.h</in>
+              <in>xed-types.h</in>
+              <in>xed-util.h</in>
+              <in>xed-version.h</in>
+            </df>
+            <df name="lib">
+            </df>
+            <df name="misc">
+            </df>
+          </df>
+        </df>
+        <df name="ia32">
+          <df name="bin">
+          </df>
+          <df name="lib">
+          </df>
+          <df name="lib-ext">
+          </df>
+          <df name="runtime">
+            <df name="cpplibs">
+            </df>
+            <df name="glibc">
+            </df>
+          </df>
+        </df>
+        <df name="intel64">
+          <df name="bin">
+          </df>
+          <df name="lib">
+          </df>
+          <df name="lib-ext">
+          </df>
+          <df name="runtime">
+            <df name="cpplibs">
+            </df>
+            <df name="glibc">
+            </df>
+          </df>
+        </df>
+        <df name="source">
+          <df name="include">
+            <df name="pin">
+              <df name="gen">
+                <in>base_ia32.PH</in>
+                <in>bbl.PH</in>
+                <in>cache_client.PH</in>
+                <in>cc_used_ia32_l.CVH</in>
+                <in>cc_used_ia32e_l.CVH</in>
+                <in>child_process.PH</in>
+                <in>child_process_client.PH</in>
+                <in>client_asm_ia32.PH</in>
+                <in>debug.PH</in>
+                <in>debugger_client.PH</in>
+                <in>deprecated_client.PH</in>
+                <in>edg.PH</in>
+                <in>exception.PH</in>
+                <in>fpstate_ia32.PH</in>
+                <in>fpstate_ia32e.PH</in>
+                <in>image.PH</in>
+                <in>image_elf.PH</in>
+                <in>img.PH</in>
+                <in>ins.PH</in>
+                <in>ins_api_xed_ia32.PH</in>
+                <in>ins_ia32.PH</in>
+                <in>ins_syscall_ia32_unix.PH</in>
+                <in>ins_xed_ia32.PH</in>
+                <in>internal_exception_client.PH</in>
+                <in>knob.PH</in>
+                <in>lock.PH</in>
+                <in>message.PH</in>
+                <in>operand_ia32.PH</in>
+                <in>opin_client.PH</in>
+                <in>pin_api_version.TLH</in>
+                <in>pin_client.PH</in>
+                <in>pin_client_replay.PH</in>
+                <in>pinsync-linux.hpp</in>
+                <in>pinsync.hpp</in>
+                <in>probe_instrument.PH</in>
+                <in>probe_instrument_ia32.PH</in>
+                <in>reg_ia32.PH</in>
+                <in>reg_partial_ia32.PH</in>
+                <in>reginfo_ia32.PH</in>
+                <in>regset.PH</in>
+                <in>regset_ia32.PH</in>
+                <in>sec.PH</in>
+                <in>stopped_thread_client.PH</in>
+                <in>symbol_elf.PH</in>
+                <in>sysfuncs_linux.PH</in>
+                <in>thread_client.PH</in>
+                <in>tls.PH</in>
+                <in>tls_client.PH</in>
+                <in>types_base.TLH</in>
+                <in>types_core.TLH</in>
+                <in>types_foundation.TLH</in>
+                <in>types_marker.TLH</in>
+                <in>types_vmapi.TLH</in>
+                <in>util.PH</in>
+                <in>val.PH</in>
+                <in>versions_client.PH</in>
+              </df>
+              <in>compiler_version_check2.H</in>
+              <in>foundation.PLH</in>
+              <in>level_base.PLH</in>
+              <in>level_core.PLH</in>
+              <in>level_foundation.PLH</in>
+              <in>level_pinclient.PLH</in>
+              <in>level_vmapi.PLH</in>
+              <in>pin-errtype.h</in>
+              <in>pin.H</in>
+              <in>pin_basic.h</in>
+              <in>pin_cache.H</in>
+              <in>pin_isa.H</in>
+              <in>pin_profile.H</in>
+              <in>pin_ucontext.h</in>
+              <in>pin_util.H</in>
+              <in>pinapp.h</in>
+              <in>portability.H</in>
+            </df>
+          </df>
+          <df name="launcher">
+            <in>launcher_u.c</in>
+            <in>os_specific.h</in>
+            <in>os_specific_a.c</in>
+            <in>os_specific_b.c</in>
+            <in>os_specific_l.c</in>
+            <in>os_specific_m.c</in>
+            <in>os_specific_mic.c</in>
+            <in>utils.c</in>
+            <in>utils.h</in>
+          </df>
+          <df name="tools">
+            <df name="AlignChk">
+              <in>alignchk.H</in>
+              <in>alignchk.cpp</in>
+              <in>misaligned.c</in>
+              <in>movdqa_test2.cpp</in>
+              <in>movdqa_test2_ia32.s</in>
+              <in>movdqa_test_ia32.asm</in>
+              <in>movdqa_test_intel64.asm</in>
+            </df>
+            <df name="AttachDetach">
+              <in>attachReattachThreadDetachCallbacks_app.cpp</in>
+              <in>attach_auxv_access.cpp</in>
+              <in>attach_auxv_access_app.cpp</in>
+              <in>attach_in_sighandler_app.cpp</in>
+              <in>change_mask.cpp</in>
+              <in>change_mask_app.cpp</in>
+              <in>detach_in_sighandler_app.cpp</in>
+              <in>detach_on_blocking_syscall.c</in>
+              <in>detach_probed_app.cpp</in>
+              <in>detach_probed_tool.cpp</in>
+              <in>detach_probed_wait_child_app.cpp</in>
+              <in>detach_syscall.cpp</in>
+              <in>detach_syscall_app.cpp</in>
+              <in>fp_save_restore_ia32.s</in>
+              <in>fp_save_restore_intel64.s</in>
+              <in>hello_world.cpp</in>
+              <in>jit_anls_detach.cpp</in>
+              <in>jit_detach_tool.cpp</in>
+              <in>jit_instr_detach.cpp</in>
+              <in>jit_tool.cpp</in>
+              <in>launchReattachThreadDetachCallbacks_app.cpp</in>
+              <in>main_attach_app.cpp</in>
+              <in>main_command_line_app.cpp</in>
+              <in>mt_attach.cpp</in>
+              <in>mt_attach_and_execv.cpp</in>
+              <in>mt_attach_android.cpp</in>
+              <in>mt_blocked.cpp</in>
+              <in>mt_detach.cpp</in>
+              <in>mt_fork_app.cpp</in>
+              <in>mt_thread.cpp</in>
+              <in>my_dll.c</in>
+              <in>my_exe.c</in>
+              <in>pause_msg_app.cpp</in>
+              <in>probe_tool.cpp</in>
+              <in>read_write_app.cpp</in>
+              <in>reattachThreadDetachCallbacks_tool.cpp</in>
+              <in>reattachZombie_tool.cpp</in>
+              <in>reattach_probed_app.cpp</in>
+              <in>reattach_probed_tool.cpp</in>
+              <in>reattach_verify_sigmask_app.cpp</in>
+              <in>secondary_attach_app.cpp</in>
+              <in>secondary_command_line_app.cpp</in>
+              <in>short_func_app.cpp</in>
+              <in>short_func_ia32.s</in>
+              <in>short_func_intel64.s</in>
+              <in>short_func_mic.s</in>
+              <in>short_func_tool.cpp</in>
+              <in>simple_tool.cpp</in>
+              <in>threadOrder.cpp</in>
+              <in>threadOrder_tool.cpp</in>
+              <in>tls_app_ia32.cpp</in>
+              <in>tls_app_intel64.cpp</in>
+              <in>tls_app_mic.cpp</in>
+              <in>tls_check_tool.cpp</in>
+              <in>verify_fpstate_app.cpp</in>
+              <in>verify_sigmask.cpp</in>
+              <in>verify_sigmask_android.cpp</in>
+              <in>w_app1.cpp</in>
+              <in>w_app2.cpp</in>
+              <in>w_app3.cpp</in>
+              <in>w_app4.cpp</in>
+              <in>w_app_launcher.cpp</in>
+              <in>w_attach_tool1.cpp</in>
+              <in>w_attach_tool2.cpp</in>
+              <in>w_attach_tool3.cpp</in>
+              <in>w_attach_tool4.cpp</in>
+              <in>w_attach_tool5.cpp</in>
+              <in>w_pin_service_launcher.cpp</in>
+              <in>w_service_app1.cpp</in>
+              <in>zombie_utils.cpp</in>
+              <in>zombie_utils.h</in>
+            </df>
+            <df name="Buffer">
+              <in>allocate.cpp</in>
+              <in>buffer-lengths.cpp</in>
+              <in>buffer-predicate.cpp</in>
+              <in>buffer-then.cpp</in>
+              <in>buffer_invalid_reg.cpp</in>
+              <in>bufferaddr.cpp</in>
+              <in>buffererror.cpp</in>
+              <in>mlog_buffer.cpp</in>
+              <in>two_buffers.cpp</in>
+            </df>
+            <df name="CacheClient">
+              <in>action_pending_cachefull.cpp</in>
+              <in>action_pending_cachefull_app.c</in>
+              <in>bb_test.cpp</in>
+              <in>bigBinary.c</in>
+              <in>bigRegion.c</in>
+              <in>br_test.cpp</in>
+              <in>cache_doubler.cpp</in>
+              <in>cache_flusher.cpp</in>
+              <in>cache_simulator.cpp</in>
+              <in>cache_stats.cpp</in>
+              <in>callFooTwice.c</in>
+              <in>codecache_stress.cpp</in>
+              <in>codecache_stress_app.cpp</in>
+              <in>codecache_stress_app_asm_ia32.asm</in>
+              <in>codecache_stress_app_asm_ia32.s</in>
+              <in>codecache_stress_app_asm_intel64.asm</in>
+              <in>codecache_stress_app_asm_intel64.s</in>
+              <in>codecache_stress_app_asm_mic.asm</in>
+              <in>codecache_stress_app_asm_mic.s</in>
+              <in>deleteTrace.cpp</in>
+              <in>enter_exit.cpp</in>
+              <in>event_trace.cpp</in>
+              <in>flushAndInsert.cpp</in>
+              <in>flush_at_if.cpp</in>
+              <in>flush_leaks.cpp</in>
+              <in>insertDelete.cpp</in>
+              <in>invalidate_cache_analysis.cpp</in>
+              <in>link_unlink.cpp</in>
+              <in>manyIndirects.c</in>
+              <in>mem_usage.cpp</in>
+              <in>mtFlush.cpp</in>
+              <in>orig_address.cpp</in>
+              <in>threadWait.c</in>
+              <in>trace_insertions.cpp</in>
+              <in>utils.H</in>
+              <in>utils.cpp</in>
+              <in>watch_fragmentation.cpp</in>
+            </df>
+            <df name="ChildProcess">
+              <in>arglist.cpp</in>
+              <in>arglist.h</in>
+              <in>badexec.c</in>
+              <in>bind_now_app.c</in>
+              <in>bind_now_tool.cpp</in>
+              <in>child_process.cpp</in>
+              <in>execvp.c</in>
+              <in>follow_child.cpp</in>
+              <in>follow_child_3gen_tool.cpp</in>
+              <in>follow_child_3gen_tool_initsym.cpp</in>
+              <in>follow_child_tool.cpp</in>
+              <in>fork_app.c</in>
+              <in>fork_jit_tool.cpp</in>
+              <in>fork_probed_tool.cpp</in>
+              <in>fork_vm_lock_app.cpp</in>
+              <in>fork_vm_lock_tool.cpp</in>
+              <in>grand_parent_tool.cpp</in>
+              <in>injection_test_app.c</in>
+              <in>null_arg_check_tool.cpp</in>
+              <in>null_check_app1.cpp</in>
+              <in>null_check_app2.cpp</in>
+              <in>parent_process.cpp</in>
+              <in>parent_tool.cpp</in>
+              <in>selfexec_app.c</in>
+              <in>sigchld_app.cpp</in>
+              <in>simple_tool.cpp</in>
+              <in>unix_parent_tool.cpp</in>
+              <in>vfork_app.c</in>
+              <in>win_child_process.cpp</in>
+              <in>win_early_termination.cpp</in>
+              <in>win_launcher_debugged_process.cpp</in>
+              <in>win_launcher_process.cpp</in>
+              <in>win_parent_process.cpp</in>
+              <in>win_parent_process_mt.cpp</in>
+              <in>win_parent_process_unicode.cpp</in>
+              <in>win_terminate_process_dll.cpp</in>
+            </df>
+            <df name="Config">
+            </df>
+            <df name="Cpp11Tests">
+              <in>cpp11Threads.cpp</in>
+              <in>cpp11ThreadsApp.cpp</in>
+            </df>
+            <df name="CrossIa32Intel64">
+              <in>child_process_injection.cpp</in>
+              <in>child_process_injection_app.c</in>
+              <in>child_process_injection_app1.c</in>
+              <in>child_process_linux.cpp</in>
+              <in>child_process_windows.cpp</in>
+              <in>early_termination.cpp</in>
+              <in>follow_child_tool.cpp</in>
+              <in>follow_child_tool_sym.cpp</in>
+              <in>follow_child_tool_windows.cpp</in>
+              <in>grand_child_process_linux.cpp</in>
+              <in>grand_child_process_windows.cpp</in>
+              <in>parent_process_linux.cpp</in>
+              <in>parent_process_windows.cpp</in>
+              <in>parent_tool.cpp</in>
+              <in>sigchld_app.cpp</in>
+              <in>w_terminate_process_dll.cpp</in>
+              <in>win_launcher_debugged_process.cpp</in>
+              <in>win_launcher_process.cpp</in>
+            </df>
+            <df name="Debugger">
+              <in>action-pending-app.cpp</in>
+              <in>action-pending-tool.cpp</in>
+              <in>app-pause-app.cpp</in>
+              <in>app-pause-in-app-thread-tool.cpp</in>
+              <in>app-pause-in-int-thread-tool.cpp</in>
+              <in>bphandler.cpp</in>
+              <in>bphandler_app.c</in>
+              <in>bptest-asm-ia32.s</in>
+              <in>bptest-asm-intel64.s</in>
+              <in>bptest.cpp</in>
+              <in>breaktool.cpp</in>
+              <in>callerapp.c</in>
+              <in>check-if-thread-stopped.cpp</in>
+              <in>checkpoint-app.c</in>
+              <in>checkpoint.cpp</in>
+              <in>debugger-shell-app-ia32.s</in>
+              <in>debugger-shell-app-intel64.s</in>
+              <in>debugger-shell-app.cpp</in>
+              <in>debugger-type.cpp</in>
+              <in>dlopen-dlclose.c</in>
+              <in>exec.cpp</in>
+              <in>fork.cpp</in>
+              <in>int3-count.cpp</in>
+              <in>intercept-app-asm-ia32.s</in>
+              <in>intercept-app-asm-intel64.s</in>
+              <in>intercept-app.cpp</in>
+              <in>intercept-tool.cpp</in>
+              <in>interpreter-remove.cpp</in>
+              <in>invalidate-regs.cpp</in>
+              <in>launch-gdb-tool.cpp</in>
+              <in>library-load-tool.cpp</in>
+              <in>memlog.hpp</in>
+              <in>mt-exit-tool.cpp</in>
+              <in>mt-exit.cpp</in>
+              <in>null-emulator-ia32.cpp</in>
+              <in>null-emulator-intel64.cpp</in>
+              <in>pc-change-async-asm-ia32.s</in>
+              <in>pc-change-async-asm-intel64.s</in>
+              <in>pc-change-async-tool.cpp</in>
+              <in>pc-change-async.cpp</in>
+              <in>pc-change-bp-asm-ia32.s</in>
+              <in>pc-change-bp-asm-intel64.s</in>
+              <in>pc-change-bp.cpp</in>
+              <in>pick-random-port.c</in>
+              <in>pthread-bare-exit-asm-ia32.s</in>
+              <in>pthread-bare-exit-asm-intel64.s</in>
+              <in>pthread-bare-exit.cpp</in>
+              <in>pthread-bare-exitgroup-asm-ia32.s</in>
+              <in>pthread-bare-exitgroup-asm-intel64.s</in>
+              <in>pthread-bare-exitgroup.cpp</in>
+              <in>reattach-loop.cpp</in>
+              <in>set-mode-tool.cpp</in>
+              <in>set_xmm_scratches.cpp</in>
+              <in>set_xmm_scratches_before_breakpoint.cpp</in>
+              <in>set_xmm_scratches_before_breakpoint_and_set_xmm_reg.cpp</in>
+              <in>set_xmm_scratches_for_ymmtest.cpp</in>
+              <in>set_xmm_scratches_ia32.s</in>
+              <in>set_xmm_scratches_intel64.s</in>
+              <in>signal-catch.cpp</in>
+              <in>simple-command-tool.cpp</in>
+              <in>simple-pindb-asm-linux-ia32.s</in>
+              <in>simple-pindb-asm-linux-intel64.s</in>
+              <in>simple-pindb-asm-windows-ia32.asm</in>
+              <in>simple-pindb-asm-windows-intel64.asm</in>
+              <in>simple-pindb.cpp</in>
+              <in>simple.c</in>
+              <in>simultaneous-toolbreak.cpp</in>
+              <in>sleep-unix.c</in>
+              <in>start-fini-callback.cpp</in>
+              <in>stop-resume-when-suspended.cpp</in>
+              <in>thread-unix.cpp</in>
+              <in>thread-win.cpp</in>
+              <in>thread.cpp</in>
+              <in>use-debugger-shell.cpp</in>
+              <in>watchpoint-app.c</in>
+              <in>watchpoint.cpp</in>
+              <in>win-continued-exception1.cpp</in>
+              <in>win-continued-exception2.cpp</in>
+              <in>win-cpp-exception.cpp</in>
+              <in>win-foo-library.cpp</in>
+              <in>win-handled-exception.cpp</in>
+              <in>win-load-library.cpp</in>
+              <in>win-software-exception.cpp</in>
+              <in>win-thread-stress.cpp</in>
+              <in>win-unhandled-exception.cpp</in>
+              <in>xmm-asm-ia32.s</in>
+              <in>xmm-asm-intel64.s</in>
+              <in>xmm.c</in>
+              <in>ymm-asm-ia32.s</in>
+              <in>ymm-asm-intel64.s</in>
+              <in>ymm.cpp</in>
+            </df>
+            <df name="DebugInfo">
+              <in>debugtest.cpp</in>
+              <in>omit_source_location.cpp</in>
+            </df>
+            <df name="DebugTrace">
+              <in>debugtrace.cpp</in>
+            </df>
+            <df name="GracefulExit">
+              <in>applicationexit.cpp</in>
+              <in>exitApplicationLocked_app.cpp</in>
+              <in>exitApplicationLocked_tool.cpp</in>
+              <in>exitFromFini_app.cpp</in>
+              <in>exitFromFini_tool.cpp</in>
+              <in>raceToEnterVm_app.cpp</in>
+              <in>raceToExit_app.cpp</in>
+              <in>threadFini_app.cpp</in>
+              <in>threadFini_exception_app.cpp</in>
+              <in>threadFini_sendsig.cpp</in>
+              <in>threadFini_sig_app.cpp</in>
+              <in>threadFini_tool.cpp</in>
+              <in>threadUtils.h</in>
+              <in>threadUtils_android.cpp</in>
+              <in>threadUtils_linux.cpp</in>
+              <in>threadUtils_windows.cpp</in>
+            </df>
+            <df name="I18N">
+              <in>i18n_tool.cpp</in>
+              <in>unix_unicode.cpp</in>
+              <in>unix_unicode_test_launcher.cpp</in>
+              <in>win_unicode.cpp</in>
+              <in>win_unicode_test_launcher.cpp</in>
+            </df>
+            <df name="IArg">
+              <in>iarg_explicit_memory_ea.cpp</in>
+              <in>iarg_explicit_memory_ea_app.cpp</in>
+              <in>iarg_explicit_memory_ea_app_asm_ia32.asm</in>
+              <in>iarg_explicit_memory_ea_app_asm_intel64.asm</in>
+              <in>iarg_inst_ptr_error_msg.cpp</in>
+            </df>
+            <df name="ImageTests">
+              <in>attachReattachImageLoadCallbacks_app.cpp</in>
+              <in>badmunmap_app.cpp</in>
+              <in>badmunmap_tool.cpp</in>
+              <in>dummy_dll.c</in>
+              <in>full_path_app.cpp</in>
+              <in>full_path_tool.cpp</in>
+              <in>imageLoad_tool.cpp</in>
+              <in>imageUnload_app.c</in>
+              <in>imageUnload_tool.cpp</in>
+              <in>image_load.cpp</in>
+              <in>images_on_attach_app.cpp</in>
+              <in>images_on_attach_tool.cpp</in>
+              <in>img_find_by_addr.cpp</in>
+              <in>img_open_win.cpp</in>
+              <in>l_imageLoad_app.cpp</in>
+              <in>launchReattachImageLoadCallbacks_app.cpp</in>
+              <in>load_dummy_dll.c</in>
+              <in>load_dummy_dll_tool.cpp</in>
+              <in>my_dll.c</in>
+              <in>one.c</in>
+              <in>reattachImageLoadCallback_tool.cpp</in>
+              <in>rebase_dll.c</in>
+              <in>rebase_dll_tool.cpp</in>
+              <in>split_image.cpp</in>
+              <in>split_image_app.cpp</in>
+              <in>two.c</in>
+              <in>w_app_launcher.cpp</in>
+              <in>w_imageLoad_app.cpp</in>
+              <in>win_load_ntdll.c</in>
+              <in>x86dll_app.cpp</in>
+            </df>
+            <df name="InlinedFuncsOpt">
+              <in>inlined_funcs_ia32.asm</in>
+              <in>inlined_funcs_intel64.asm</in>
+              <in>inlined_funcs_opt.cpp</in>
+              <in>inscount_for_lea_opt.cpp</in>
+              <in>update_icount_intel64.asm</in>
+            </df>
+            <df name="Insmix">
+              <in>insmix.cpp</in>
+            </df>
+            <df name="InstLib">
+              <df name="obj-intel64">
+              </df>
+              <in>alarm_manager.H</in>
+              <in>alarm_manager.cpp</in>
+              <in>alarms.H</in>
+              <in>alarms.cpp</in>
+              <in>asm_macros.h</in>
+              <in>call-stack.H</in>
+              <in>call-stack.cpp</in>
+              <in>control_chain.H</in>
+              <in>control_chain.cpp</in>
+              <in>control_manager.H</in>
+              <in>control_manager.cpp</in>
+              <in>controller_events.H</in>
+              <in>controller_events.cpp</in>
+              <in>debugger-shell.H</in>
+              <in>debugger-shell.cpp</in>
+              <in>filter.H</in>
+              <in>follow_child.H</in>
+              <in>ialarm.H</in>
+              <in>ialarm.cpp</in>
+              <in>icount.H</in>
+              <in>init_alarm.H</in>
+              <in>init_alarm.cpp</in>
+              <in>instlib.H</in>
+              <in>interactive_listener.H</in>
+              <in>interactive_listener.cpp</in>
+              <in>parse_control.H</in>
+              <in>parse_control.cpp</in>
+              <in>regions_control.H</in>
+              <in>skipper.H</in>
+              <in>time_warp.H</in>
+            </df>
+            <df name="InstLibExamples">
+              <in>control.cpp</in>
+              <in>control_detach.cpp</in>
+              <in>filter.cpp</in>
+              <in>filter_app.c</in>
+              <in>follow_child.cpp</in>
+              <in>icount.cpp</in>
+              <in>int3-test.c</in>
+              <in>itext-marker-test.c</in>
+              <in>multi-start-stop-test.c</in>
+              <in>one.c</in>
+              <in>test-mt3.cpp</in>
+            </df>
+            <df name="InstructionTests">
+              <in>pushpopcall_riprelative.s</in>
+              <in>rewritememop1.cpp</in>
+            </df>
+            <df name="InstrumentationOrderAndVersion">
+              <in>callbacks_order.cpp</in>
+              <in>instrumentation_order.cpp</in>
+              <in>instrumentation_order1.cpp</in>
+              <in>instrumentation_order10.cpp</in>
+              <in>instrumentation_order11.cpp</in>
+              <in>instrumentation_order12.cpp</in>
+              <in>instrumentation_order13.cpp</in>
+              <in>instrumentation_order14.cpp</in>
+              <in>instrumentation_order15.cpp</in>
+              <in>instrumentation_order16.cpp</in>
+              <in>instrumentation_order17.cpp</in>
+              <in>instrumentation_order18.cpp</in>
+              <in>instrumentation_order19.cpp</in>
+              <in>instrumentation_order2.cpp</in>
+              <in>instrumentation_order20.cpp</in>
+              <in>instrumentation_order21.cpp</in>
+              <in>instrumentation_order22.cpp</in>
+              <in>instrumentation_order23.cpp</in>
+              <in>instrumentation_order3.cpp</in>
+              <in>instrumentation_order4.cpp</in>
+              <in>instrumentation_order5.cpp</in>
+              <in>instrumentation_order6.cpp</in>
+              <in>instrumentation_order7.cpp</in>
+              <in>instrumentation_order8.cpp</in>
+              <in>instrumentation_order9.cpp</in>
+              <in>instrumentation_order_app.cpp</in>
+              <in>instrumentation_order_app.h</in>
+              <in>redblue.cpp</in>
+              <in>redblue.s</in>
+              <in>redblue_ia32.asm</in>
+              <in>redblue_intel64.asm</in>
+              <in>special.cpp</in>
+              <in>special_case.cpp</in>
+              <in>special_case1.cpp</in>
+              <in>special_case2.cpp</in>
+              <in>special_case3.cpp</in>
+              <in>special_case_aoti.cpp</in>
+              <in>special_case_aoti1.cpp</in>
+              <in>special_case_app.cpp</in>
+            </df>
+            <df name="JitProfilingApiTests">
+              <in>DynamicFuncInstrument.cpp</in>
+              <in>DynamicInsCount.cpp</in>
+            </df>
+            <df name="MacTests">
+              <in>bundle_app.c</in>
+              <in>bundle_bundle.c</in>
+              <in>bundle_tool.cpp</in>
+              <in>libdep.c</in>
+              <in>mylib.c</in>
+              <in>section_app.c</in>
+              <in>section_tool.cpp</in>
+              <in>thcnt.cpp</in>
+              <in>wqtimer.c</in>
+            </df>
+            <df name="Maid">
+              <in>CallStack.H</in>
+              <in>CallStack.cpp</in>
+              <in>Maid.cpp</in>
+              <in>argv_readparam.cpp</in>
+              <in>argv_readparam.h</in>
+              <in>syscall_names.H</in>
+              <in>syscall_names.cpp</in>
+            </df>
+            <df name="ManualExamples">
+              <in>buffer_linux.cpp</in>
+              <in>buffer_windows.cpp</in>
+              <in>countreps.cpp</in>
+              <in>detach.cpp</in>
+              <in>divide_by_zero_linux.c</in>
+              <in>divide_by_zero_windows.c</in>
+              <in>emudiv.cpp</in>
+              <in>fibonacci.cpp</in>
+              <in>follow_child_app1.cpp</in>
+              <in>follow_child_app2.cpp</in>
+              <in>follow_child_tool.cpp</in>
+              <in>fork_app.cpp</in>
+              <in>fork_jit_tool.cpp</in>
+              <in>imageload.cpp</in>
+              <in>inscount0.cpp</in>
+              <in>inscount1.cpp</in>
+              <in>inscount2.cpp</in>
+              <in>inscount_tls.cpp</in>
+              <in>invocation.cpp</in>
+              <in>isampling.cpp</in>
+              <in>itrace.cpp</in>
+              <in>little_malloc.c</in>
+              <in>malloc_mt.cpp</in>
+              <in>malloctrace.cpp</in>
+              <in>nonstatica.cpp</in>
+              <in>pinatrace.cpp</in>
+              <in>proccount.cpp</in>
+              <in>replacesigprobed.cpp</in>
+              <in>safecopy.cpp</in>
+              <in>stack-debugger.cpp</in>
+              <in>statica.cpp</in>
+              <in>staticcount.cpp</in>
+              <in>strace.cpp</in>
+              <in>thread_unix.c</in>
+              <in>thread_win.c</in>
+              <in>w_malloctrace.cpp</in>
+            </df>
+            <df name="MaskVector">
+              <in>iarg_reg_mask.cpp</in>
+              <in>maskedBranchTaken.cpp</in>
+              <in>maskedJump_app.cpp</in>
+              <in>maskedJump_mic.s</in>
+              <in>memoryVector_app.cpp</in>
+              <in>memoryVector_mic.s</in>
+              <in>vcount.cpp</in>
+              <in>vectorUtilization.cpp</in>
+              <in>vectorUtilizationTypes.cpp</in>
+              <in>vectorUtilizationTypes.h</in>
+              <in>vectorvalues.cpp</in>
+              <in>vectorvalues.h</in>
+            </df>
+            <df name="Memory">
+              <in>access_protection_app.cpp</in>
+              <in>address_mapping.cpp</in>
+              <in>address_mapping_probe.cpp</in>
+              <in>allcache.cpp</in>
+              <in>big_malloc.cpp</in>
+              <in>cache.H</in>
+              <in>dcache.cpp</in>
+              <in>dcache_xscale_config.cpp</in>
+              <in>footprint.H</in>
+              <in>footprint.cpp</in>
+              <in>icache.cpp</in>
+              <in>memalign.cpp</in>
+              <in>memalloc.cpp</in>
+              <in>memalloc2.cpp</in>
+              <in>memory_allocation_from_app_access_protection_tool.cpp</in>
+              <in>memory_allocation_from_tool_access_protection_tool.cpp</in>
+              <in>memory_limit.cpp</in>
+              <in>mmap_reader_app.cpp</in>
+              <in>new_delete_app.cpp</in>
+              <in>new_delete_tool.cpp</in>
+              <in>print_stack.c</in>
+              <in>print_vdso.c</in>
+              <in>restrict_memory_vdso.cpp</in>
+            </df>
+            <df name="MemTrace">
+              <in>atomic_increment_ia32.asm</in>
+              <in>atomic_increment_ia32.s</in>
+              <in>atomic_increment_intel64.asm</in>
+              <in>atomic_increment_intel64.s</in>
+              <in>atomic_increment_mic.s</in>
+              <in>membuffer.cpp</in>
+              <in>membuffer_simple.cpp</in>
+              <in>membuffer_simple_tid.cpp</in>
+              <in>membuffer_threadpool.cpp</in>
+              <in>memtrace.cpp</in>
+              <in>memtrace_simple.cpp</in>
+              <in>memtrace_threadpool.cpp</in>
+              <in>thread.c</in>
+              <in>thread2.cpp</in>
+              <in>threadpool_statistics.h</in>
+            </df>
+            <df name="MemTranslate">
+              <in>indirect_jmp.asm</in>
+              <in>indirect_jmp.s</in>
+              <in>indirect_jmp_with_translation.cpp</in>
+              <in>memory_addr_callback.cpp</in>
+              <in>memory_callback_error.cpp</in>
+            </df>
+            <df name="Mix">
+              <in>assy-support-ia32.asm</in>
+              <in>assy-support-intel64.asm</in>
+              <in>marker-example.cpp</in>
+              <in>mix-fp-state.H</in>
+              <in>mix-mt.cpp</in>
+              <in>test-mt.cpp</in>
+            </df>
+            <df name="Mmx">
+              <in>fpstack_ia32_win.asm</in>
+              <in>mmx_test1_app.cpp</in>
+              <in>mmx_test1_tool.cpp</in>
+              <in>mmx_test2_app.cpp</in>
+              <in>mmx_test2_tool.cpp</in>
+              <in>mmxsequence_ia32_win.asm</in>
+            </df>
+            <df name="MyPinTool">
+              <in>MyPinTool.cpp</in>
+            </df>
+            <df name="Probes">
+              <in>app_trace.c</in>
+              <in>arglist.cpp</in>
+              <in>arglist.h</in>
+              <in>bad_call.c</in>
+              <in>bad_jump.c</in>
+              <in>before_after_defaultcall.cpp</in>
+              <in>before_after_defaultcall_app.c</in>
+              <in>before_after_fastcall.cpp</in>
+              <in>before_after_fastcall_app.c</in>
+              <in>before_after_stdcall.cpp</in>
+              <in>before_after_stdcall_app.c</in>
+              <in>child_process.cpp</in>
+              <in>code_range.cpp</in>
+              <in>context_probe.cpp</in>
+              <in>create_process_app.cpp</in>
+              <in>dltest_unix.c</in>
+              <in>dltest_win.c</in>
+              <in>do_nothing_ia32.asm</in>
+              <in>do_nothing_ia32.s</in>
+              <in>do_nothing_intel64.asm</in>
+              <in>do_nothing_intel64.s</in>
+              <in>empty.c</in>
+              <in>emptysub.c</in>
+              <in>err_call.c</in>
+              <in>err_replace.c</in>
+              <in>error-lin-jit.cpp</in>
+              <in>error-lin-probe.cpp</in>
+              <in>error-main.c</in>
+              <in>error-sub.c</in>
+              <in>error-win-jit.cpp</in>
+              <in>error-win-probe.cpp</in>
+              <in>exc.cpp</in>
+              <in>exception_in_dll_app.cpp</in>
+              <in>exception_in_dll_tool.cpp</in>
+              <in>exception_in_mt_attach.cpp</in>
+              <in>exception_in_mt_attach_app.cpp</in>
+              <in>exception_in_probe.cpp</in>
+              <in>exception_in_probe_app.c</in>
+              <in>exception_in_probe_on_probe.cpp</in>
+              <in>exception_in_probe_on_probe_sig.cpp</in>
+              <in>exception_in_probe_sig.cpp</in>
+              <in>exception_in_probed_call.cpp</in>
+              <in>exception_in_probed_call_after.cpp</in>
+              <in>exception_in_probed_call_after_app.c</in>
+              <in>exception_in_probed_call_app.c</in>
+              <in>exception_in_probed_call_cpp_after_app.cpp</in>
+              <in>exception_in_probed_call_cpp_app.cpp</in>
+              <in>exception_in_probed_call_sig.cpp</in>
+              <in>exit_app.cpp</in>
+              <in>exit_repl.cpp</in>
+              <in>fall_thru.c</in>
+              <in>fork_app.cpp</in>
+              <in>getesp_ia32.asm</in>
+              <in>getesp_intel64.asm</in>
+              <in>getstack_ia32.s</in>
+              <in>getstack_intel64.s</in>
+              <in>good_jump.c</in>
+              <in>heavy_stack_win.c</in>
+              <in>high_target.c</in>
+              <in>init.cpp</in>
+              <in>insert1.cpp</in>
+              <in>insert10.cpp</in>
+              <in>insert11.cpp</in>
+              <in>insert12.cpp</in>
+              <in>insert1win.cpp</in>
+              <in>insert2.cpp</in>
+              <in>insert2win.cpp</in>
+              <in>insert3.cpp</in>
+              <in>insert3win.cpp</in>
+              <in>insert4.cpp</in>
+              <in>insert5.cpp</in>
+              <in>insert6.cpp</in>
+              <in>insert7.cpp</in>
+              <in>insert8.cpp</in>
+              <in>insert9.cpp</in>
+              <in>insert_call_probed.cpp</in>
+              <in>insert_call_probed_app.c</in>
+              <in>insertfast.cpp</in>
+              <in>insertstd.cpp</in>
+              <in>ipr.c</in>
+              <in>iprtool.cpp</in>
+              <in>jmp_in_probe.cpp</in>
+              <in>jmp_in_probe_app.cpp</in>
+              <in>jmp_in_probe_app1.cpp</in>
+              <in>jmp_in_probe_intel64.asm</in>
+              <in>jmp_in_probe_intel64.s</in>
+              <in>little_malloc.c</in>
+              <in>load_map.cpp</in>
+              <in>load_map_app.cpp</in>
+              <in>local_branch_ia32.s</in>
+              <in>local_branch_intel64.s</in>
+              <in>malloctrace2.cpp</in>
+              <in>malloctrace2win.cpp</in>
+              <in>malloctrace_locktest.cpp</in>
+              <in>mallocwrappers_unix.c</in>
+              <in>move_ip.c</in>
+              <in>one_unix.c</in>
+              <in>one_win.c</in>
+              <in>parent_process.cpp</in>
+              <in>pc64.s</in>
+              <in>probe1.cpp</in>
+              <in>probe10.cpp</in>
+              <in>probe2.cpp</in>
+              <in>probe3.cpp</in>
+              <in>probe4.cpp</in>
+              <in>probe5.cpp</in>
+              <in>probe6.cpp</in>
+              <in>probe7.cpp</in>
+              <in>probe8.cpp</in>
+              <in>probe9.cpp</in>
+              <in>probe_close.cpp</in>
+              <in>probe_err1.cpp</in>
+              <in>probe_err2.cpp</in>
+              <in>probe_err4.cpp</in>
+              <in>probe_err5.cpp</in>
+              <in>probe_err6.cpp</in>
+              <in>probe_movip.cpp</in>
+              <in>probe_on_probe1.cpp</in>
+              <in>probe_on_probe2.cpp</in>
+              <in>probe_safe_test_ia32.s</in>
+              <in>probe_safe_test_intel64.s</in>
+              <in>probe_stdcall_fastcall.h</in>
+              <in>probecdecl.cpp</in>
+              <in>probefastcall.cpp</in>
+              <in>probefastcall_app.c</in>
+              <in>probeheapalloc.cpp</in>
+              <in>probemalloctrace.cpp</in>
+              <in>probesafetest.cpp</in>
+              <in>probesafetest_app.c</in>
+              <in>probesleep.cpp</in>
+              <in>probestdcall.cpp</in>
+              <in>probestdcall_app.c</in>
+              <in>proto1.cpp</in>
+              <in>proto1win-err.cpp</in>
+              <in>proto1win.cpp</in>
+              <in>proto2.cpp</in>
+              <in>proto3.cpp</in>
+              <in>proto3win.cpp</in>
+              <in>proto4.cpp</in>
+              <in>protobar.c</in>
+              <in>protofoo.c</in>
+              <in>protorbar.c</in>
+              <in>pthread_exit_app.c</in>
+              <in>pthread_exit_tool.cpp</in>
+              <in>relocate_app.cpp</in>
+              <in>relocate_asm_ia32.s</in>
+              <in>relocate_asm_intel64.s</in>
+              <in>relocate_rtn.cpp</in>
+              <in>remove_probe.cpp</in>
+              <in>remove_probe2.cpp</in>
+              <in>replace_empty.cpp</in>
+              <in>replace_empty_twice.cpp</in>
+              <in>replace_exit.cpp</in>
+              <in>replaceapp.c</in>
+              <in>replacecall.c</in>
+              <in>replacedisp.c</in>
+              <in>replacefun.c</in>
+              <in>replacejmp.c</in>
+              <in>replaceshorty.c</in>
+              <in>replacesig_empty.cpp</in>
+              <in>scan_all_rtns_for_probe.cpp</in>
+              <in>sectest.cpp</in>
+              <in>sempost_app.cpp</in>
+              <in>sempost_repl.cpp</in>
+              <in>set_tp.s</in>
+              <in>shortBB.cpp</in>
+              <in>shortBB64.cpp</in>
+              <in>shortBB64app.c</in>
+              <in>shortBB64foo.asm</in>
+              <in>shortBBapp.c</in>
+              <in>signals.cpp</in>
+              <in>signals_app.cpp</in>
+              <in>simplebar.c</in>
+              <in>simplefoo.c</in>
+              <in>simplefoo10.c</in>
+              <in>simplefoo9.c</in>
+              <in>simplesp.s</in>
+              <in>simplestd10.c</in>
+              <in>sleep_unix.c</in>
+              <in>sleep_win.c</in>
+              <in>spin_lock_app.c</in>
+              <in>spinlock_insert.cpp</in>
+              <in>spinlock_repl.cpp</in>
+              <in>spinlock_replsig.cpp</in>
+              <in>ssewin.cpp</in>
+              <in>svcraw_app.cpp</in>
+              <in>svcraw_repl.cpp</in>
+              <in>symbolnames.cpp</in>
+              <in>syscall_in_probe.cpp</in>
+              <in>syscall_in_probe_app.c</in>
+              <in>syscall_yield64.s</in>
+              <in>thd_malloc.c</in>
+              <in>tpss.cpp</in>
+              <in>tpss_lin_libc.cpp</in>
+              <in>tpss_lin_libdl.cpp</in>
+              <in>tpss_lin_libncurses.cpp</in>
+              <in>tpss_lin_libpthread.cpp</in>
+              <in>tpss_lin_librt.cpp</in>
+              <in>two_unix.c</in>
+              <in>two_win.c</in>
+              <in>unix_parent_tool.cpp</in>
+              <in>unloadtest_unix.c</in>
+              <in>unloadtest_win.c</in>
+              <in>win_child_process.cpp</in>
+            </df>
+            <df name="Regvalue">
+              <in>changeRegs_ia32.asm</in>
+              <in>changeRegs_ia32.s</in>
+              <in>changeRegs_intel64.asm</in>
+              <in>changeRegs_intel64.s</in>
+              <in>changeRegs_mic.s</in>
+              <in>change_context_regvalue.cpp</in>
+              <in>checkXStateBV_app.cpp</in>
+              <in>checkXStateBV_tool.cpp</in>
+              <in>context_regvalue.cpp</in>
+              <in>context_utils.cpp</in>
+              <in>context_utils.h</in>
+              <in>doXsave_ia32.asm</in>
+              <in>doXsave_ia32.s</in>
+              <in>doXsave_intel64.asm</in>
+              <in>doXsave_intel64.s</in>
+              <in>emu_context_regvalue.cpp</in>
+              <in>iarg_reg_reference.cpp</in>
+              <in>iarg_reg_reference_flags.cpp</in>
+              <in>print_flags.c</in>
+              <in>print_flags_asm.asm</in>
+              <in>print_flags_asm.s</in>
+              <in>register_modification_utils.cpp</in>
+              <in>register_modification_utils.h</in>
+              <in>regvalue_app.cpp</in>
+              <in>regvalue_test_utils.cpp</in>
+              <in>regvalue_test_utils.h</in>
+              <in>regvalues.cpp</in>
+              <in>regvalues.h</in>
+              <in>xsave_iarg_mem.cpp</in>
+              <in>xsave_iarg_mem_app.cpp</in>
+              <in>xstateBVUtils.cpp</in>
+              <in>xstateBVUtils.h</in>
+            </df>
+            <df name="Replay">
+              <in>call_function_natively.cpp</in>
+              <in>call_function_natively_app.cpp</in>
+              <in>record_imageload.cpp</in>
+              <in>record_imageload2.cpp</in>
+              <in>replay_syscall.cpp</in>
+              <in>win_exception.c</in>
+              <in>win_replay_exception.cpp</in>
+            </df>
+            <df name="RtnTests">
+              <in>ifuncInstrumentation.cpp</in>
+              <in>ifuncInstrumentationApp.c</in>
+            </df>
+            <df name="SegmentsVirtualization">
+              <in>fixed_base_reg.cpp</in>
+              <in>gcc_thread_local_vars_app.c</in>
+              <in>load_far_pointer_ia32.cpp</in>
+              <in>load_far_pointer_ia32.s</in>
+              <in>load_far_pointer_intel64.cpp</in>
+              <in>load_far_pointer_intel64.s</in>
+              <in>load_far_pointer_mic.cpp</in>
+              <in>load_far_pointer_mic.s</in>
+              <in>modify_ldt.cpp</in>
+              <in>movs.s</in>
+              <in>set_thread_area1.cpp</in>
+              <in>set_thread_area2.cpp</in>
+              <in>set_thread_area3.cpp</in>
+            </df>
+            <df name="SegTrace">
+              <in>disasm_container.H</in>
+              <in>hello.c</in>
+              <in>pending_syscalls.H</in>
+              <in>segtrace.cpp</in>
+              <in>thread.c</in>
+            </df>
+            <df name="SignalTests">
+              <in>action-pending.cpp</in>
+              <in>altstack.c</in>
+              <in>async_multithreadingapp.c</in>
+              <in>async_multithreadingtool.cpp</in>
+              <in>asyncfpe.c</in>
+              <in>bad-stack-ia32-asm.s</in>
+              <in>bad-stack-intel64-asm.s</in>
+              <in>bad-stack.c</in>
+              <in>blockingsyscall.c</in>
+              <in>blockloop.c</in>
+              <in>call-app-stress-tool.cpp</in>
+              <in>call-app-stress.cpp</in>
+              <in>call-app-tool.cpp</in>
+              <in>call-app.cpp</in>
+              <in>copywithxmm_ia32.s</in>
+              <in>copywithxmm_intel64.s</in>
+              <in>deprecated-intercept.cpp</in>
+              <in>dfcheck.c</in>
+              <in>dfcheck_ia32.s</in>
+              <in>dfcheck_intel64.s</in>
+              <in>double.c</in>
+              <in>efault.c</in>
+              <in>errcheck.c</in>
+              <in>exithandler.c</in>
+              <in>exittool.cpp</in>
+              <in>fastsigchecktool.cpp</in>
+              <in>fatal.c</in>
+              <in>fatal_block_sync.c</in>
+              <in>fatalsync.c</in>
+              <in>faultcheck-ia32-asm.s</in>
+              <in>faultcheck-intel64-asm.s</in>
+              <in>faultcheck-target.h</in>
+              <in>faultcheck-x86.c</in>
+              <in>faultcheck.c</in>
+              <in>faultcheck_flags.c</in>
+              <in>faultcheck_flags_ia32_asm.s</in>
+              <in>faultcheck_flags_tool1.cpp</in>
+              <in>faultcheck_flags_tool2.cpp</in>
+              <in>faultcheck_flags_tool3.cpp</in>
+              <in>faultcheck_ipf_asm.s</in>
+              <in>faulttool.cpp</in>
+              <in>forktest_altstack.c</in>
+              <in>fpcheck.c</in>
+              <in>fptags.c</in>
+              <in>fptags_ia32.s</in>
+              <in>futex.c</in>
+              <in>handle-usr1.c</in>
+              <in>handlerAlignment.cpp</in>
+              <in>handlerAlignment_ia32.s</in>
+              <in>hlt.c</in>
+              <in>insfault-intel64-asm.s</in>
+              <in>insfault-intel64.h</in>
+              <in>insfault-linux-intel64.cpp</in>
+              <in>insfault.cpp</in>
+              <in>inst-type-app.cpp</in>
+              <in>inst-type-tool.cpp</in>
+              <in>interceptall.cpp</in>
+              <in>interceptor_for_regbindings_cache_test.cpp</in>
+              <in>interceptsegv.cpp</in>
+              <in>intercepttool.cpp</in>
+              <in>logtool.cpp</in>
+              <in>maskcheck.c</in>
+              <in>movsbtest.c</in>
+              <in>movsbtest_ia32.s</in>
+              <in>movsbtest_intel64.s</in>
+              <in>movsbtest_mic.s</in>
+              <in>mtstress.cpp</in>
+              <in>nestmask.c</in>
+              <in>null-rewrite-tool.cpp</in>
+              <in>num_segvs.h</in>
+              <in>raise-exception-addrs.h</in>
+              <in>raise-exception-tool.cpp</in>
+              <in>recursive.c</in>
+              <in>reg-pressure-tool.cpp</in>
+              <in>regbindings_cache_test_checker.c</in>
+              <in>replay-signal-app.c</in>
+              <in>replay-signal-tool.cpp</in>
+              <in>reporter.cpp</in>
+              <in>resetcont.c</in>
+              <in>resetsegv-safecopy.cpp</in>
+              <in>resetsegv.c</in>
+              <in>segv.c</in>
+              <in>segv_for_regbindings_cache_test.c</in>
+              <in>segv_on_fetch.c</in>
+              <in>setcontext.c</in>
+              <in>shortmask.c</in>
+              <in>sig64.cpp</in>
+              <in>sigaltstack.c</in>
+              <in>sigcont.c</in>
+              <in>sigenable.cpp</in>
+              <in>sigenableapp.c</in>
+              <in>sigenableapp2.c</in>
+              <in>sigflowcheck.cpp</in>
+              <in>sigprocmask_short.cpp</in>
+              <in>sigsuspend.c</in>
+              <in>sigusr2.c</in>
+              <in>simple.c</in>
+              <in>spilltool.cpp</in>
+              <in>suspendmask.c</in>
+              <in>syncasyncapp.c</in>
+              <in>syncasynctool.cpp</in>
+              <in>then-stress-app.cpp</in>
+              <in>then-stress-tool.cpp</in>
+              <in>threadtest_altstack.c</in>
+              <in>xmmcheck.c</in>
+              <in>xmmfaultcheck.c</in>
+            </df>
+            <df name="SimpleExamples">
+              <in>calltrace.cpp</in>
+              <in>catmix.cpp</in>
+              <in>coco.cpp</in>
+              <in>dcache.H</in>
+              <in>dcache.cpp</in>
+              <in>edgcnt.cpp</in>
+              <in>emuload.cpp</in>
+              <in>extmix.cpp</in>
+              <in>fence.cpp</in>
+              <in>get_source_app.cpp</in>
+              <in>get_source_location.cpp</in>
+              <in>icount.cpp</in>
+              <in>ilenmix.cpp</in>
+              <in>inscount2_mt.cpp</in>
+              <in>inscount2_vregs.cpp</in>
+              <in>jumpmix.cpp</in>
+              <in>ldstmix.cpp</in>
+              <in>malloctrace.cpp</in>
+              <in>opcodemix.cpp</in>
+              <in>oper-imm.cpp</in>
+              <in>oper_imm_app.cpp</in>
+              <in>oper_imm_asm.asm</in>
+              <in>oper_imm_asm.s</in>
+              <in>pinatrace.cpp</in>
+              <in>regmix.cpp</in>
+              <in>regval.cpp</in>
+              <in>regval_app.cpp</in>
+              <in>topopcode.cpp</in>
+              <in>toprtn.cpp</in>
+              <in>trace.cpp</in>
+              <in>xed-print.cpp</in>
+              <in>xed-use.cpp</in>
+            </df>
+            <df name="SyncTests">
+              <in>lock-tester.cpp</in>
+              <in>mt-worker-unix.cpp</in>
+              <in>mt-worker-win.cpp</in>
+              <in>rt-locks-app.cpp</in>
+              <in>rt-locks-tool.cpp</in>
+              <in>stress-client-lock-app.cpp</in>
+              <in>stress-client-lock-tool.cpp</in>
+            </df>
+            <df name="SyscallsEmulation">
+              <in>ppollEmulation_app.cpp</in>
+              <in>syscalls_and_locks_app.cpp</in>
+              <in>syscalls_and_locks_tool.cpp</in>
+            </df>
+            <df name="Tests">
+              <in>IARGList.cpp</in>
+              <in>after.cpp</in>
+              <in>alah.cpp</in>
+              <in>bblCache.cpp</in>
+              <in>bblFallThrough.cpp</in>
+              <in>bblnull.cpp</in>
+              <in>brtaken.cpp</in>
+              <in>callargs.cpp</in>
+              <in>callargs_probe_tool.cpp</in>
+              <in>cflowcheck.cpp</in>
+              <in>check_env.cpp</in>
+              <in>checkaddress.cpp</in>
+              <in>checkaddressapp.s</in>
+              <in>child_sig_while_execv_app.c</in>
+              <in>child_sig_while_execv_simple_app.c</in>
+              <in>clear_df_flag_tool.cpp</in>
+              <in>const_context_at_ins.cpp</in>
+              <in>context-pc.cpp</in>
+              <in>context.cpp</in>
+              <in>context_stack_and_spill.cpp</in>
+              <in>correct_winapp_runs_pin_cmdline.cpp</in>
+              <in>detach.cpp</in>
+              <in>ea_verifier.cpp</in>
+              <in>emu.cpp</in>
+              <in>exitProcess.cpp</in>
+              <in>exitProcessApp.c</in>
+              <in>finiRemove.cpp</in>
+              <in>foobar.c</in>
+              <in>hello.cpp</in>
+              <in>icount1.cpp</in>
+              <in>icount2.cpp</in>
+              <in>icount3.cpp</in>
+              <in>icount4.cpp</in>
+              <in>icount5.cpp</in>
+              <in>icountcheck.cpp</in>
+              <in>ifunc_tst.cpp</in>
+              <in>ifuncmemcpy.cpp</in>
+              <in>illegalEnvp_app.c</in>
+              <in>imageLoad.cpp</in>
+              <in>imageLoadBackward.cpp</in>
+              <in>insMix.cpp</in>
+              <in>insMixApp.s</in>
+              <in>inscount2_mt_debuginfo.cpp</in>
+              <in>inscount_per_image.cpp</in>
+              <in>int3test.c</in>
+              <in>jecxz_ia32.asm</in>
+              <in>jecxz_ia32.s</in>
+              <in>jecxz_intel64.asm</in>
+              <in>jecxz_intel64.s</in>
+              <in>jecxz_mic.s</in>
+              <in>lasterror.cpp</in>
+              <in>launcher_app.cpp</in>
+              <in>launcher_tool.cpp</in>
+              <in>limitedTraces.cpp</in>
+              <in>loop.s</in>
+              <in>malloc.cpp</in>
+              <in>memcpy_app.c</in>
+              <in>memident.cpp</in>
+              <in>mtest.cpp</in>
+              <in>multipleinstrumentation.cpp</in>
+              <in>mysetenv.c</in>
+              <in>new.cpp</in>
+              <in>operand.cpp</in>
+              <in>pagetable.H</in>
+              <in>parse_executed_rtns.cpp</in>
+              <in>pin_tests_util.H</in>
+              <in>prefix.cpp</in>
+              <in>prefixApp.s</in>
+              <in>probe.cpp</in>
+              <in>reg.cpp</in>
+              <in>reg_ref_inlined.cpp</in>
+              <in>removeinstrumentation.cpp</in>
+              <in>rep_ip_at_ipoint_after_app.c</in>
+              <in>rep_ip_at_ipoint_after_app_unix.s</in>
+              <in>rep_ip_at_ipoint_after_tool.cpp</in>
+              <in>rtnNumIns.cpp</in>
+              <in>rtn_create_at_dup.cpp</in>
+              <in>rtn_insert_call_probed.cpp</in>
+              <in>sampleApp.s</in>
+              <in>sec.cpp</in>
+              <in>segv.cpp</in>
+              <in>sequence.cpp</in>
+              <in>sequencecheck.cpp</in>
+              <in>set_df_flag_tool.cpp</in>
+              <in>set_status_flags_tool.cpp</in>
+              <in>smc_check.cpp</in>
+              <in>smc_test_l.c</in>
+              <in>snprintf.cpp</in>
+              <in>sourceLocation_app.cpp</in>
+              <in>sourceLocation_img1.cpp</in>
+              <in>sourceLocation_img2.cpp</in>
+              <in>sourceLocation_tool.cpp</in>
+              <in>statdyn_app.cpp</in>
+              <in>statdyn_tool.cpp</in>
+              <in>strcmp_app.c</in>
+              <in>swizzle1.cpp</in>
+              <in>symOutOfBound.cpp</in>
+              <in>syntax.cpp</in>
+              <in>syntax_tst.cpp</in>
+              <in>test_ebx_in_exceptions_ia32_unix.s</in>
+              <in>test_ebx_in_exceptions_ia32_win.asm</in>
+              <in>test_ebx_in_exceptions_unix.cpp</in>
+              <in>test_ebx_in_exceptions_win.cpp</in>
+              <in>test_ebx_in_exceptions_xed_interface.cpp</in>
+              <in>thread.cpp</in>
+              <in>threadApp.cpp</in>
+              <in>traceOriginal.cpp</in>
+              <in>tracecount.cpp</in>
+              <in>traceusage.cpp</in>
+              <in>util.cpp</in>
+              <in>verify.cpp</in>
+              <in>win_cvapp_test_tool.cpp</in>
+              <in>winapp_runs_pin.cpp</in>
+              <in>winapp_runs_pin.h</in>
+              <in>xedReg.cpp</in>
+            </df>
+            <df name="ToolUnitTests">
+              <in>addit.c</in>
+              <in>addr32_override_app.cpp</in>
+              <in>addr32_override_app_asm.s</in>
+              <in>align_access.cpp</in>
+              <in>align_access_app.c</in>
+              <in>analysis_flag_overwrite_app.c</in>
+              <in>analysis_flag_overwrite_app_win.asm</in>
+              <in>analysis_flag_overwrite_tool1.cpp</in>
+              <in>analysis_flag_overwrite_tool1_win.asm</in>
+              <in>analysis_flag_overwrite_tool2.cpp</in>
+              <in>analysis_flag_overwrite_tool2_win.asm</in>
+              <in>analysis_flag_overwrite_tool3.cpp</in>
+              <in>analysis_flag_overwrite_tool3_win.asm</in>
+              <in>and.s</in>
+              <in>aoti_mutation_target.c</in>
+              <in>aoti_mutation_tool.cpp</in>
+              <in>apc_monitor.cpp</in>
+              <in>app_inspects_internal_thread_win.cpp</in>
+              <in>app_inspects_internal_thread_win_app.c</in>
+              <in>args.cpp</in>
+              <in>args_err.cpp</in>
+              <in>args_lineno.cpp</in>
+              <in>attach.cpp</in>
+              <in>attach_app.cpp</in>
+              <in>baserel_in_probe_tool.cpp</in>
+              <in>big_bss.c</in>
+              <in>branch_target_addr.cpp</in>
+              <in>btc.s</in>
+              <in>btc_app.c</in>
+              <in>callapp-flush.cpp</in>
+              <in>callapp0.cpp</in>
+              <in>callapp0i.cpp</in>
+              <in>callapp1.cpp</in>
+              <in>callapp10.cpp</in>
+              <in>callapp10i.cpp</in>
+              <in>callapp12.cpp</in>
+              <in>callapp13.cpp</in>
+              <in>callapp14.cpp</in>
+              <in>callapp15.cpp</in>
+              <in>callapp1i.cpp</in>
+              <in>callapp2.cpp</in>
+              <in>callapp3.cpp</in>
+              <in>callapp4.cpp</in>
+              <in>callapp5.cpp</in>
+              <in>callapp6.cpp</in>
+              <in>callapp7.cpp</in>
+              <in>callapp8.cpp</in>
+              <in>callapp9.cpp</in>
+              <in>callapp_64bit_param_app_1.c</in>
+              <in>callapp_64bit_param_app_2.c</in>
+              <in>callapp_64bit_param_tool.cpp</in>
+              <in>callapp_nested_app.c</in>
+              <in>callapp_nested_app1.c</in>
+              <in>callapp_nested_tool.cpp</in>
+              <in>callapp_perf_app.c</in>
+              <in>callapp_perf_app1.c</in>
+              <in>callapp_perf_tool.cpp</in>
+              <in>callappfast10.cpp</in>
+              <in>callappstd10.cpp</in>
+              <in>callsp_ia32.s</in>
+              <in>callsp_intel64.s</in>
+              <in>callsp_mic.s</in>
+              <in>cancel.c</in>
+              <in>change_syscall.cpp</in>
+              <in>change_syscall_app.c</in>
+              <in>check_env.cpp</in>
+              <in>check_env_app.cpp</in>
+              <in>check_fpstate.cpp</in>
+              <in>check_fpstate_app.c</in>
+              <in>check_legal_callbacks.cpp</in>
+              <in>checkerrorfile.cpp</in>
+              <in>checkexecuting.cpp</in>
+              <in>checkinline.cpp</in>
+              <in>checkreps.cpp</in>
+              <in>claim_regs.cpp</in>
+              <in>clobber.cpp</in>
+              <in>clobber_asm.s</in>
+              <in>cmovstest.c</in>
+              <in>cmpxchg8b_unix.s</in>
+              <in>cmpxchg8b_win.asm</in>
+              <in>cmpxchg8b_with_explicit_ebx_win.asm</in>
+              <in>code_cache_block_overflow1.cpp</in>
+              <in>code_cache_block_overflow2.cpp</in>
+              <in>context.cpp</in>
+              <in>context_state_apis.cpp</in>
+              <in>control_init.cpp</in>
+              <in>create_rtn.cpp</in>
+              <in>create_rtn_app.cpp</in>
+              <in>data_in_code_win.cpp</in>
+              <in>data_in_code_win_app.c</in>
+              <in>datasym.cpp</in>
+              <in>datasym_app.c</in>
+              <in>debugservice_monitor.cpp</in>
+              <in>deepbind.cpp</in>
+              <in>deepbind_app.c</in>
+              <in>deepbind_syscalls.c</in>
+              <in>df_test_app.c</in>
+              <in>df_test_app_win.asm</in>
+              <in>df_test_tool1.cpp</in>
+              <in>df_test_tool1_win.asm</in>
+              <in>df_test_tool2.cpp</in>
+              <in>df_test_tool2_win.asm</in>
+              <in>df_test_tool3.cpp</in>
+              <in>df_test_tool3_win.asm</in>
+              <in>df_test_tool4.cpp</in>
+              <in>df_test_tool4_win.asm</in>
+              <in>df_test_tool5.cpp</in>
+              <in>df_test_tool5_win.asm</in>
+              <in>dlclose.cpp</in>
+              <in>dlclose_app.cpp</in>
+              <in>dltest.c</in>
+              <in>dltest2.c</in>
+              <in>doint.c</in>
+              <in>doint_ia32.s</in>
+              <in>dummy_dll.c</in>
+              <in>dynamic_secondary_dll.cpp</in>
+              <in>ea_verifier_addr16.cpp</in>
+              <in>ea_verifier_addr16_win.asm</in>
+              <in>ea_verifier_bt.cpp</in>
+              <in>earlymalloc.cpp</in>
+              <in>earlyout.cpp</in>
+              <in>elf_symbols.cpp</in>
+              <in>elf_symsize.cpp</in>
+              <in>emu_jumps.cpp</in>
+              <in>emu_stack.cpp</in>
+              <in>error_log.cpp</in>
+              <in>error_log_app.cpp</in>
+              <in>exceptionAddress_lin.cpp</in>
+              <in>exceptionAddress_lin_app.cpp</in>
+              <in>exception_app_ia32.s</in>
+              <in>exception_app_intel64.s</in>
+              <in>exception_app_mic.s</in>
+              <in>exception_context_monitor.cpp</in>
+              <in>exception_monitor.cpp</in>
+              <in>exception_monitor_for_iret_order.cpp</in>
+              <in>exception_tool_ia32.s</in>
+              <in>exception_tool_intel64.s</in>
+              <in>exception_tool_mic.s</in>
+              <in>executeat_callback.cpp</in>
+              <in>executeat_lock.cpp</in>
+              <in>execvp.c</in>
+              <in>exports_only_tool.cpp</in>
+              <in>far.s</in>
+              <in>farmain.cpp</in>
+              <in>fini.cpp</in>
+              <in>flag_ac_app.c</in>
+              <in>flag_ac_app_ia32_unix.s</in>
+              <in>flag_ac_app_ia32_win.asm</in>
+              <in>flag_ac_app_intel64_unix.s</in>
+              <in>flag_ac_app_intel64_win.asm</in>
+              <in>flag_ac_app_mic_unix.s</in>
+              <in>flag_ac_app_u_64.s</in>
+              <in>flag_ac_tool.cpp</in>
+              <in>flag_ac_win_app.c</in>
+              <in>flag_ac_win_tool.cpp</in>
+              <in>flag_spill_fill_app.c</in>
+              <in>flag_spill_fill_app_win.asm</in>
+              <in>flag_spill_fill_tool1.cpp</in>
+              <in>flag_spill_fill_tool1_win.asm</in>
+              <in>flags_at_analysis_app.c</in>
+              <in>flags_at_analysis_app_win.asm</in>
+              <in>flags_at_analysis_tool.cpp</in>
+              <in>fp_args.cpp</in>
+              <in>fp_args_app.cpp</in>
+              <in>fp_context_set_const_context.cpp</in>
+              <in>fp_insert.cpp</in>
+              <in>fp_replace.cpp</in>
+              <in>fp_replace_app.c</in>
+              <in>funcarg_ep.cpp</in>
+              <in>funcarg_ep_app.cpp</in>
+              <in>funreplace_alert.cpp</in>
+              <in>guard_page.cpp</in>
+              <in>guard_page_app.cpp</in>
+              <in>htab.c</in>
+              <in>iarg_tsc1.cpp</in>
+              <in>iarg_tsc2.cpp</in>
+              <in>iarg_tsc3.cpp</in>
+              <in>iarg_tsc4.cpp</in>
+              <in>iarg_tsc5.cpp</in>
+              <in>iarg_tsc_probed1.cpp</in>
+              <in>illegal_call_app.cpp</in>
+              <in>image_entry.cpp</in>
+              <in>image_load.cpp</in>
+              <in>incebx.cpp</in>
+              <in>indirect_call_branch_target_addr.cpp</in>
+              <in>inline_opt_test.cpp</in>
+              <in>inline_opt_test_app.cpp</in>
+              <in>inline_opt_test_app_ia32.asm</in>
+              <in>inline_opt_test_app_ia32.s</in>
+              <in>inline_opt_test_app_intel64.asm</in>
+              <in>inline_opt_test_app_intel64.s</in>
+              <in>inline_opt_test_df1.cpp</in>
+              <in>inline_opt_test_df3.cpp</in>
+              <in>inline_opt_test_df_app.cpp</in>
+              <in>inline_opt_test_df_app_ia32.asm</in>
+              <in>inline_opt_test_df_ia32.asm</in>
+              <in>inline_opt_test_ia32.asm</in>
+              <in>inline_opt_test_ia32.s</in>
+              <in>inline_opt_test_intel64.asm</in>
+              <in>inline_opt_test_intel64.s</in>
+              <in>inlinecall.cpp</in>
+              <in>inlined-stack-arg.cpp</in>
+              <in>inlined-stack-arg1.cpp</in>
+              <in>inlined-stack-arg2.cpp</in>
+              <in>inlined-stack-arg2_win.asm</in>
+              <in>inlined-stack-arg2_win_intel64.asm</in>
+              <in>inner.c</in>
+              <in>ins_check_fetcher.cpp</in>
+              <in>inscount2_fornoinline.cpp</in>
+              <in>insert_if_then_call.cpp</in>
+              <in>insert_if_then_call1.cpp</in>
+              <in>insert_if_then_call2.cpp</in>
+              <in>insert_if_then_call_app.cpp</in>
+              <in>insertand.cpp</in>
+              <in>insfetch_tool.cpp</in>
+              <in>int3del.cpp</in>
+              <in>int3test.c</in>
+              <in>internal_exception_handler.cpp</in>
+              <in>internal_exception_handler_app.cpp</in>
+              <in>internal_exception_handler_app_lin.cpp</in>
+              <in>internal_exception_handler_lin.cpp</in>
+              <in>intrin.cpp</in>
+              <in>iret_ia32.s</in>
+              <in>iret_intel64.s</in>
+              <in>iret_mic.s</in>
+              <in>iretmain_ia32.c</in>
+              <in>iretmain_intel64.c</in>
+              <in>iretmain_mic.c</in>
+              <in>jcx_addr16_app.c</in>
+              <in>jcx_addr16_tool.cpp</in>
+              <in>jitmalloctrace.cpp</in>
+              <in>knob_duplicate_name.cpp</in>
+              <in>knob_writeonce.cpp</in>
+              <in>kthread.c</in>
+              <in>leave.cpp</in>
+              <in>line.cpp</in>
+              <in>little_malloc.c</in>
+              <in>lpd.c</in>
+              <in>main_dll.cpp</in>
+              <in>malmalloc.cpp</in>
+              <in>memalign.cpp</in>
+              <in>memory_displacement.cpp</in>
+              <in>memory_displacement_app.cpp</in>
+              <in>memory_displacement_app.s</in>
+              <in>mmap.cpp</in>
+              <in>move_then_test.cpp</in>
+              <in>mt.cpp</in>
+              <in>mt_app.cpp</in>
+              <in>mt_tool.cpp</in>
+              <in>mtflush.cpp</in>
+              <in>mtflushapp_unix.cpp</in>
+              <in>mtflushapp_win.cpp</in>
+              <in>multimem.cpp</in>
+              <in>mxcsr_ia32.asm</in>
+              <in>mxcsr_ia32.s</in>
+              <in>mxcsr_intel64.asm</in>
+              <in>mxcsr_intel64.s</in>
+              <in>mxcsr_mic.s</in>
+              <in>nops.cpp</in>
+              <in>one.c</in>
+              <in>oneprog.c</in>
+              <in>operandtool.cpp</in>
+              <in>partialinline.cpp</in>
+              <in>passthru_context_xmm_regs_app.cpp</in>
+              <in>passthru_context_xmm_regs_callapp.cpp</in>
+              <in>passthru_context_xmm_regs_executeat.cpp</in>
+              <in>pipeapp.c</in>
+              <in>popea_verifier.cpp</in>
+              <in>posix_memalign.cpp</in>
+              <in>pusha_popa.cpp</in>
+              <in>pusha_popa_asm.asm</in>
+              <in>pusha_popa_asm.s</in>
+              <in>pushtest.c</in>
+              <in>pushw.s</in>
+              <in>raise_exception.cpp</in>
+              <in>raise_exception_app.cpp</in>
+              <in>realloc.cpp</in>
+              <in>rebase_dll.c</in>
+              <in>rebase_dll_tool.cpp</in>
+              <in>reg_context_fp_st.cpp</in>
+              <in>reg_context_set_const_context.cpp</in>
+              <in>reg_context_set_fp_st.cpp</in>
+              <in>reg_context_set_x87.cpp</in>
+              <in>reg_context_set_xmm.cpp</in>
+              <in>reg_context_set_ymm.cpp</in>
+              <in>reg_context_x87.cpp</in>
+              <in>reg_context_xmm.cpp</in>
+              <in>reg_context_ymm.cpp</in>
+              <in>reg_inst_gx.cpp</in>
+              <in>reg_operands_test_app.c</in>
+              <in>reg_operands_test_app_win.asm</in>
+              <in>reg_operands_test_tool.cpp</in>
+              <in>reg_ref_fp_st.cpp</in>
+              <in>reg_ref_x87.cpp</in>
+              <in>reg_ref_xmm.cpp</in>
+              <in>reg_ref_ymm.cpp</in>
+              <in>reg_value_fp_st.cpp</in>
+              <in>reg_value_x87.cpp</in>
+              <in>reg_value_xmm.cpp</in>
+              <in>reg_value_ymm.cpp</in>
+              <in>rep_ia32.s</in>
+              <in>rep_intel64.s</in>
+              <in>rep_mic.s</in>
+              <in>repcmpsz.c</in>
+              <in>repcmpsz.s</in>
+              <in>repcmpsz_tool.cpp</in>
+              <in>replace_free.cpp</in>
+              <in>replace_malloc_inst.cpp</in>
+              <in>replace_rtl_alloc_heap.cpp</in>
+              <in>reptool.cpp</in>
+              <in>reserve_memory.c</in>
+              <in>returnflags.cpp</in>
+              <in>returnflags_and_ref.cpp</in>
+              <in>returnreg.cpp</in>
+              <in>rewritememop.cpp</in>
+              <in>rewritememop1.cpp</in>
+              <in>rtn_insert_call1.cpp</in>
+              <in>rtn_insert_call2.cpp</in>
+              <in>runnable.cpp</in>
+              <in>runnable.h</in>
+              <in>safecopy.cpp</in>
+              <in>safecopy_mxcsr.cpp</in>
+              <in>secname_app.cpp</in>
+              <in>secname_tool.cpp</in>
+              <in>secure_scl_test.cpp</in>
+              <in>seg_override_app1.c</in>
+              <in>seg_override_app1_win.asm</in>
+              <in>segmented_ea_verifier.cpp</in>
+              <in>segmented_ea_verifier_lin_ia32.s</in>
+              <in>segmented_ea_verifier_lin_intel64.s</in>
+              <in>segmented_ea_verifier_win1_ia32.asm</in>
+              <in>segmented_ea_verifier_win1_intel64.asm</in>
+              <in>set_fp_context_xmm_regs.cpp</in>
+              <in>set_fp_context_xmm_regs_app.cpp</in>
+              <in>set_xmm_scratches.cpp</in>
+              <in>set_xmm_scratches_ia32.asm</in>
+              <in>set_xmm_scratches_intel64.asm</in>
+              <in>short_name.cpp</in>
+              <in>sigmask.c</in>
+              <in>simple.c</in>
+              <in>simplebar.c</in>
+              <in>simplebar64.c</in>
+              <in>simplefast10.c</in>
+              <in>simplefoo.c</in>
+              <in>simplefoo1.c</in>
+              <in>simplefoo10.c</in>
+              <in>simplefoo12.c</in>
+              <in>simplefoo13.c</in>
+              <in>simplefoo14.c</in>
+              <in>simplefoo2.c</in>
+              <in>simplefoo3.c</in>
+              <in>simplefoo4.c</in>
+              <in>simplefoo6.c</in>
+              <in>simplefoo7.c</in>
+              <in>simplefoo8.c</in>
+              <in>simplefoo9.c</in>
+              <in>simplesp.s</in>
+              <in>simplestd10.c</in>
+              <in>smallpush_ia32.s</in>
+              <in>smallpush_intel64.s</in>
+              <in>smallpush_mic.s</in>
+              <in>smc_util.cpp</in>
+              <in>smc_util.h</in>
+              <in>smcapp_bbl.cpp</in>
+              <in>smcapp_except.cpp</in>
+              <in>smcapp_ia32.cpp</in>
+              <in>smcapp_mt.cpp</in>
+              <in>socket_app.cpp</in>
+              <in>soload.cpp</in>
+              <in>soloadrange.cpp</in>
+              <in>sp_argument.cpp</in>
+              <in>sp_argument_app.c</in>
+              <in>spalign.cpp</in>
+              <in>spalign_asm_intel64_unix.s</in>
+              <in>spalign_asm_intel64_win.asm</in>
+              <in>spawntool.cpp</in>
+              <in>spawntool_app.c</in>
+              <in>sse-ref.cpp</in>
+              <in>sse-ref_ia32.asm</in>
+              <in>sse-ref_ia32.s</in>
+              <in>sse-ref_intel64.asm</in>
+              <in>sse-ref_intel64.s</in>
+              <in>sse-ref_mic.s</in>
+              <in>sse-unaligned-class.cpp</in>
+              <in>sse-unaligned-class2.cpp</in>
+              <in>sse.cpp</in>
+              <in>stackalign.cpp</in>
+              <in>static_secondary_dll.cpp</in>
+              <in>statica_locktest.cpp</in>
+              <in>str2flt.cpp</in>
+              <in>str2int.cpp</in>
+              <in>str2int64.cpp</in>
+              <in>strace_ia32.cpp</in>
+              <in>stracewin_ia32.cpp</in>
+              <in>stress_const_context.cpp</in>
+              <in>stress_const_context2.cpp</in>
+              <in>stress_const_context_app.cpp</in>
+              <in>stringtest.c</in>
+              <in>suspend-mxcsr-asm.asm</in>
+              <in>suspend-mxcsr.cpp</in>
+              <in>suspend_app_win.cpp</in>
+              <in>suspend_context_app_win.cpp</in>
+              <in>suspend_win.cpp</in>
+              <in>sw_interrupt.cpp</in>
+              <in>sw_interrupt_app.cpp</in>
+              <in>swizzle2.cpp</in>
+              <in>swizzle3.cpp</in>
+              <in>swizzle5.cpp</in>
+              <in>swizzle_seg.cpp</in>
+              <in>swizzle_seg_app.cpp</in>
+              <in>swizzle_seg_app_ia32_unix.s</in>
+              <in>swizzle_seg_app_ia32_win.asm</in>
+              <in>swizzle_seg_app_intel64_unix.s</in>
+              <in>swizzle_seg_app_mic_unix.s</in>
+              <in>swizzle_util.h</in>
+              <in>swizzlealloc.c</in>
+              <in>symsize.c</in>
+              <in>symsize_asm.s</in>
+              <in>sys_memory.h</in>
+              <in>sys_memory_unix.c</in>
+              <in>sys_memory_win.c</in>
+              <in>syscall.cpp</in>
+              <in>syscall_std.cpp</in>
+              <in>syscall_std_app.cpp</in>
+              <in>teb.cpp</in>
+              <in>teb_app.cpp</in>
+              <in>test_iarg_partial_context.cpp</in>
+              <in>test_iarg_partial_context_app.cpp</in>
+              <in>test_iarg_preserve.cpp</in>
+              <in>test_iarg_preserve2.cpp</in>
+              <in>test_iarg_preserve_app.cpp</in>
+              <in>test_iarg_preserve_app2.cpp</in>
+              <in>test_iarg_preserve_ia32_unix.s</in>
+              <in>test_iarg_preserve_ia32_win.asm</in>
+              <in>test_iarg_preserve_intel64_unix.s</in>
+              <in>test_iarg_preserve_intel64_win.asm</in>
+              <in>test_iarg_preserve_mxcsr.cpp</in>
+              <in>test_iarg_preserve_mxcsr1.cpp</in>
+              <in>test_iarg_preserve_mxcsr_app.cpp</in>
+              <in>test_iarg_preserve_probe.cpp</in>
+              <in>test_iarg_preserve_probe_app.cpp</in>
+              <in>test_inlined_consts.cpp</in>
+              <in>test_inlined_consts_intel64.asm</in>
+              <in>test_ip_access.cpp</in>
+              <in>test_ip_access_app.cpp</in>
+              <in>test_ip_access_app_intel64.asm</in>
+              <in>test_lea_rip_app.cpp</in>
+              <in>test_lea_rip_intel64.asm</in>
+              <in>test_sysenter_win.cpp</in>
+              <in>thenpredicated.cpp</in>
+              <in>thread.c</in>
+              <in>thread_callback.cpp</in>
+              <in>thread_count.cpp</in>
+              <in>thread_count2.cpp</in>
+              <in>thread_ea_addr16.c</in>
+              <in>thread_pool.cpp</in>
+              <in>thread_pool.h</in>
+              <in>thread_segmented_ea.c</in>
+              <in>thread_usestack.c</in>
+              <in>thread_wait.c</in>
+              <in>threadtestwin.c</in>
+              <in>tool_fetch_app.c</in>
+              <in>tool_full_path.cpp</in>
+              <in>tool_malloc.cpp</in>
+              <in>toolfetch_sub.cpp</in>
+              <in>tstcmpxchg8b.c</in>
+              <in>tstcmpxchg8b_with_explicit_ebx.c</in>
+              <in>two.c</in>
+              <in>undecorate.cpp</in>
+              <in>undecorateOperator_app.cpp</in>
+              <in>undecorate_app.cpp</in>
+              <in>unsup_syscall.s</in>
+              <in>waitpidbug.c</in>
+              <in>win_callback.cpp</in>
+              <in>win_callback_app.cpp</in>
+              <in>win_code_on_reused_memory.cpp</in>
+              <in>win_cpp_exception.cpp</in>
+              <in>win_debug_service.cpp</in>
+              <in>win_divide_by_zero_exception.cpp</in>
+              <in>win_early_thread.cpp</in>
+              <in>win_early_thread_dll.cpp</in>
+              <in>win_exception_test.cpp</in>
+              <in>win_load_library.cpp</in>
+              <in>win_mxcsr_app.cpp</in>
+              <in>win_no_dependencies.cpp</in>
+              <in>win_queue_apc.cpp</in>
+              <in>win_syscallenum.cpp</in>
+              <in>win_thread_create_apc.cpp</in>
+              <in>win_tls_dll.cpp</in>
+              <in>winapp_exception_context.cpp</in>
+              <in>write_debugger_error.cpp</in>
+              <in>write_user_error.cpp</in>
+              <in>x87_regs_in_context.cpp</in>
+              <in>x87_regs_in_context_app.cpp</in>
+              <in>xmmapp.cpp</in>
+              <in>xmmtest.cpp</in>
+            </df>
+            <df name="Utils">
+              <in>attachLauncher_unix.cpp</in>
+              <in>avx2_check.c</in>
+              <in>avx_check.c</in>
+              <in>avx_check_ia32.asm</in>
+              <in>avx_check_ia32.s</in>
+              <in>avx_check_intel64.asm</in>
+              <in>avx_check_intel64.s</in>
+              <in>avx_check_mic.s</in>
+              <in>cp-pin.cpp</in>
+              <in>disable-aslr.c</in>
+              <in>hello.c</in>
+              <in>regvalue_utils.cpp</in>
+              <in>regvalue_utils.h</in>
+              <in>supports_avx2_ia32.asm</in>
+              <in>supports_avx2_ia32.s</in>
+              <in>supports_avx2_intel64.asm</in>
+              <in>supports_avx2_intel64.s</in>
+              <in>supports_avx2_mic.s</in>
+              <in>supports_avx_ia32.asm</in>
+              <in>supports_avx_ia32.s</in>
+              <in>supports_avx_intel64.asm</in>
+              <in>supports_avx_intel64.s</in>
+              <in>supports_avx_mic.s</in>
+              <in>threadlib.h</in>
+              <in>threadlib_unix.c</in>
+              <in>threadlib_win.c</in>
+              <in>tsx_check.c</in>
+              <in>tsx_check_ia32.asm</in>
+              <in>tsx_check_ia32.s</in>
+              <in>tsx_check_intel64.asm</in>
+              <in>tsx_check_intel64.s</in>
+              <in>tsx_check_mic.s</in>
+            </df>
+          </df>
+        </df>
+      </df>
+      <df name="python_kit">
+        <df name="intel64">
+          <df name="include">
+            <df name="python2.7">
+              <in>Python-ast.h</in>
+              <in>Python.h</in>
+              <in>abstract.h</in>
+              <in>asdl.h</in>
+              <in>ast.h</in>
+              <in>bitset.h</in>
+              <in>boolobject.h</in>
+              <in>bufferobject.h</in>
+              <in>bytearrayobject.h</in>
+              <in>bytes_methods.h</in>
+              <in>bytesobject.h</in>
+              <in>cStringIO.h</in>
+              <in>cellobject.h</in>
+              <in>ceval.h</in>
+              <in>classobject.h</in>
+              <in>cobject.h</in>
+              <in>code.h</in>
+              <in>codecs.h</in>
+              <in>compile.h</in>
+              <in>complexobject.h</in>
+              <in>datetime.h</in>
+              <in>descrobject.h</in>
+              <in>dictobject.h</in>
+              <in>dtoa.h</in>
+              <in>enumobject.h</in>
+              <in>errcode.h</in>
+              <in>eval.h</in>
+              <in>fileobject.h</in>
+              <in>floatobject.h</in>
+              <in>frameobject.h</in>
+              <in>funcobject.h</in>
+              <in>genobject.h</in>
+              <in>graminit.h</in>
+              <in>grammar.h</in>
+              <in>import.h</in>
+              <in>intobject.h</in>
+              <in>intrcheck.h</in>
+              <in>iterobject.h</in>
+              <in>listobject.h</in>
+              <in>longintrepr.h</in>
+              <in>longobject.h</in>
+              <in>marshal.h</in>
+              <in>memoryobject.h</in>
+              <in>metagrammar.h</in>
+              <in>methodobject.h</in>
+              <in>modsupport.h</in>
+              <in>moduleobject.h</in>
+              <in>node.h</in>
+              <in>object.h</in>
+              <in>objimpl.h</in>
+              <in>opcode.h</in>
+              <in>osdefs.h</in>
+              <in>parsetok.h</in>
+              <in>patchlevel.h</in>
+              <in>pgen.h</in>
+              <in>pgenheaders.h</in>
+              <in>py_curses.h</in>
+              <in>pyarena.h</in>
+              <in>pycapsule.h</in>
+              <in>pyconfig.h</in>
+              <in>pyctype.h</in>
+              <in>pydebug.h</in>
+              <in>pyerrors.h</in>
+              <in>pyexpat.h</in>
+              <in>pyfpe.h</in>
+              <in>pygetopt.h</in>
+              <in>pymacconfig.h</in>
+              <in>pymactoolbox.h</in>
+              <in>pymath.h</in>
+              <in>pymem.h</in>
+              <in>pyport.h</in>
+              <in>pystate.h</in>
+              <in>pystrcmp.h</in>
+              <in>pystrtod.h</in>
+              <in>pythonrun.h</in>
+              <in>pythread.h</in>
+              <in>rangeobject.h</in>
+              <in>setobject.h</in>
+              <in>sliceobject.h</in>
+              <in>stringobject.h</in>
+              <in>structmember.h</in>
+              <in>structseq.h</in>
+              <in>symtable.h</in>
+              <in>sysmodule.h</in>
+              <in>timefuncs.h</in>
+              <in>token.h</in>
+              <in>traceback.h</in>
+              <in>tupleobject.h</in>
+              <in>ucnhash.h</in>
+              <in>unicodeobject.h</in>
+              <in>warnings.h</in>
+              <in>weakrefobject.h</in>
+            </df>
+          </df>
+          <df name="lib">
+            <df name="pkgconfig">
+            </df>
+            <df name="python2.7">
+              <df name="bsddb">
+              </df>
+              <df name="compiler">
+              </df>
+              <df name="config">
+                <in>config.c</in>
+              </df>
+              <df name="ctypes">
+                <df name="macholib">
+                </df>
+              </df>
+              <df name="curses">
+              </df>
+              <df name="encodings">
+              </df>
+              <df name="hotshot">
+              </df>
+              <df name="importlib">
+              </df>
+              <df name="json">
+                <df name="tests">
+                </df>
+              </df>
+              <df name="lib-dynload">
+              </df>
+              <df name="logging">
+              </df>
+              <df name="multiprocessing">
+                <df name="dummy">
+                </df>
+              </df>
+              <df name="plat-linux2">
+              </df>
+              <df name="pydoc_data">
+              </df>
+              <df name="site-packages">
+              </df>
+              <df name="sqlite3">
+              </df>
+              <df name="wsgiref">
+              </df>
+              <df name="xml">
+                <df name="dom">
+                </df>
+                <df name="etree">
+                </df>
+                <df name="parsers">
+                </df>
+                <df name="sax">
+                </df>
+              </df>
+            </df>
+          </df>
+        </df>
+      </df>
+      <df name="scripts">
+        <df name="sim">
+        </df>
+      </df>
+      <df name="sift">
+        <df name="recorder">
+          <in>bbv_count.cc</in>
+          <in>bbv_count.h</in>
+          <in>emulation.cc</in>
+          <in>emulation.h</in>
+          <in>globals.cc</in>
+          <in>globals.h</in>
+          <in>papi.cc</in>
+          <in>papi.h</in>
+          <in>pinboost_assert.h</in>
+          <in>pinboost_debug.cc</in>
+          <in>pinboost_debug.h</in>
+          <in>recorder_base.cc</in>
+          <in>recorder_base.h</in>
+          <in>recorder_control.cc</in>
+          <in>recorder_control.h</in>
+          <in>sift_recorder.cc</in>
+          <in>syscall_modeling.cc</in>
+          <in>syscall_modeling.h</in>
+          <in>threads.cc</in>
+          <in>threads.h</in>
+          <in>trace_rtn.cc</in>
+          <in>trace_rtn.h</in>
+        </df>
+        <df name="standalone_pin3.0">
+          <df name="libsift">
+            <in>fixed_types.h</in>
+            <in>sift.h</in>
+            <in>sift_assert.h</in>
+            <in>sift_format.h</in>
+            <in>sift_reader.cc</in>
+            <in>sift_reader.h</in>
+            <in>sift_utils.cc</in>
+            <in>sift_utils.h</in>
+            <in>sift_writer.cc</in>
+            <in>sift_writer.h</in>
+            <in>siftdump.cc</in>
+            <in>zfstream.cc</in>
+            <in>zfstream.h</in>
+          </df>
+          <in>bbv_count.cc</in>
+          <in>bbv_count.h</in>
+          <in>emulation.cc</in>
+          <in>emulation.h</in>
+          <in>globals.cc</in>
+          <in>globals.h</in>
+          <in>papi.cc</in>
+          <in>papi.h</in>
+          <in>recorder_base.cc</in>
+          <in>recorder_base.h</in>
+          <in>recorder_control.cc</in>
+          <in>recorder_control.h</in>
+          <in>sift_recorder.cc</in>
+          <in>sim_api.h</in>
+          <in>syscall_modeling.cc</in>
+          <in>syscall_modeling.h</in>
+          <in>threads.cc</in>
+          <in>threads.h</in>
+          <in>trace_rtn.cc</in>
+          <in>trace_rtn.h</in>
+        </df>
+        <in>sift.h</in>
+        <in>sift_assert.h</in>
+        <in>sift_format.h</in>
+        <in>sift_reader.cc</in>
+        <in>sift_reader.h</in>
+        <in>sift_utils.cc</in>
+        <in>sift_utils.h</in>
+        <in>sift_writer.cc</in>
+        <in>sift_writer.h</in>
+        <in>siftdump.cc</in>
+        <in>zfstream.cc</in>
+        <in>zfstream.h</in>
+      </df>
+      <df name="standalone">
+        <in>exceptions.cc</in>
+        <in>exceptions.h</in>
+        <in>standalone.cc</in>
+      </df>
+      <df name="test">
+        <df name="AMHMapprox">
+          <in>AMHMapprox.cc</in>
+        </df>
+        <df name="api">
+          <in>api.c</in>
+        </df>
+        <df name="aso">
+        </df>
+        <df name="demo-scheduling">
+        </df>
+        <df name="dvfs">
+          <in>dvfs.c</in>
+        </df>
+        <df name="fft">
+          <in>fft.c</in>
+        </df>
+        <df name="fft-dvfs">
+        </df>
+        <df name="fft-hetero">
+        </df>
+        <df name="fft-hetero-cfg">
+        </df>
+        <df name="fft-marker">
+        </df>
+        <df name="fork">
+          <in>fork.c</in>
+        </df>
+        <df name="memapprox">
+          <df name="viz">
+            <df name="css">
+            </df>
+            <df name="images">
+            </df>
+            <df name="levels">
+              <df name="level2">
+                <df name="css">
+                </df>
+                <df name="data">
+                </df>
+                <df name="javascript">
+                </df>
+              </df>
+              <df name="level3">
+                <df name="data">
+                </df>
+                <df name="javascript">
+                </df>
+              </df>
+              <df name="profile">
+              </df>
+              <df name="topology">
+              </df>
+            </df>
+            <df name="rickshaw">
+              <df name="js">
+              </df>
+              <df name="src">
+                <df name="css">
+                </df>
+                <df name="images">
+                </df>
+                <df name="js">
+                </df>
+              </df>
+              <df name="vendor">
+              </df>
+            </df>
+            <df name="scripts">
+            </df>
+          </df>
+        </df>
+        <df name="memapproxAMHM">
+          <in>test.cc</in>
+        </df>
+        <df name="motion_blobdetection">
+          <in>CImageProcessing.cc</in>
+          <in>image_processing.cc</in>
+          <in>image_processing.h</in>
+          <in>motion.cc</in>
+        </df>
+        <df name="mpi">
+          <in>pi_mpi.c</in>
+        </df>
+        <df name="mpi-omp">
+          <in>hybrid.c</in>
+        </df>
+        <df name="pinplay">
+        </df>
+        <df name="shared">
+        </df>
+        <df name="signal">
+          <in>signal.c</in>
+        </df>
+        <df name="smc">
+          <in>smc.c</in>
+        </df>
+        <df name="sniper-in-sniper">
+        </df>
+        <df name="spinloop">
+          <in>spinloop.c</in>
+        </df>
+        <df name="true">
+          <in>true.cc</in>
+        </df>
+      </df>
+      <df name="tools">
+        <df name="cpistack-collect">
+        </df>
+        <df name="viz">
+          <df name="css">
+          </df>
+          <df name="flot">
+            <df name="images">
+            </df>
+          </df>
+          <df name="images">
+          </df>
+          <df name="levels">
+            <df name="functionbased">
+            </df>
+            <df name="level2">
+              <df name="css">
+              </df>
+              <df name="javascript">
+              </df>
+            </df>
+            <df name="level3">
+              <df name="javascript">
+              </df>
+            </df>
+            <df name="profile">
+            </df>
+            <df name="topology">
+            </df>
+          </df>
+          <df name="rickshaw">
+            <df name="js">
+            </df>
+            <df name="src">
+              <df name="css">
+              </df>
+              <df name="images">
+              </df>
+              <df name="js">
+              </df>
+            </df>
+            <df name="vendor">
+            </df>
+          </df>
+          <df name="scripts">
+          </df>
+        </df>
+      </df>
+    </df>
+  </logicalFolder>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Default" type="0">
+      <toolsSet>
+        <developmentServer>localhost</developmentServer>
+        <platform>2</platform>
+      </toolsSet>
+      <compile>
+        <compiledirpicklist>
+          <compiledirpicklistitem>.</compiledirpicklistitem>
+          <compiledirpicklistitem>${AUTO_FOLDER}</compiledirpicklistitem>
+        </compiledirpicklist>
+        <compiledir>${AUTO_FOLDER}</compiledir>
+        <compilecommandpicklist>
+          <compilecommandpicklistitem>${MAKE} ${ITEM_NAME}.o</compilecommandpicklistitem>
+          <compilecommandpicklistitem>${AUTO_COMPILE}</compilecommandpicklistitem>
+        </compilecommandpicklist>
+        <compilecommand>${AUTO_COMPILE}</compilecommand>
+      </compile>
+      <dbx_gdbdebugger version="1">
+        <gdb_pathmaps>
+        </gdb_pathmaps>
+        <gdb_interceptlist>
+          <gdbinterceptoptions gdb_all="false" gdb_unhandled="true" gdb_unexpected="true"/>
+        </gdb_interceptlist>
+        <gdb_options>
+          <DebugOptions>
+          </DebugOptions>
+        </gdb_options>
+        <gdb_buildfirst gdb_buildfirst_overriden="false" gdb_buildfirst_old="false"/>
+      </dbx_gdbdebugger>
+      <nativedebugger version="1">
+        <engine>gdb</engine>
+      </nativedebugger>
+      <runprofile version="9">
+        <runcommandpicklist>
+          <runcommandpicklistitem>"${OUTPUT_PATH}"</runcommandpicklistitem>
+        </runcommandpicklist>
+        <runcommand>"${OUTPUT_PATH}"</runcommand>
+        <rundir>.</rundir>
+        <buildfirst>false</buildfirst>
+        <terminal-type>0</terminal-type>
+        <remove-instrumentation>0</remove-instrumentation>
+        <environment>
+        </environment>
+      </runprofile>
+    </conf>
+  </confs>
+</configurationDescriptor>
