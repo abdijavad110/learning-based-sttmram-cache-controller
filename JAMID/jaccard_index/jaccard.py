@@ -59,13 +59,13 @@ if __name__ == "__main__":
 
     # check all Jaccard indexes of all bb_exp x bb_golden1
     matched_bbe = 0
+    max_jaccard = None
     for bbe in bb_exp:
         bbe = bbe.split(' ')
         bbe.pop(2)
         # cast the string of the bb in a list of 4 integer values (x_min, y_min, x_max, y_max)
         bbe = [int(bbe[0]), int(bbe[1]), int(bbe[2]), int(bbe[3])]
         # we need to find the pair of bbs one of the golder run and one of the current exp maximising the Jaccard index
-        max_jaccard = None
         max_bbg = None
         for bbg in bb_golden1:
             # compute intersection coords
@@ -99,6 +99,7 @@ if __name__ == "__main__":
         if (not max_jaccard is None) and max_jaccard >= JACCARD_THR:
             bb_golden1.remove(max_bbg)  # it is not necessary to remove from bb_exp since we are scanning such list
             matched_bbe = matched_bbe + 1
+    print(max_jaccard)
     # compute final stats
     TP = TP + matched_bbe  # we add to TP the count of bb pairs having jaccard value >= JACCARD_THR
     FP = len(bb_exp) - matched_bbe  # the number of "new" wrong bbs is equal to the remaining bbs in bb_exp

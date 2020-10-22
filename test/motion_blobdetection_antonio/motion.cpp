@@ -10,8 +10,8 @@
 #define ToUnsignedInt(X) *((unsigned long long*)(&X))
 //double ber[8]={0.0000001,0.0000001,0.0000001,0.0000001,0.0000001,0.0000001,0.0000001,0.0000001}; // FI Uniform 0.01 sometimes crash!
 //double ber[8]={0.000001,0.000001,0.000001,0.000001,0.000001,0.000001,0.000001,0.000001}; // FI Uniform 0.01 sometimes crash!
-double ber[8]={0.00001,0.00001,0.00001,0.00001,0.00001,0.00001,0.00001,0.00001}; // FI Uniform 0.01 sometimes crash!
-//double ber[8]={0,0,0,0,0,0,0,0}; // FI Uniform 0.01 sometimes crash!
+//double ber[8]={0.00001,0.00001,0.0001,0.00001,0.0001,0.0001,0.0000001,0}; // FI Uniform 0.01 sometimes crash!
+double ber[8]={0,0,0,0,0,0,0,0}; // FI Uniform 0.01 sometimes crash!
 //AMHM End
 
 #include <time.h>
@@ -31,6 +31,9 @@ double ber[8]={0.00001,0.00001,0.00001,0.00001,0.00001,0.00001,0.00001,0.00001};
 #define FG 255
 #define BG 0
 #define ER_THRESHOLD 0.3
+
+/// JAMID
+#define TIME double(clock())/CLOCKS_PER_SEC
 
 typedef struct {
     int rows;
@@ -59,8 +62,10 @@ int main(int argc, char **argv) {
   int** bb_coords;
   bool output=false;
 
-  // halikhani start
-  //FILE *exec_time = fopen("exec_time.txt", "w");
+  /// JAMID start
+  char exec_buf_s[256], exec_buf_l[1024*1024], var_buf_s[256], var_buf_l[1024*1024];
+  float time_latch;
+  /// JAMID end
 
   if(argc>4 || argc<3) {
     std::cout << "USAGE: " << argv[0] << " frame1.bmp frame2.bmp [output]" << std::endl<< std::endl;
@@ -83,97 +88,117 @@ int main(int argc, char **argv) {
     initImage(&outputImage,bgImage.rows,bgImage.cols,bgImage.depth, bgImage.header);
     initImage(&outputImage2,bgImage.rows,bgImage.cols,bgImage.depth, bgImage.header);
   }
+  /// JA codes start
+  sprintf(var_buf_s, "%s,%lld\n", "bgImage", (long long int)&(bgImage.data[0])); strcat(var_buf_l, var_buf_s);
+  sprintf(var_buf_s, "%s,%lld\n", "originalImage", (long long int)&(originalImage.data[0])); strcat(var_buf_l, var_buf_s);
+  sprintf(var_buf_s, "%s,%lld\n", "bgGreyImage", (long long int)&(bgGreyImage.data[0])); strcat(var_buf_l, var_buf_s);
+  sprintf(var_buf_s, "%s,%lld\n", "greyImage", (long long int)&(greyImage.data[0])); strcat(var_buf_l, var_buf_s);
+  sprintf(var_buf_s, "%s,%lld\n", "motionImage", (long long int)&(motionImage.data[0])); strcat(var_buf_l, var_buf_s);
+  sprintf(var_buf_s, "%s,%lld\n", "blobImage", (long long int)&(blobImage.data[0])); strcat(var_buf_l, var_buf_s);
+  sprintf(var_buf_s, "%s,%lld\n", "erosionImage", (long long int)&(erosionImage.data[0])); strcat(var_buf_l, var_buf_s);
+  sprintf(var_buf_s, "%s,%lld\n", "outputImage", (long long int)&(outputImage.data[0])); strcat(var_buf_l, var_buf_s);
+  sprintf(var_buf_s, "%s,%lld\n", "outputImage2", (long long int)&(outputImage2.data[0])); strcat(var_buf_l, var_buf_s);
+  /// JA codes end
 
   //put here the annotations on all the variables. pay attention that you don't have to annotate the variable but only the heap memory location pointed by the ->data fiend.
   //the size of the array pointed by ->data is equal to the content of the ->size field (in byte)
   //AMHM Start
 
   AMHM_approx((long long int)&(bgImage.data[0]), (long long int) (&bgImage.data[0] + sizeof(unsigned char)*bgImage.rows*bgImage.cols*1 - 1));
-  AMHM_qual(ToUnsignedInt(ber[1]));
+  AMHM_qual(ToUnsignedInt(ber[ORIGINAL_IMAGEB]));
   printf("-----------------------------------------------------------------\n");
   printf("bgImage start address is = %lld\n",(long long int)&(bgImage.data[0]));
   printf("-----------------------------------------------------------------\n");
 
   AMHM_approx((long long int)&(bgGreyImage.data[0]), (long long int) (&bgGreyImage.data[0] + sizeof(unsigned char)*bgImage.rows*bgImage.cols*1 - 1));
-  AMHM_qual(ToUnsignedInt(ber[1]));
+  AMHM_qual(ToUnsignedInt(ber[GREY_IMAGEB]));
 
   //AMHM End
   printf("-----------------------------------------------------------------\n");
   printf("bgGreyImage start address is = %lld\n",(long long int)&(bgGreyImage.data[0]));
   printf("-----------------------------------------------------------------\n");
-  printf("bgImage to bgGreyImage (rgb2grey) START time: %f\n", (double)(clock()/CLOCKS_PER_SEC));
+//  printf("bgImage to bgGreyImage (rgb2grey) START time: %f\n", TIME);
+  time_latch = TIME;
   rgb2grey(&bgImage,&bgGreyImage, true);
-  printf("bgImage to bgGreyImage (rgb2grey) END time: %f\n", (double)(clock()/CLOCKS_PER_SEC));
+  sprintf(exec_buf_s, "%s,%f,%f\n", "bgImage to bgGreyImage (rgb2grey)", time_latch, TIME); strcat(exec_buf_l, exec_buf_s);    /// JA code
+//  printf("bgImage to bgGreyImage (rgb2grey) END time: %f\n", TIME);
 
   //AMHM Start
   AMHM_approx((long long int)&(originalImage.data[0]), (long long int) (&originalImage.data[0] + sizeof(unsigned char)*bgImage.rows*bgImage.cols*1 - 1));
-  AMHM_qual(ToUnsignedInt(ber[1]));
+  AMHM_qual(ToUnsignedInt(ber[ORIGINAL_IMAGEF]));
   printf("-----------------------------------------------------------------\n");
   printf("originalImage start address is = %lld\n",(long long int)&(originalImage.data[0]));
   printf("-----------------------------------------------------------------\n");
   AMHM_approx((long long int)&(greyImage.data[0]), (long long int) (&greyImage.data[0] + sizeof(unsigned char)*bgImage.rows*bgImage.cols*1 - 1));
-  AMHM_qual(ToUnsignedInt(ber[1]));
+  AMHM_qual(ToUnsignedInt(ber[GREY_IMAGEF]));
   printf("-----------------------------------------------------------------\n");
   printf("greyImage start address is = %lld\n",(long long int)&(greyImage.data[0]));
   printf("-----------------------------------------------------------------\n");
   //AMHM End
-  printf("originalImage to greyImage (rgb2grey) START time: %f\n", (double)(clock()/CLOCKS_PER_SEC));
+//  printf("originalImage to greyImage (rgb2grey) START time: %f\n", (double)(clock()/CLOCKS_PER_SEC));
+  time_latch = TIME;
   rgb2grey(&originalImage,&greyImage, false);
-  printf("originalImage to greyImage (rgb2grey) END time: %f\n", (double)(clock()/CLOCKS_PER_SEC));
-  //fclose(exec_time);
+  sprintf(exec_buf_s, "%s,%f,%f\n", "originalImage to greyImage (rgb2grey)", time_latch, TIME); strcat(exec_buf_l, exec_buf_s);    /// JA code
+//  printf("originalImage to greyImage (rgb2grey) END time: %f\n", (double)(clock()/CLOCKS_PER_SEC));
 
   //AMHM Start
   AMHM_approx((long long int)&(greyImage.data[0]), (long long int) (&greyImage.data[0] + sizeof(unsigned char)*bgImage.rows*bgImage.cols*1 - 1));
-  AMHM_qual(ToUnsignedInt(ber[1]));
+  AMHM_qual(ToUnsignedInt(ber[GREY_IMAGEF]));
   printf("-----------------------------------------------------------------\n");
   printf("greyImage start address is = %lld\n",(long long int)&(greyImage.data[0]));
   printf("-----------------------------------------------------------------\n");
   AMHM_approx((long long int)&(bgGreyImage.data[0]), (long long int) (&bgGreyImage.data[0] + sizeof(unsigned char)*bgImage.rows*bgImage.cols*1 - 1));
-  AMHM_qual(ToUnsignedInt(ber[1]));
+  AMHM_qual(ToUnsignedInt(ber[GREY_IMAGEB]));
   printf("-----------------------------------------------------------------\n");
   printf("bgGreyImage start address is = %lld\n",(long long int)&(bgGreyImage.data[0]));
   printf("-----------------------------------------------------------------\n");
   AMHM_approx((long long int)&(motionImage.data[0]), (long long int) (&motionImage.data[0] + sizeof(unsigned char)*bgImage.rows*bgImage.cols*1 - 1));
-  AMHM_qual(ToUnsignedInt(ber[1]));
+  AMHM_qual(ToUnsignedInt(ber[MOTION_IMAGE]));
   printf("-----------------------------------------------------------------\n");
   printf("motionImage start address is = %lld\n",(long long int)&(motionImage.data[0]));
   printf("-----------------------------------------------------------------\n");
   //AMHM End
-  printf("motion detection START time: %f\n", (double)(clock()/CLOCKS_PER_SEC));
+//  printf("motion detection START time: %f\n", (double)(clock()/CLOCKS_PER_SEC));
+  time_latch = TIME;
   motion_detection(&greyImage, &bgGreyImage, &motionImage);
-  printf("motion detection END time: %f\n", (double)(clock()/CLOCKS_PER_SEC));
+  sprintf(exec_buf_s, "%s,%f,%f\n", "motion detection", time_latch, TIME); strcat(exec_buf_l, exec_buf_s);    /// JA code
+//  printf("motion detection END time: %f\n", (double)(clock()/CLOCKS_PER_SEC));
 
   //AMHM Start
   AMHM_approx((long long int)&(motionImage.data[0]), (long long int) (&motionImage.data[0] + sizeof(unsigned char)*bgImage.rows*bgImage.cols*1 - 1));
-  AMHM_qual(ToUnsignedInt(ber[1]));
+  AMHM_qual(ToUnsignedInt(ber[MOTION_IMAGE]));
   printf("-----------------------------------------------------------------\n");
   printf("motionImage start address is = %lld\n",(long long int)&(motionImage.data[0]));
   printf("-----------------------------------------------------------------\n");
   AMHM_approx((long long int)&(erosionImage.data[0]), (long long int) (&erosionImage.data[0] + sizeof(unsigned char)*bgImage.rows*bgImage.cols*1 - 1));
-  AMHM_qual(ToUnsignedInt(ber[1]));
+  AMHM_qual(ToUnsignedInt(ber[EROSION_IMAGE]));
   printf("-----------------------------------------------------------------\n");
   printf("erosionImage start address is = %lld\n",(long long int)&(erosionImage.data[0]));
   printf("-----------------------------------------------------------------\n");
   //AMHM End
-  printf("erosion filter START time: %f\n", (double)(clock()/CLOCKS_PER_SEC));
+//  printf("erosion filter START time: %f\n", (double)(clock()/CLOCKS_PER_SEC));
+  time_latch = TIME;
   erosion_filter(&motionImage, &erosionImage);
-  printf("erosion filter END time: %f\n", (double)(clock()/CLOCKS_PER_SEC));
+  sprintf(exec_buf_s, "%s,%f,%f\n", "erosion filter", time_latch, TIME); strcat(exec_buf_l, exec_buf_s);    /// JA code
+//  printf("erosion filter END time: %f\n", (double)(clock()/CLOCKS_PER_SEC));
 
   //AMHM Start
   AMHM_approx((long long int)&(erosionImage.data[0]), (long long int) (&erosionImage.data[0] + sizeof(unsigned char)*bgImage.rows*bgImage.cols*1 - 1));
-  AMHM_qual(ToUnsignedInt(ber[1]));
+  AMHM_qual(ToUnsignedInt(ber[EROSION_IMAGE]));
   printf("-----------------------------------------------------------------\n");
   printf("erosionImage start address is = %lld\n",(long long int)&(erosionImage.data[0]));
   printf("-----------------------------------------------------------------\n");
   AMHM_approx((long long int)&(blobImage.data[0]), (long long int) (&blobImage.data[0] + sizeof(unsigned char)*bgImage.rows*bgImage.cols*1 - 1));
-  AMHM_qual(ToUnsignedInt(ber[1]));
+  AMHM_qual(ToUnsignedInt(ber[BLOB_IMAGE]));
   printf("-----------------------------------------------------------------\n");
   printf("blobImage start address is = %lld\n",(long long int)&(blobImage.data[0]));
   printf("-----------------------------------------------------------------\n");
   //AMHM End
-  printf("blob detection START time: %f\n", (double)(clock()/CLOCKS_PER_SEC));
+//  printf("blob detection START time: %f\n", double(clock())/CLOCKS_PER_SEC);
+  time_latch = TIME;
   bb_coords = blob_detection(&erosionImage, &blobImage, &bbs_num, output);
-  printf("blob detection END time: %f\n", (double)(clock()/CLOCKS_PER_SEC));
+  sprintf(exec_buf_s, "%s,%f,%f\n", "blob detection", time_latch, TIME); strcat(exec_buf_l, exec_buf_s);    /// JA code
+//  printf("blob detection END time: %f\n", double(clock())/CLOCKS_PER_SEC);
 
   if(output){
     writeImage("output0.bmp", &originalImage);
@@ -210,6 +235,12 @@ int main(int argc, char **argv) {
     deleteImage(&outputImage);
     deleteImage(&outputImage2);
   }
+
+  printf("\n\n\n >>>>>>>>>>>>>>>>>>>>>> JAMID:\n>>>>>>>>>>> execution times:\n");
+  printf("%s", exec_buf_l);
+  printf(">>>>>>>>>>> variables addresses:\n");
+  printf("%s\n\n\n", var_buf_l);
+
   return 0;
 }
 

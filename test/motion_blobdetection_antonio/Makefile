@@ -6,6 +6,6 @@ $(TARGET): $(TARGET).o
 
 run_$(TARGET):
 	$(MAKE) -C ../../
-	../../run-sniper -c base.cfg --cache-only --roi -- ./motion frames/00227.bmp frames/00228.bmp outputs/output.bmp
+	../../run-sniper -c base.cfg --cache-only -- ./motion frames/00227.bmp frames/00228.bmp outputs/output.bmp
 
 CLEAN_EXTRA=output.bmp

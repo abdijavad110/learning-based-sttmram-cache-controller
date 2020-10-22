@@ -1,0 +1,5 @@
+bgImage to bgGreyImage (rgb2grey),1.246718,7.159143
+originalImage to greyImage (rgb2grey),7.233172,13.186974
+motion detection,13.249594,16.645408
+erosion filter,16.667919,76.851582
+blob detection,76.863876,137.377507
