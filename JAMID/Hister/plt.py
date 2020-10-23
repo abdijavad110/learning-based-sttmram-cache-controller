@@ -1,6 +1,5 @@
 from matplotlib import pyplot as plt
 import matplotlib
-import numpy as np
 
 
 FONT_SIZE = 20
