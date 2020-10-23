@@ -8,7 +8,7 @@ FONT_SIZE = 20
 def grouper(addr: type({}), reqs: list):
     lis = list(addr.items())
     lis.sort(key=lambda q: q[1])
-    groups = [[]]*len(lis)
+    groups = [[] for i in range(len(lis))]
     lis.append(("end", lis[-1][1]+1000000))
     reqs = list(filter(lambda q: q[2] in ['W', 'WB'], reqs))
     for r in reqs:
