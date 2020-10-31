@@ -6,6 +6,7 @@ name = "pypi"
 [packages]
 matplotlib = "*"
 pyqt5 = "*"
+seaborn = "*"
 
 [dev-packages]
 

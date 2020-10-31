@@ -1,23 +1,97 @@
-from matplotlib import pyplot as plt
+import os
 import matplotlib
+import numpy as np
+import seaborn as sns
+from matplotlib import pyplot as plt
+
+FONT_SIZE = 5 if os.name == 'nt' else 10
+TITLE_SIZE = 5 if os.name == 'nt' else 20
 
 
-FONT_SIZE = 20
-
-
-def grouper(addr: type({}), reqs: list):
+def grouper(time: type({}), addr: type({}), reqs: list):
     lis = list(addr.items())
+    times = list(time.items())
     lis.sort(key=lambda q: q[1])
-    groups = [[] for i in range(len(lis))]
-    lis.append(("end", lis[-1][1]+1000000))
+    times.sort(key=lambda q: q[1])
+    # print(lis)
+    # print(times)
+    write_per_addr = [[] for i in range(len(lis))]
+    write_per_time = [[] for i in range(len(times))]
+    lis.append(("end", lis[-1][1] + 750000))
+    times.append(("output", reqs[-1][0]))
+    # print(times)
+    # print(lis)
     reqs = list(filter(lambda q: q[2] in ['W', 'WB'], reqs))
+    time_periods = []
+    addr_periods = []
     for r in reqs:
         for b in range(len(lis) - 1):
-            if lis[b][1] <= r[1] < lis[b+1][1]:
-                groups[b].append(r)
+
+            if lis[b][1] <= r[1] < lis[b + 1][1]:
+                write_per_addr[b].append(r)
                 break
-    for g in groups:
-        print(len(g))
+        for d in range(len(times) - 1):
+
+            if times[d][1] <= r[0] <= times[d + 1][1]:
+                write_per_time[d].append(r)
+                break
+
+    for b in range(len(lis) - 1):
+        addr_periods.append(lis[b + 1][1] - lis[b][1])
+
+    for d in range(len(times) - 1):
+        time_periods.append(times[d + 1][1] - times[d][1])
+
+    print(addr_periods)
+    print(time_periods)
+    tmp = 0
+    time_count = []
+    addr_count = []
+    time_density = []
+    addr_density = []
+    time_addr_count = [[0 for j in range(len(write_per_time))] for i in range(len(write_per_addr))]
+    # for i in range(len(write_per_time)):
+    #     for j in range(len(write_per_time[i])):
+    #         if times[i][1] <= write_per_time[i][j][0] <= times[i+1][1]:
+    #             counter += 1
+    print('addr')
+    t = 0
+    for a in write_per_addr:
+        tmp += len(a)
+        addr_count.append(len(a))
+    print('sum: ' + str(tmp))
+    tmp = 0
+    print('times')
+    for t in write_per_time:
+        tmp += len(t)
+        time_count.append(len(t))
+        # print(len(t))
+    print('sum: ' + str(tmp))
+    # print(len(write_per_addr))
+    # todo A huge toff, will fix it later
+    for r in reqs:
+        for j in range(len(lis) - 1):
+            for k in range(len(times) - 1):
+                if lis[j][1] <= r[1] <= lis[j + 1][1] and times[k][1] <= r[0] <= times[k + 1][1]:
+                    time_addr_count[j][k] += 1
+
+    for i in range(len(time_count)):
+        time_density.append(time_count[i] / time_periods[i])
+    for j in range(len(addr_count)):
+        addr_density.append(addr_count[j] / addr_periods[j])
+        for k in range(len(time_count)):
+            time_addr_count[j][k] = time_addr_count[j][k] / time_periods[k]
+    print(time_addr_count[6][3])
+
+    addr_max = max(addr_density)
+    time_max = max(time_density)
+    for i in range(len(time_density)):
+        time_density[i] = time_density[i] / time_max
+    for j in range(len(addr_density)):
+        addr_density[j] = addr_density[j] / addr_max
+
+    print(time_density)
+    print(addr_density)
 
 
 def parse_borders():
@@ -40,39 +114,88 @@ def parse_log():
     return list(map(lambda q: [float(q[0]), int(q[1]), q[2]], nn))
 
 
-def plot(lls, tts, adds, separate_wb=True):
+def plot(lls, tts, adds, separate_wb=False, heat_w_h=None):
     matplotlib.use('TkAgg')
-    # draw borders
-    cmap = plt.cm.get_cmap("Dark2", len(tts))
-    for i, k in enumerate(tts.items()):
-        k, v = k
-        plt.axvline(v, lw=2.0, label=k, c=cmap(i))
-    cmap = plt.cm.get_cmap("Dark2", len(adds))
-    for i, k in enumerate(adds.items()):
-        k, v = k
-        plt.axhline(v, lw=1.5, label=k, c=cmap(i))
+
+    def borders():
+        cmap = plt.cm.get_cmap("Dark2", len(tts))
+        for i, k in enumerate(tts.items()):
+            k, v = k
+            plt.axvline(v, lw=2.0, label=k, c=cmap(i))
+        cmap = plt.cm.get_cmap("Dark2", len(adds))
+        for i, k in enumerate(adds.items()):
+            k, v = k
+            plt.axhline(v, lw=1.5, label=k, c=cmap(i))
 
     # initialization
+    plt.subplot(1, 1, 1) if heat_w_h is None else plt.subplot(2, 2, 1)
+    borders()
     plt.legend(fontsize=FONT_SIZE)
     plt.xlabel("time (seconds)", fontsize=FONT_SIZE)
     plt.ylabel("Addresses", fontsize=FONT_SIZE)
+    lls = list(filter(lambda q: min(adds.values()) < q[1] < max(adds.values()) + 725000, lls))
 
     # draw plots
+    x_data = list(map(lambda q: q[0], lls))
+    y_data = list(map(lambda q: q[1], lls))
     if separate_wb:
-        writes = list(filter(lambda q: q[2] == 'W' and min(adds.values()) < q[1] < max(adds.values())+1000000, logs))
+        writes = list(filter(lambda q: q[2] == 'W', lls))
         wrs_idx = list(map(lambda q: q[0], writes))
         wrs_add = list(map(lambda q: q[1], writes))
 
-        write_backs = list(filter(lambda q: q[2] == 'WB' and min(adds.values()) < q[1] < max(adds.values())+1000000, logs))
+        write_backs = list(filter(lambda q: q[2] == 'WB', lls))
         wbs_idx = list(map(lambda q: q[0], write_backs))
         wbs_add = list(map(lambda q: q[1], write_backs))
 
         plt.plot(wbs_idx, wbs_add, 'b.', label="Write Backs")
         plt.plot(wrs_idx, wrs_add, 'r.', label="Writes")
     else:
-        logs_idx = list(map(lambda q: q[0], lls))
-        logs_add = list(map(lambda q: q[1], lls))
-        plt.plot(logs_idx, logs_add)
+        plt.plot(x_data, y_data, '.')
+
+    if heat_w_h:
+        try:
+            wdt, hgt = heat_w_h
+            x_min, x_max = min(x_data), max(x_data)
+            y_min, y_max = min(y_data), max(y_data)
+            wdt_bin = int((x_max - x_min) / wdt) + 1
+            hgt_bin = int((y_max - y_min) / hgt) + 1
+        except Exception as e:
+            if type(e) == TypeError:
+                print('\033[91m' + "ERROR: heat_w_h should be in the form (width, height). can't draw the plot.")
+            else:
+                print(e)
+            return
+        plt.subplot(2, 2, 2)
+        plt.title("writes per chunk", fontsize=TITLE_SIZE)
+        plt.hist2d(x_data, y_data, bins=(wdt_bin, hgt_bin), cmap=plt.cm.get_cmap('jet'))
+        # plt.colorbar()
+
+        # density plots
+        buckets = [[[] for _ in range(hgt_bin)] for _ in range(wdt_bin)]
+        temp_dens = np.zeros((hgt_bin, wdt_bin), dtype='float')
+        spat_dens = np.zeros((hgt_bin, wdt_bin), dtype='float')
+        for x, y in zip(x_data, y_data):
+            i = int((x - x_min) / wdt)
+            j = int((y - y_min) / hgt)
+            buckets[i][j].append((x, y))
+        for i, row in enumerate(buckets):
+            for j, cell in enumerate(row):
+                write_count = len(cell)
+                if write_count > 1:
+                    time_range = max(cell, key=lambda q: q[0])[0] - min(cell, key=lambda q: q[0])[0]
+                    addr_range = max(cell, key=lambda q: q[1])[1] - min(cell, key=lambda q: q[1])[1]
+                    temp_dens[hgt_bin - j - 1, i] = write_count / time_range if addr_range != 0 else np.inf
+                    spat_dens[hgt_bin - j - 1, i] = write_count / addr_range if addr_range != 0 else np.inf
+                else:
+                    spat_dens[hgt_bin - j - 1, i] = 0
+                    temp_dens[hgt_bin - j - 1, i] = 0
+        plt.subplot(2, 2, 3)
+        plt.title("temporal density", fontsize=TITLE_SIZE)
+        sns.heatmap(temp_dens, cmap='jet', robust=True, cbar=False)
+        plt.subplot(2, 2, 4)
+        plt.title("spatial density", fontsize=TITLE_SIZE)
+        sns.heatmap(spat_dens, cmap='jet', robust=True, cbar=False)
+
     plt.show()
 
 
@@ -80,6 +203,6 @@ if __name__ == '__main__':
     logs = parse_log()
     times, addresses = parse_borders()
 
-    # plot(logs, times, addresses)
+    plot(logs, times, addresses, heat_w_h=(3, 150000))
 
-    grouper(addresses, logs)
+    # grouper(times, addresses, logs)
