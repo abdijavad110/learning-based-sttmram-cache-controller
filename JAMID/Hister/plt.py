@@ -6,6 +6,7 @@ from matplotlib import pyplot as plt
 
 FONT_SIZE = 5 if os.name == 'nt' else 10
 TITLE_SIZE = 5 if os.name == 'nt' else 20
+CMAP = 'coolwarm'
 
 
 def grouper(time: type({}), addr: type({}), reqs: list):
@@ -165,15 +166,10 @@ def plot(lls, tts, adds, separate_wb=False, heat_w_h=None):
             else:
                 print(e)
             return
-        plt.subplot(2, 2, 2)
-        plt.title("writes per chunk", fontsize=TITLE_SIZE)
-        plt.hist2d(x_data, y_data, bins=(wdt_bin, hgt_bin), cmap=plt.cm.get_cmap('jet'))
-        # plt.colorbar()
-
-        # density plots
         buckets = [[[] for _ in range(hgt_bin)] for _ in range(wdt_bin)]
         temp_dens = np.zeros((hgt_bin, wdt_bin), dtype='float')
         spat_dens = np.zeros((hgt_bin, wdt_bin), dtype='float')
+        wrt_cnts = np.zeros((hgt_bin, wdt_bin), dtype='float')
         for x, y in zip(x_data, y_data):
             i = int((x - x_min) / wdt)
             j = int((y - y_min) / hgt)
@@ -184,17 +180,29 @@ def plot(lls, tts, adds, separate_wb=False, heat_w_h=None):
                 if write_count > 1:
                     time_range = max(cell, key=lambda q: q[0])[0] - min(cell, key=lambda q: q[0])[0]
                     addr_range = max(cell, key=lambda q: q[1])[1] - min(cell, key=lambda q: q[1])[1]
-                    temp_dens[hgt_bin - j - 1, i] = write_count / time_range if addr_range != 0 else np.inf
-                    spat_dens[hgt_bin - j - 1, i] = write_count / addr_range if addr_range != 0 else np.inf
+                    temp_dens[hgt_bin - j - 1, i] = write_count / time_range if time_range != 0 else np.inf
+                    spat_dens[hgt_bin - j - 1, i] = write_count / addr_range if addr_range != 0 else 0
                 else:
                     spat_dens[hgt_bin - j - 1, i] = 0
                     temp_dens[hgt_bin - j - 1, i] = 0
+                wrt_cnts[hgt_bin - j - 1, i] = write_count
+        hgt, y_min, y_max = list(map(lambda q: q // 10 ** 4, [hgt, y_min, y_max]))
+
+        def draw(data):
+            sns.heatmap(data / np.max(data, axis=(0, 1), keepdims=True), cmap=CMAP, robust=False, cbar=True,
+                        yticklabels=range(y_min, y_max, hgt), xticklabels=range(int(x_min), int(x_max), wdt),
+                        )
+            #           annot=True, fmt='.1f')
+
+        plt.subplot(2, 2, 2)
+        plt.title("writes per chunk", fontsize=TITLE_SIZE)
+        draw(wrt_cnts)
         plt.subplot(2, 2, 3)
         plt.title("temporal density", fontsize=TITLE_SIZE)
-        sns.heatmap(temp_dens, cmap='jet', robust=True, cbar=False)
+        draw(temp_dens)
         plt.subplot(2, 2, 4)
         plt.title("spatial density", fontsize=TITLE_SIZE)
-        sns.heatmap(spat_dens, cmap='jet', robust=True, cbar=False)
+        draw(spat_dens)
 
     plt.show()
 
