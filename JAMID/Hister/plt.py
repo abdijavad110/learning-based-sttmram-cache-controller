@@ -190,7 +190,7 @@ def plot(lls, tts, adds, separate_wb=False, heat_w_h=None):
 
         def draw(data):
             sns.heatmap(data / np.max(data, axis=(0, 1), keepdims=True), cmap=CMAP, robust=False, cbar=True,
-                        yticklabels=range(y_min, y_max, hgt), xticklabels=range(int(x_min), int(x_max), wdt),
+                        # yticklabels=range(y_min, y_max, hgt), xticklabels=range(int(x_min), int(x_max), wdt),
                         )
             #           annot=True, fmt='.1f')
 
@@ -211,6 +211,6 @@ if __name__ == '__main__':
     logs = parse_log()
     times, addresses = parse_borders()
 
-    plot(logs, times, addresses, heat_w_h=(3, 150000))
+    plot(logs, times, addresses, heat_w_h=(0.2, 50000))
 
     # grouper(times, addresses, logs)

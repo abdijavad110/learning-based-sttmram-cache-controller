@@ -96,12 +96,12 @@ if __name__ == "__main__":
                 max_bbg = bbg
         # if we have found a pair and the Jaccard index is higher than JACCARD_THR we have a match
         # (i.e. TP++ - we use another variable to count just for the sake of clarity. we add to TP later)
-        if (not max_jaccard is None) and max_jaccard >= JACCARD_THR:
-            bb_golden1.remove(max_bbg)  # it is not necessary to remove from bb_exp since we are scanning such list
-            matched_bbe = matched_bbe + 1
-    print(max_jaccard)
+        # if max_jaccard and max_jaccard >= JACCARD_THR:
+        #     bb_golden1.remove(max_bbg)  # it is not necessary to remove from bb_exp since we are scanning such list
+        #     matched_bbe = matched_bbe + 1
+    print(max_jaccard) if max_jaccard else print("none")
     # compute final stats
-    TP = TP + matched_bbe  # we add to TP the count of bb pairs having jaccard value >= JACCARD_THR
-    FP = len(bb_exp) - matched_bbe  # the number of "new" wrong bbs is equal to the remaining bbs in bb_exp
-    FN = len(bb_golden1)  # the number of not detected golden bbs is equal to the size of bb_golden1
-    print("TP: " + str(TP) + " FP: " + str(FP) + " FN: " + str(FN))
+    # TP = TP + matched_bbe  # we add to TP the count of bb pairs having jaccard value >= JACCARD_THR
+    # FP = len(bb_exp) - matched_bbe  # the number of "new" wrong bbs is equal to the remaining bbs in bb_exp
+    # FN = len(bb_golden1)  # the number of not detected golden bbs is equal to the size of bb_golden1
+    # print("TP: " + str(TP) + " FP: " + str(FP) + " FN: " + str(FN))

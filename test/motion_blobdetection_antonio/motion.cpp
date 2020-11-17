@@ -8,10 +8,13 @@
 //AMHM Start
 #include "../../include/sim_api.h"
 #define ToUnsignedInt(X) *((unsigned long long*)(&X))
-//double ber[8]={0.0000001,0.0000001,0.0000001,0.0000001,0.0000001,0.0000001,0.0000001,0.0000001}; // FI Uniform 0.01 sometimes crash!
-//double ber[8]={0.000001,0.000001,0.000001,0.000001,0.000001,0.000001,0.000001,0.000001}; // FI Uniform 0.01 sometimes crash!
-//double ber[8]={0.00001,0.00001,0.0001,0.00001,0.0001,0.0001,0.0000001,0}; // FI Uniform 0.01 sometimes crash!
-double ber[8]={0,0,0,0,0,0,0,0}; // FI Uniform 0.01 sometimes crash!
+//double ber[8]={0.0000001,0.0000001,0.0000001,0.0000001,0.0000001,0.0000001,0.0000001,0.0000001}; // all -7
+//double ber[8]={0.000001,0.000001,0.000001,0.000001,0.000001,0.000001,0.000001,0.000001}; // all -6
+//double ber[8]={0.00001,0.00001,0.00001,0.00001,0.00001,0.00001,0.00001,0.00001}; // all -5
+//double ber[8]={0.00001,0.00001,0.0001,0.00001,0.0001,0.0001,0.0000001,0}; // minimum
+//double ber[8]={0.00001,0.00001,0.0001,0.00001,0.0001,0.0001,0.0000001,0.00001}; // scenario 2
+double ber[8]={0.00001,0.00001,0.0001,0.00001,0.0001,0.0001,0.00001,0.00001}; // scenario 3
+//double ber[8]={0,0,0,0,0,0,0,0}; // golden
 //AMHM End
 
 #include <time.h>
@@ -447,6 +450,7 @@ int** blob_detection(sImage* originalImage, sImage* blobImage, int* num_of_bbs, 
 
   //do consider that 0 means no blob. >0 is a blob. in this way there is an extra identified bb in position [0]
   //that is later discarded during the print on the screen and in the modification of the application
+  printf(">>>>>>>>>>>>>>>> A: %f\n", TIME);
   for(r=0, count=1; r<blobImage->rows; r++){
     for (c=0; c<blobImage->cols; c++){
       int value;
@@ -468,7 +472,7 @@ int** blob_detection(sImage* originalImage, sImage* blobImage, int* num_of_bbs, 
       blobImage->data[r*blobImage->cols+c] = value;
     }
   }
-
+  printf(">>>>>>>>>>>>>>>> B: %f\n", TIME);
   /*pay attention. numbering of blobs starts from 1 (0 is the background) so we have to shift left the index by 1*/
   count--;
   bb_coords = (int**) malloc(sizeof(int*)*(count));
@@ -479,6 +483,7 @@ int** blob_detection(sImage* originalImage, sImage* blobImage, int* num_of_bbs, 
     bb_coords[i][2] = 0;
     bb_coords[i][3] = 0;
   }
+  printf(">>>>>>>>>>>>>>>> C: %f\n", TIME);
   for(r=0; r<blobImage->rows; r++){
     for (c=0; c<blobImage->cols; c++){
       char value = blobImage->data[r*blobImage->cols+c];
@@ -494,7 +499,9 @@ int** blob_detection(sImage* originalImage, sImage* blobImage, int* num_of_bbs, 
       }
     }
   }
-
+  printf(">>>>>>>>>>>>>>>> D: %f\n", TIME);
+//  AMHM_approx((long long int)&(blobImage.data[0]), (long long int) (&blobImage.data[0] + sizeof(unsigned char)*bgImage.rows*bgImage.cols*1 - 1));
+  AMHM_qual(ToUnsignedInt(ber[7]));
   if(output)
     for(r=0; r<blobImage->rows; r++)
       for (c=0; c<blobImage->cols; c++){
@@ -506,6 +513,7 @@ int** blob_detection(sImage* originalImage, sImage* blobImage, int* num_of_bbs, 
              (r==bb_coords[i][3] && c>=bb_coords[i][0] && c<=bb_coords[i][2]) )
             blobImage->data[r*blobImage->cols+c]=FG;
       }
+  printf(">>>>>>>>>>>>>>>> E: %f\n", TIME);
 
   *num_of_bbs = count;
   return bb_coords;

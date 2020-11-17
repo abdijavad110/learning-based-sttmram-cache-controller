@@ -9,8 +9,7 @@ using namespace std;
 //AMHM End
 /////////////// JA codes start
 #include <time.h>
-//#define MODE_AllLayers 0  /// 0: log only l2, 1: log all layers
-//#define MODE_RecordReads 0  /// 0: log only writes and writebacks, 1: log all requests
+//#define EN_LOG 1
 /////////////// end
 
 // Cache class
@@ -49,6 +48,7 @@ Cache::Cache(
    #endif
 
    /////////////// JA codes start
+#ifdef EN_LOG
    if (name == "L2") {
      char buff[100];
      sprintf(buff, "log_%s_core-%d.log", name.c_str(), core_id);
@@ -56,6 +56,7 @@ Cache::Cache(
      fprintf(access_log, "time,hit\n");
    }
    /////////////// end
+#endif
 }
 
 Cache::~Cache()
@@ -93,7 +94,9 @@ Cache::~Cache()
    //AMHM End
 
    /////////////// JA codes start
+#ifdef EN_LOG
    if (m_name == "L2") fclose(access_log);
+#endif
    /////////////// end
 }
 
@@ -148,9 +151,9 @@ Cache::accessSingleLine(IntPtr addr, access_t access_type,
 
       set->read_line(line_index, block_offset, buff, bytes, update_replacement);
 
-      #if MODE_RecordReads
+#ifdef EN_LOG
       if (m_name == "L2") fprintf(access_log,"%f,%ld,R\n", double(clock())/CLOCKS_PER_SEC, addr); /////////////// JA code
-      #endif
+#endif
    }
    else
    {
@@ -160,7 +163,9 @@ Cache::accessSingleLine(IntPtr addr, access_t access_type,
       if (m_fault_injector)
          m_fault_injector->postWrite(addr, set_index * m_associativity + line_index, bytes, (Byte*)m_sets[set_index]->getDataPtr(line_index, block_offset), now);
 
+#ifdef EN_LOG
      if (m_name == "L2") fprintf(access_log,"%f,%ld,WB\n", double(clock())/CLOCKS_PER_SEC, addr); /////////////// JA code
+#endif
    }
 
    return cache_block_info;
@@ -196,8 +201,9 @@ Cache::insertSingleLine(IntPtr addr, Byte* fill_buff,
    ++m_set_usage_hist[set_index];
    #endif
 
+#ifdef EN_LOG
   if (m_name == "L2") fprintf(access_log,"%f,%ld,W\n", double(clock())/CLOCKS_PER_SEC, addr); /////////////// JA code
-
+#endif
    delete cache_block_info;
 }
 
@@ -222,9 +228,11 @@ Cache::updateCounters(bool cache_hit)
       if (cache_hit) {
           m_num_hits++;
       /////////////// JA codes start
+#ifdef EN_LOG
         if (m_name == "L2") fprintf(access_log,"%f,1\n", double(clock())/CLOCKS_PER_SEC);
       } else if (m_name == "L2") {
          fprintf(access_log,"%f,0\n", double(clock())/CLOCKS_PER_SEC);
+#endif
       }
        /////////////// end
    }
