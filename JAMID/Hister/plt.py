@@ -189,7 +189,8 @@ def plot(lls, tts, adds, separate_wb=False, heat_w_h=None):
         hgt, y_min, y_max = list(map(lambda q: q // 10 ** 4, [hgt, y_min, y_max]))
 
         def draw(data):
-            sns.heatmap(data / np.max(data, axis=(0, 1), keepdims=True), cmap=CMAP, robust=False, cbar=True,
+            sns.heatmap(data / np.max(data, axis=(0, 1), keepdims=True), cmap=CMAP, robust=False,
+                        cbar=False,
                         # yticklabels=range(y_min, y_max, hgt), xticklabels=range(int(x_min), int(x_max), wdt),
                         )
             #           annot=True, fmt='.1f')
@@ -211,6 +212,6 @@ if __name__ == '__main__':
     logs = parse_log()
     times, addresses = parse_borders()
 
-    plot(logs, times, addresses, heat_w_h=(0.2, 50000))
+    plot(logs, times, addresses, heat_w_h=(0.5, 50000))
 
     # grouper(times, addresses, logs)

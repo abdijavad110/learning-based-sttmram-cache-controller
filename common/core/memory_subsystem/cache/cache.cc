@@ -151,9 +151,9 @@ Cache::accessSingleLine(IntPtr addr, access_t access_type,
 
       set->read_line(line_index, block_offset, buff, bytes, update_replacement);
 
-#ifdef EN_LOG
-      if (m_name == "L2") fprintf(access_log,"%f,%ld,R\n", double(clock())/CLOCKS_PER_SEC, addr); /////////////// JA code
-#endif
+//#ifdef EN_LOG
+//      if (m_name == "L2") fprintf(access_log,"%f,%ld,R\n", double(clock())/CLOCKS_PER_SEC, addr); /////////////// JA code
+//#endif
    }
    else
    {
