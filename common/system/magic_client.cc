@@ -65,8 +65,26 @@ UInt64 handleMagicInstruction(thread_id_t thread_id, UInt64 cmd, UInt64 arg0, UI
        }
        else
             printf("AMHM: Address 0x%llx is not found in approximation table\n", (unsigned long long int) arg0);
-       return 0;     
+       return 0;
    //AMHM End
+   //// JH_start
+   case JH_SPAT:
+       Sim()->approx_table[Sim()->approx_table_entry].spat.min = *(double*) &arg0;
+       Sim()->approx_table[Sim()->approx_table_entry].spat.max = *(double*) &arg1;
+       printf("JH: min: %e, max: %e Fed to Sniper for 0x%llx start address\n",\
+            Sim()->approx_table[Sim()->approx_table_entry].spat.min,\
+            Sim()->approx_table[Sim()->approx_table_entry].spat.max,\
+            Sim()->approx_table[Sim()->approx_table_entry].start_address);
+       return 0;
+   case JH_TEMP:
+       Sim()->approx_table[Sim()->approx_table_entry].temp.min = *(double*) &arg0;
+       Sim()->approx_table[Sim()->approx_table_entry].temp.max = *(double*) &arg1;
+       printf("JH: min: %e, max: %e Fed to Sniper for 0x%llx start address\n",\
+            Sim()->approx_table[Sim()->approx_table_entry].temp.min,\
+            Sim()->approx_table[Sim()->approx_table_entry].temp.max,\
+            Sim()->approx_table[Sim()->approx_table_entry].start_address);
+       return 0;
+   //// JH_end
    case SIM_CMD_INSTRUMENT_MODE:
    case SIM_CMD_MHZ_GET:
    case SIM_CMD_SET_THREAD_NAME:

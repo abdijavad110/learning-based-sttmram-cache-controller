@@ -47,7 +47,7 @@ double erosion_C = 0.001;
 #define BG 0
 #define ER_THRESHOLD 0.3
 
-/// JAMID
+/// JH
 #define TIME double(clock())/CLOCKS_PER_SEC
 
 typedef struct {
@@ -86,10 +86,10 @@ int main(int argc, char **argv) {
   int **bb_coords;
   bool output = false;
 
-  /// JAMID start
+  /// JH start
   char exec_buf_s[256], exec_buf_l[1024 * 1024], var_buf_s[256], var_buf_l[1024 * 1024];
   float time_latch;
-  /// JAMID end
+  /// JH end
 
   if (argc > 4 || argc < 3) {
     std::cout << "USAGE: " << argv[0] << " frame1.bmp frame2.bmp [output]" << std::endl << std::endl;
@@ -298,7 +298,7 @@ int main(int argc, char **argv) {
     deleteImage(&outputImage2);
   }
 
-  printf("\n\n\n >>>>>>>>>>>>>>>>>>>>>> JAMID:\n>>>>>>>>>>> execution times:\n");
+  printf("\n\n\n >>>>>>>>>>>>>>>>>>>>>> JH:\n>>>>>>>>>>> execution times:\n");
   printf("%s", exec_buf_l);
   printf(">>>>>>>>>>> variables addresses:\n");
   printf("%s\n\n\n", var_buf_l);

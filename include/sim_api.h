@@ -22,6 +22,10 @@
 #define AMHM_QUAL               16
 #define AMHM_ACCURATE           17
 //AMHM End
+//// JH_start
+#define JH_SPAT                 18
+#define JH_TEMP                 19
+//// JH_end
 
 #define SIM_OPT_INSTRUMENT_DETAILED    0
 #define SIM_OPT_INSTRUMENT_WARMUP      1
@@ -96,6 +100,10 @@
 #define AMHM_qual(arg0)                     SimMagic1(AMHM_QUAL, arg0)
 #define AMHM_accurate(arg0)                 SimMagic1(AMHM_ACCURATE, arg0)
 //AMHM End
+//// JH_start
+#define JH_spat(arg0, arg1)                 SimMagic2(JH_SPAT, arg0, arg1)
+#define JH_temp(arg0, arg1)                 SimMagic2(JH_TEMP, arg0, arg1)
+//// JH_end
 #define SimNamedMarker(arg0, str)           SimMagic2(SIM_CMD_NAMED_MARKER, arg0, (unsigned long)(str))
 #define SimUser(cmd, arg)                   SimMagic2(SIM_CMD_USER, cmd, arg)
 #define SimSetInstrumentMode(opt)           SimMagic1(SIM_CMD_INSTRUMENT_MODE, opt)

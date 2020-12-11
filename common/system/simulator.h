@@ -90,6 +90,12 @@ public:
        UInt64 numberOfReads;
        UInt64 numberOfWrites;
        UInt64 numberOfInjectedFaults;
+       //// JH_start
+       struct mM {
+           double min;
+           double max;
+       } spat, temp;
+       //// JH_end
    }approx_table[approx_table_max_entry];
    signed int approx_table_search(IntPtr address);
    double get_error_rate(IntPtr address);

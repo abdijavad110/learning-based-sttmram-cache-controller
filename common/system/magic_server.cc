@@ -111,6 +111,16 @@ UInt64 MagicServer::Magic_unlocked(thread_id_t thread_id, core_id_t core_id, UIn
          return arg0;
       }
       //AMHM End
+      //// JH_start
+       case JH_SPAT:         // fixme: (JH) don't know what this should do
+       {
+           return arg0;
+       }
+       case AMHM_TEMP:       // fixme: (JH) don't know what this should do
+       {
+           return arg0;
+       }
+      //// JH_end
       case SIM_CMD_INSTRUMENT_MODE:
          return setInstrumentationMode(arg0);
       case SIM_CMD_MHZ_GET:

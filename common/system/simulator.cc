@@ -158,6 +158,12 @@ void Simulator::start()
        approx_table[i].numberOfReads = 0;
        approx_table[i].numberOfWrites = 0;
        approx_table[i].numberOfInjectedFaults = 0;
+       //// JH_start
+       approx_table[i].spat.min = 0;
+       approx_table[i].spat.max = 0;
+       approx_table[i].temp.min = 0;
+       approx_table[i].temp.max = 0;
+       //// JH_end
    }
    //AMHM End
 }
