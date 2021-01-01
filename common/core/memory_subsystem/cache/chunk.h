@@ -1,7 +1,3 @@
-//
-// Created by javad on 11/12/2020.
-//
-
 #ifndef SNIPER_MEM_AUX_ELEM_H
 #define SNIPER_MEM_AUX_ELEM_H
 
@@ -11,7 +7,7 @@ struct Dens {
 };
 
 
-class AuxElem {
+class Chunk {
 private:
     int accesses;
     struct A {
@@ -23,7 +19,7 @@ private:
         float end;
     } time;
 public:
-    AuxElem();
+    Chunk();
 
     void new_acc(int a);
 

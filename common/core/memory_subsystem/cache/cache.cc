@@ -9,7 +9,7 @@ using namespace std;
 //AMHM End
 /////////////// JA codes start
 #include <time.h>
-#include "auxiliary.h"
+#include "chunk_manager.h"
 //#define EN_LOG 1
 /////////////// end
 
@@ -57,7 +57,7 @@ Cache::Cache(
      fprintf(access_log, "time,hit\n");
    }
 #endif
-    Auxiliary().initiate();     // fixme: (JH) set cache size, chunk size
+    ChunkManager().initiate();     // fixme: (JH) set cache size, chunk size
    /////////////// end
 }
 
@@ -168,7 +168,7 @@ Cache::accessSingleLine(IntPtr addr, access_t access_type,
 #ifdef EN_LOG
      if (m_name == "L2") fprintf(access_log,"%f,%ld,WB\n", double(clock())/CLOCKS_PER_SEC, addr); /////////////// JA code
 #endif
-    Auxiliary().new_acc(addr);  // fixme: (JH) should pass the cache address?
+    ChunkManager().new_acc(addr);  // fixme: (JH) should pass the cache address?
    }
 
    return cache_block_info;
@@ -207,7 +207,7 @@ Cache::insertSingleLine(IntPtr addr, Byte* fill_buff,
 #ifdef EN_LOG
   if (m_name == "L2") fprintf(access_log,"%f,%ld,W\n", double(clock())/CLOCKS_PER_SEC, addr); /////////////// JA code
 #endif
-    Auxiliary().new_acc(addr);  // fixme: (JH) should pass the cache address?
+    ChunkManager().new_acc(addr);  // fixme: (JH) should pass the cache address?
    delete cache_block_info;
 }
 

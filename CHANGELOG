@@ -32,7 +32,7 @@ Version 5.3
 Version 5.2
   * Configurable coherency protocol (MSI/MESI/MESIF), made MESI the default
   * Add more cache statistics: LRU stack distance historgram, LLC miss latency breakdown
-  * Implement auxiliary tag directories (ATD) to track constructive/destructive interference in shared caches
+  * Implement ChunkManager tag directories (ATD) to track constructive/destructive interference in shared caches
   * Implement 2-level TLB hierarchy with Nehalem configuration
   * New hooks HOOK_APPLICATION_ROI_{BEGIN,END}, called even when ROI markers are not used directly; these hooks can be used to trigger ROI from a script
   * Improved stop-by-icount script to support ROI-relative warmup and detailed lengths

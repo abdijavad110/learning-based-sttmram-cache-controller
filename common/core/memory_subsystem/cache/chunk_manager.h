@@ -1,13 +1,13 @@
 #ifndef SNIPER_MEM_AUXILIARY_H
 #define SNIPER_MEM_AUXILIARY_H
 
-#include "aux_elem.h"
+#include "chunk.h"
 
-class Auxiliary {
+class ChunkManager {
 private:
     static int chunkNo;
     static int chunkSize;
-    static AuxElem *array[];
+    static Chunk *chunks[];
     static Dens *densities[];
 
     static void calc_densities();

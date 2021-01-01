@@ -2,18 +2,18 @@
 // Created by javad on 11/12/2020.
 //
 
-#include "aux_elem.h"
+#include "chunk.h"
 
-AuxElem::AuxElem() {
+Chunk::Chunk() {
     reset();
 }
 
-void AuxElem::new_acc(int a) {
+void Chunk::new_acc(int a) {
     accesses += 1;
     // fixme: (JH) implemet addr & time updates
 }
 
-void AuxElem::reset() {
+void Chunk::reset() {
     accesses = 0;
     addr.min = -1;
     addr.max = 0;
@@ -21,7 +21,7 @@ void AuxElem::reset() {
     time.end = 0;
 }
 
-Dens AuxElem::calc_densities() {
+Dens Chunk::calc_densities() {
     Dens res;
     res.spatial = 0;
     res.temporal = 0;
