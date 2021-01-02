@@ -5,19 +5,18 @@
 
 class ChunkManager {
 private:
-    static int chunkNo;
-    static int chunkSize;
-    static Chunk *chunks[];
-    static Dens *densities[];
 
-    static void calc_densities();
+    Chunk current_chunk;
+
+    void calc_densities();
+    double get_qual(float min, float max, float current);
 
 public:
-    static void initiate(int cache_size, int chunk_size);
+//    static void initiate();
 
-    static void new_acc(int addr);
+    void new_acc(int addr);
 
-    static void update_table();
+    void update_table();
 };
 
 

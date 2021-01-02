@@ -7,6 +7,9 @@
 
 //AMHM Start
 #define approx_table_max_entry 100
+//JAMID
+//int app_max_ent = approx_table_max_entry;
+//
 //AMHM End
 
 

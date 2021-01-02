@@ -11,6 +11,7 @@ using namespace std;
 #include <time.h>
 #include "chunk_manager.h"
 //#define EN_LOG 1
+#define TIME double(clock())/CLOCKS_PER_SEC
 /////////////// end
 
 // Cache class
@@ -57,7 +58,9 @@ Cache::Cache(
      fprintf(access_log, "time,hit\n");
    }
 #endif
-    ChunkManager().initiate();     // fixme: (JH) set cache size, chunk size
+    time_container = 0;
+
+//    ChunkManager().initiate();
    /////////////// end
 }
 
@@ -168,7 +171,10 @@ Cache::accessSingleLine(IntPtr addr, access_t access_type,
 #ifdef EN_LOG
      if (m_name == "L2") fprintf(access_log,"%f,%ld,WB\n", double(clock())/CLOCKS_PER_SEC, addr); /////////////// JA code
 #endif
-    ChunkManager().new_acc(addr);  // fixme: (JH) should pass the cache address?
+    if (m_name == "L2"){
+        chunkManager.new_acc(addr);
+        update_approx_table();
+    }
    }
 
    return cache_block_info;
@@ -207,7 +213,10 @@ Cache::insertSingleLine(IntPtr addr, Byte* fill_buff,
 #ifdef EN_LOG
   if (m_name == "L2") fprintf(access_log,"%f,%ld,W\n", double(clock())/CLOCKS_PER_SEC, addr); /////////////// JA code
 #endif
-    ChunkManager().new_acc(addr);  // fixme: (JH) should pass the cache address?
+    if (m_name == "L2"){
+        chunkManager.new_acc(addr);
+        update_approx_table();
+    }
    delete cache_block_info;
 }
 
@@ -251,3 +260,13 @@ Cache::updateHits(Core::mem_op_t mem_op_type, UInt64 hits)
       m_num_hits += hits;
    }
 }
+// hamidreza
+
+void
+Cache::update_approx_table() {
+    if ((TIME- time_container) > 0.001){ //fixme set time chunk
+        time_container = TIME;
+        chunkManager.update_table();
+    }
+}
+//

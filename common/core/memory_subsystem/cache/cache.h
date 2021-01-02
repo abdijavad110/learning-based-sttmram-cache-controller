@@ -13,6 +13,7 @@
 #include "fault_injection.h"
 /////////////// JA codes start
 #include <stdio.h>
+#include "chunk_manager.h"
 /////////////// end
 
 // Define to enable the set usage histogram
@@ -39,6 +40,9 @@ class Cache : public CacheBase
       #endif
       /////////////// JA codes start
       FILE* access_log;
+      double time_container;
+      ChunkManager chunkManager;
+      void update_approx_table();
       /////////////// end
 
    public:

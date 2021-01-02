@@ -2,30 +2,45 @@
 #include "simulator.h"
 
 
-void ChunkManager::initiate(int cache_size, int chunk_size) {
-    chunkSize = chunk_size;
-    chunkNo = (int) cache_size / chunk_size;
-    Chunk arr[chunkNo];       // fixme: (JH) check if this syntax is correct or should use malloc instead
-    chunks = arr;                // fixme: (JH) what is this warning
-    Dens dens[chunkNo];
-    densities = dens;
-}
+//void ChunkManager::initiate() {
+//    current_chunk = new Chunk();
+//}
+
+
+float qual_array[] = {10e-3, 10e-4, 10e-5, 10e-6, 10e-7};
+int qual_arr_size = sizeof(qual_array)/sizeof(qual_array[0]);
 
 void ChunkManager::new_acc(int addr) {
-    int idx = addr;                // fixme: (JH) find the proper translation for address
-    chunks[idx].new_acc(addr);
+    current_chunk.new_acc(addr);
 }
 
 void ChunkManager::update_table() {    // fixme: (JH) use properly
-    calc_densities();
-    for () { // fixme: (JH) for on approx_table or dens_table?
-        // fixme: (JH) find the new value for quality
+    Dens dens = current_chunk.calc_densities();
+    float spatial = dens.spatial;
+    float temporal = dens.temporal;
+
+    for(int i = 0; i < approx_table_max_entry; i++) {
+        double new_spat_qual = get_qual(Sim()->approx_table[i].spat.min, Sim()->approx_table[i].spat.max, spatial);
+        double new_temp_qual = get_qual(Sim()->approx_table[i].temp.min, Sim()->approx_table[i].temp.max, temporal);
+        //fixme: felan faghat temporal
+        Sim()->approx_table[i].quality_level = new_temp_qual;
     }
+    current_chunk.reset();
+
+//        if((address >= (IntPtr) approx_table[i].start_address) && (address <= (IntPtr) approx_table[i].end_address))
+//            return i;
 }
 
-void ChunkManager::calc_densities() {
-    for (int i=0; i<chunkNo; i++) {
-        densities[i] = chunks[i].calc_densities();
-        chunks[i].reset()
+double
+ChunkManager::get_qual(float min, float max, float current){
+    if (current <= min)
+        return qual_array[0];
+    else if (current >= max)
+        return qual_array[qual_arr_size-1];
+    else {
+        float gap = max - min;
+        float map_level = (current - min)/(gap);
+        int idx = map_level*qual_arr_size;
+        return qual_array[idx];
     }
 }

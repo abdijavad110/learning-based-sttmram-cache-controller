@@ -116,7 +116,7 @@ UInt64 MagicServer::Magic_unlocked(thread_id_t thread_id, core_id_t core_id, UIn
        {
            return arg0;
        }
-       case AMHM_TEMP:       // fixme: (JH) don't know what this should do
+       case JH_TEMP:       // fixme: (JH) don't know what this should do
        {
            return arg0;
        }
