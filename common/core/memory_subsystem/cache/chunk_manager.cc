@@ -33,6 +33,7 @@ void ChunkManager::update_table() {    // fixme: (JH) use properly
 
 double
 ChunkManager::get_qual(float min, float max, float current){
+    return qual_array[qual_arr_size-1];
     if (current <= min)
         return qual_array[0];
     else if (current >= max)

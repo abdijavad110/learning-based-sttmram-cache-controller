@@ -112,13 +112,17 @@ UInt64 MagicServer::Magic_unlocked(thread_id_t thread_id, core_id_t core_id, UIn
       }
       //AMHM End
       //// JH_start
-       case JH_SPAT:         // fixme: (JH) don't know what this should do
+       case JH_SPAT:
        {
-           return arg0;
+           MagicMarkerType args = { thread_id: thread_id, core_id: core_id, arg0: arg0, arg1: arg1, str: NULL};
+           Sim()->getHooksManager()->callHooks(HookType::HOOK_MAGIC_MARKER, (UInt64)&args);
+           return 0;
        }
-       case JH_TEMP:       // fixme: (JH) don't know what this should do
+       case JH_TEMP:
        {
-           return arg0;
+           MagicMarkerType args = { thread_id: thread_id, core_id: core_id, arg0: arg0, arg1: arg1, str: NULL};
+           Sim()->getHooksManager()->callHooks(HookType::HOOK_MAGIC_MARKER, (UInt64)&args);
+           return 0;
        }
       //// JH_end
       case SIM_CMD_INSTRUMENT_MODE:
