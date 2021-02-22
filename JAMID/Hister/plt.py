@@ -276,8 +276,8 @@ if __name__ == '__main__':
     logs = parse_log()
     times, addresses = parse_borders()
 
-    res = plot(logs, times, addresses, heat_w_h=(0.5, 50000), silent_mode=True)
+    res = plot(logs, times, addresses, heat_w_h=(0.5, 50000), silent_mode=False)
 
-    f = open('stat.json', 'w')
-    f.write(rec_str(res))
-    f.close()
+    # f = open('stat.json', 'w')
+    # f.write(rec_str(res))
+    # f.close()

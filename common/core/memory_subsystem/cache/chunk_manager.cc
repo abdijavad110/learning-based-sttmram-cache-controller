@@ -2,11 +2,6 @@
 #include "simulator.h"
 
 
-//void ChunkManager::initiate() {
-//    current_chunk = new Chunk();
-//}
-
-
 float qual_array[] = {10e-3, 10e-4, 10e-5, 10e-6, 10e-7};
 int qual_arr_size = sizeof(qual_array)/sizeof(qual_array[0]);
 
@@ -20,7 +15,7 @@ void ChunkManager::update_table() {    // fixme: (JH) use properly
     float temporal = dens.temporal;
 
     for(int i = 0; i < approx_table_max_entry; i++) {
-        double new_spat_qual = get_qual(Sim()->approx_table[i].spat.min, Sim()->approx_table[i].spat.max, spatial);
+//        double new_spat_qual = get_qual(Sim()->approx_table[i].spat.min, Sim()->approx_table[i].spat.max, spatial);
         double new_temp_qual = get_qual(Sim()->approx_table[i].temp.min, Sim()->approx_table[i].temp.max, temporal);
         //fixme: felan faghat temporal
         Sim()->approx_table[i].quality_level = new_temp_qual;
@@ -33,7 +28,8 @@ void ChunkManager::update_table() {    // fixme: (JH) use properly
 
 double
 ChunkManager::get_qual(float min, float max, float current){
-    return qual_array[qual_arr_size-1];
+//    return qual_array[qual_arr_size-1];
+    if (current == 0) return 0;
     if (current <= min)
         return qual_array[0];
     else if (current >= max)
