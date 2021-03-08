@@ -10,7 +10,7 @@ Chunk::Chunk() {
     reset();
 }
 
-void Chunk::new_acc(int a) {
+void Chunk::new_acc(long long int  a) {
     accesses += 1;
 
     if (a < addr.min || addr.min == -1)

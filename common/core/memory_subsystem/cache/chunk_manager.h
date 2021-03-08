@@ -7,6 +7,8 @@ class ChunkManager {
 private:
 
     Chunk current_chunk;
+    int qual_write_num[5] = {0, 0, 0, 0, 0};
+    int high_cur_wrt_num = 0;
 
     void calc_densities();
     double get_qual(float min, float max, float current);
@@ -14,7 +16,9 @@ private:
 public:
 //    static void initiate();
 
-    void new_acc(int addr);
+    ~ChunkManager();
+
+    void new_acc(long long int  addr);
 
     void update_table();
 };

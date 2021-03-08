@@ -235,7 +235,8 @@ signed int Simulator::approx_table_search(IntPtr address) {
 }
 
 double Simulator::get_error_rate(IntPtr address) {
-    //printf("AMHM: Start Address Fed to search table: 0x%llx\n", start_address);
+//    printf("================ %lld\n", (long long int) address);
+//    printf("AMHM: Start Address Fed to search table: 0x%llx\n", address);
     for(int i = 0; i < approx_table_max_entry; i++)
                if((address >= (IntPtr) approx_table[i].start_address) && (address <= (IntPtr) approx_table[i].end_address))
                    return approx_table[i].quality_level;

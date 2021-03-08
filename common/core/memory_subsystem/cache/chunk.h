@@ -11,8 +11,8 @@ class Chunk {
 private:
     int accesses;
     struct A {
-        int min;
-        int max;
+        long long int  min;
+        long long int  max;
     } addr;
     struct T {
         float start;
@@ -21,7 +21,7 @@ private:
 public:
     Chunk();
 
-    void new_acc(int a);
+    void new_acc(long long int a);
 
     void reset();
 

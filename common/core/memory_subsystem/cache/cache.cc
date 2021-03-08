@@ -264,7 +264,7 @@ Cache::updateHits(Core::mem_op_t mem_op_type, UInt64 hits)
 
 void
 Cache::update_approx_table() {
-    if ((TIME- time_container) > 0.05){ //fixme set time chunk
+    if ((TIME- time_container) > 0.5){ //fixme set time chunk
         time_container = TIME;
         chunkManager.update_table();
     }
