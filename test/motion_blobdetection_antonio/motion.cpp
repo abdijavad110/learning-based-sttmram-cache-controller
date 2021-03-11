@@ -9,7 +9,7 @@
 #include "../../include/sim_api.h"
 
 #define ToUnsignedInt(X) *((unsigned long long*)(&X))
-double ber[8] = {1e-5, 1e-5, 1e-4, 1e-5, 1e-4, 1e-4, 1e-7, 1e-9}; // FI Uniform 0.01 sometimes crash!
+double ber[8] = {1e-5, 1e-5, 1e-4, 1e-5, 1e-4, 1e-4, 1e-7, 1e-9};
 //double ber[8] = {0, 0, 0, 0, 0, 0, 0, 0};
 //AMHM End
 
@@ -84,8 +84,12 @@ int main(int argc, char **argv) {
         std::cout << "Specify the last parameter (any string is fine) to save output bmps" << std::endl;
         return 1;
     }
-    if (argc == 4)
+    if (argc == 4) {
         output = true;
+        if (strcmp(argv[3], "golden") == 0)
+            for (int i = 0; i < 8; i++)
+                ber[i] = 0;
+    }
 
     readImage(argv[1], &bgImage);
     readImage(argv[2], &originalImage);
@@ -115,7 +119,8 @@ int main(int argc, char **argv) {
     printf("-----------------------------------------------------------------\n");
 
     AMHM_approx((long long int) &(bgGreyImage.data[0]),
-                (long long int) (&bgGreyImage.data[0] + sizeof(unsigned char) * bgImage.rows * bgImage.cols * 1 - 1));
+                (long long int) (&bgGreyImage.data[0] + sizeof(unsigned char) * bgImage.rows * bgImage.cols * 1 -
+                                 1));
     AMHM_qual(ToUnsignedInt(ber[GREY_IMAGEB]));
 //    JH_spat(ToUnsignedInt(0.003497), ToUnsignedInt(0.016827));
     JH_temp(ToUnsignedInt(temporal_arr[GREY_IMAGEB][0]), ToUnsignedInt(temporal_arr[GREY_IMAGEB][1]));
@@ -130,7 +135,8 @@ int main(int argc, char **argv) {
 
     //AMHM Start
     AMHM_approx((long long int) &(originalImage.data[0]),
-                (long long int) (&originalImage.data[0] + sizeof(unsigned char) * bgImage.rows * bgImage.cols * 1 - 1));
+                (long long int) (&originalImage.data[0] + sizeof(unsigned char) * bgImage.rows * bgImage.cols * 1 -
+                                 1));
     AMHM_qual(ToUnsignedInt(ber[ORIGINAL_IMAGEF]));
 //    JH_spat(ToUnsignedInt(0.001736), ToUnsignedInt(0.018229));
     JH_temp(ToUnsignedInt(temporal_arr[ORIGINAL_IMAGEF][0]), ToUnsignedInt(temporal_arr[ORIGINAL_IMAGEF][1]));
@@ -159,13 +165,15 @@ int main(int argc, char **argv) {
     printf("greyImage start address is = %lld\n", (long long int) &(greyImage.data[0]));
     printf("-----------------------------------------------------------------\n");
     AMHM_approx((long long int) &(bgGreyImage.data[0]),
-                (long long int) (&bgGreyImage.data[0] + sizeof(unsigned char) * bgImage.rows * bgImage.cols * 1 - 1));
+                (long long int) (&bgGreyImage.data[0] + sizeof(unsigned char) * bgImage.rows * bgImage.cols * 1 -
+                                 1));
     AMHM_qual(ToUnsignedInt(ber[GREY_IMAGEB]));
     printf("-----------------------------------------------------------------\n");
     printf("bgGreyImage start address is = %lld\n", (long long int) &(bgGreyImage.data[0]));
     printf("-----------------------------------------------------------------\n");
     AMHM_approx((long long int) &(motionImage.data[0]),
-                (long long int) (&motionImage.data[0] + sizeof(unsigned char) * bgImage.rows * bgImage.cols * 1 - 1));
+                (long long int) (&motionImage.data[0] + sizeof(unsigned char) * bgImage.rows * bgImage.cols * 1 -
+                                 1));
     AMHM_qual(ToUnsignedInt(ber[MOTION_IMAGE]));
 //    JH_spat(ToUnsignedInt(0.003746), ToUnsignedInt(0.016059));
     JH_temp(ToUnsignedInt(temporal_arr[MOTION_IMAGE][0]), ToUnsignedInt(temporal_arr[MOTION_IMAGE][1]));
@@ -179,13 +187,15 @@ int main(int argc, char **argv) {
 
     //AMHM Start
     AMHM_approx((long long int) &(motionImage.data[0]),
-                (long long int) (&motionImage.data[0] + sizeof(unsigned char) * bgImage.rows * bgImage.cols * 1 - 1));
+                (long long int) (&motionImage.data[0] + sizeof(unsigned char) * bgImage.rows * bgImage.cols * 1 -
+                                 1));
     AMHM_qual(ToUnsignedInt(ber[MOTION_IMAGE]));
     printf("-----------------------------------------------------------------\n");
     printf("motionImage start address is = %lld\n", (long long int) &(motionImage.data[0]));
     printf("-----------------------------------------------------------------\n");
     AMHM_approx((long long int) &(erosionImage.data[0]),
-                (long long int) (&erosionImage.data[0] + sizeof(unsigned char) * bgImage.rows * bgImage.cols * 1 - 1));
+                (long long int) (&erosionImage.data[0] + sizeof(unsigned char) * bgImage.rows * bgImage.cols * 1 -
+                                 1));
     AMHM_qual(ToUnsignedInt(ber[EROSION_IMAGE]));
 //    JH_spat(ToUnsignedInt(0.003581), ToUnsignedInt(0.027165));
     JH_temp(ToUnsignedInt(temporal_arr[EROSION_IMAGE][0]), ToUnsignedInt(temporal_arr[EROSION_IMAGE][1]));
@@ -199,7 +209,8 @@ int main(int argc, char **argv) {
 
     //AMHM Start
     AMHM_approx((long long int) &(erosionImage.data[0]),
-                (long long int) (&erosionImage.data[0] + sizeof(unsigned char) * bgImage.rows * bgImage.cols * 1 - 1));
+                (long long int) (&erosionImage.data[0] + sizeof(unsigned char) * bgImage.rows * bgImage.cols * 1 -
+                                 1));
     AMHM_qual(ToUnsignedInt(ber[EROSION_IMAGE]));
     printf("-----------------------------------------------------------------\n");
     printf("erosionImage start address is = %lld\n", (long long int) &(erosionImage.data[0]));
@@ -234,13 +245,15 @@ int main(int argc, char **argv) {
         writeImage("output7.bmp", &outputImage);
     }
 
-
+    printf("2199e9c4bdf0ffd34f789e9551382509");
     for (i = 0; i < bbs_num; i++)
-        std::cout << bb_coords[i][0] << " " << bb_coords[i][1] << " -> " << bb_coords[i][2] << " " << bb_coords[i][3]
+        std::cout << bb_coords[i][0] << " " << bb_coords[i][1] << " -> " << bb_coords[i][2] << " "
+                  << bb_coords[i][3]
                   << std::endl;
     for (i = 0; i < bbs_num; i++)
         free(bb_coords[i]);
     free(bb_coords);
+    printf("2199e9c4bdf0ffd34f789e9551382509");
 
     deleteImage(&greyImage);
     deleteImage(&originalImage);

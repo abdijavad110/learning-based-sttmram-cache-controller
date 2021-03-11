@@ -22,12 +22,16 @@ void ChunkManager::new_acc(long long int  addr) {
 }
 
 ChunkManager::~ChunkManager() {
-    printf("\n\nnumber of writes per ber:\n");
-    for (int i=0; i<qual_arr_size; i++) {
-        printf("%.9f: %d\n", qual_array[i], qual_write_num[i]);
+    if (high_cur_wrt_num > 0) {
+        printf("\n\nnumber of writes per ber:\n");
+        printf("4dcc865dcd8a0440f3e955e66928b6a9");
+        for (int i = 0; i < qual_arr_size; i++) {
+            printf("%.9f: %d\n", qual_array[i], qual_write_num[i]);
+        }
+        printf("high current: %d\n", high_cur_wrt_num);
+        printf("4dcc865dcd8a0440f3e955e66928b6a9");
+        printf("\n\n");
     }
-    printf("high current: %d\n", high_cur_wrt_num);
-    printf("\n\n");
 }
 
 void ChunkManager::update_table() {    // fixme: (JH) use properly
