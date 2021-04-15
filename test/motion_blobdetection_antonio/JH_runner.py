@@ -37,7 +37,7 @@ def run_golden(a, b):
 
 
 def run_sniper(a, b):
-    r, o, e = execute("../../run-sniper -c base.cfg --cache-only -- ./motion {} {} outputs/output.bmp".format(a, b))
+    r, o, e = execute("../../run-sniper -c base.cfg --cache-only -- ./motion {} {}".format(a, b))
     if r != 0:
         print(" > Error while running sniper for {}, {} \n{}\n{}".format(a, b, o, e))
     return o
@@ -110,7 +110,7 @@ if __name__ == "__main__":
             img_b = IMG_NAME.format(str(i + 1))
             test_name = "{} vs {}".format(i, i + 1)
             pbar.set_postfix_str(test_name)
-            res_golden = run_golden(img_a, img_b)
+            # res_golden = run_golden(img_a, img_b)
             res_exp = run_sniper(img_a, img_b)
 
             logger.log(test_name, res_exp)

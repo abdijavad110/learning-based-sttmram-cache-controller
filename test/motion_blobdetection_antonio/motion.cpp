@@ -86,9 +86,9 @@ int main(int argc, char **argv) {
     }
     if (argc == 4) {
         output = true;
-        if (strcmp(argv[3], "golden") == 0)
-            for (int i = 0; i < 8; i++)
-                ber[i] = 0;
+//        if (strcmp(argv[3], "golden") == 0)
+//            for (int i = 0; i < 8; i++)
+//                ber[i] = 0;
     }
 
     readImage(argv[1], &bgImage);

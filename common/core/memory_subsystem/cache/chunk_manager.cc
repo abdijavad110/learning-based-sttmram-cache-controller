@@ -59,7 +59,7 @@ void ChunkManager::update_table() {    // fixme: (JH) use properly
 double
 ChunkManager::get_qual(float min, float max, float current){
 //    return 1e-5;
-    max = max *10;
+//    max = max *10;
     if (current == 0) return 0;
     if (current <= min)
         return qual_array[0];
