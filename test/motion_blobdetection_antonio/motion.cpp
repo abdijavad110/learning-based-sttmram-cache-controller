@@ -10,6 +10,7 @@
 
 #define ToUnsignedInt(X) *((unsigned long long*)(&X))
 double ber[8] = {1e-5, 1e-5, 1e-4, 1e-5, 1e-4, 1e-4, 1e-7, 1e-9};
+//double ber[8] = {1e-5, 1e-5, 1e-3, 1e-5, 1e-3, 1e-3, 1e-7, 1e-9};
 //double ber[8] = {0, 0, 0, 0, 0, 0, 0, 0};
 //AMHM End
 

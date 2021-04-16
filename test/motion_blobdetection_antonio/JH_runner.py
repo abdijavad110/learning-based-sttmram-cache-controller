@@ -5,7 +5,7 @@ import json
 import subprocess
 from tqdm import tqdm
 
-IMG_ID_RANGE = range(227, 255)
+IMG_ID_RANGE = range(227, 233)
 IMG_NAME = 'frames/00{}.bmp'
 # REP_PER_TEST = 1
 

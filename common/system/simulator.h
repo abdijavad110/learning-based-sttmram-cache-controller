@@ -90,6 +90,7 @@ public:
        unsigned long long int start_address;
        unsigned long long int end_address;
        double quality_level;
+       double quality_level_ref;
        UInt64 numberOfReads;
        UInt64 numberOfWrites;
        UInt64 numberOfInjectedFaults;
