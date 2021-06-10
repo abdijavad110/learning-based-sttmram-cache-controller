@@ -61,7 +61,7 @@ def jaccard(raw_test, raw_gold):
             jaccard = float(intersArea) / unionArea
             if max_jaccard is None or jaccard > max_jaccard:
                 max_jaccard = jaccard
-    return max_jaccard if max_jaccard else "none"
+    return max_jaccard if max_jaccard else 1
 
 
 if __name__ == '__main__':

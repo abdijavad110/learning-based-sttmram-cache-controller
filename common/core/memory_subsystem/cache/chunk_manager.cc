@@ -35,7 +35,7 @@ ChunkManager::~ChunkManager() {
 }
 
 void ChunkManager::update_table() {    // fixme: (JH) use properly
-    return;
+//    return;
     Dens dens = current_chunk.calc_densities();
     float spatial = dens.spatial;
     float temporal = dens.temporal;
@@ -63,7 +63,7 @@ void ChunkManager::update_table() {    // fixme: (JH) use properly
 double
 ChunkManager::get_qual(float min, float max, float current){
 //    return 1e-5;
-    max = max *10;
+//    max = max *10;
     if (current == 0) return 0;
     if (current <= min)
         return qual_array[0];
@@ -71,14 +71,14 @@ ChunkManager::get_qual(float min, float max, float current){
         return qual_array[qual_arr_size-1];
     else {
         float gap = max - min;
-//        float map_level = (current - min)/(gap);
-        float map_level = (current - min)/(gap) * 31;
-//        int idx = map_level*qual_arr_size;
-//        return qual_array[idx];
-        if (map_level < 16) return qual_array[0];
-        else if (map_level < 24) return qual_array[1];
-        else if (map_level < 28) return qual_array[2];
-        else if (map_level < 30) return qual_array[3];
-        else return qual_array[4];
+        float map_level = (current - min)/(gap);
+        int idx = map_level*qual_arr_size;
+        return qual_array[idx];
+//        float map_level = (current - min)/(gap) * 31;
+//        if (map_level < 16) return qual_array[0];
+//        else if (map_level < 24) return qual_array[1];
+//        else if (map_level < 28) return qual_array[2];
+//        else if (map_level < 30) return qual_array[3];
+//        else return qual_array[4];
     }
 }

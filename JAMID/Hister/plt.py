@@ -132,7 +132,7 @@ def plot_borders(tts=None, adds=None, labels=True):
 
 def plot(lls, tts, adds, separate_wb=False, heat_w_h=None, silent_mode=False):
     res = None
-    matplotlib.use('TkAgg')
+    # matplotlib.use('TkAgg')
 
     # initialization
     lls = list(filter(lambda q: min(adds.values()) < q[1] < max(adds.values()) + 725000, lls))
@@ -278,6 +278,6 @@ if __name__ == '__main__':
 
     res = plot(logs, times, addresses, heat_w_h=(0.5, 50000), silent_mode=False)
 
-    # f = open('stat.json', 'w')
-    # f.write(rec_str(res))
-    # f.close()
+    f = open('stat.json', 'w')
+    f.write(rec_str(res))
+    f.close()

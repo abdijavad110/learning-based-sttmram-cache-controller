@@ -4,10 +4,12 @@ import time
 import json
 import subprocess
 from tqdm import tqdm
+from time import sleep
+from random import random
+import multiprocessing as mp
 
-IMG_ID_RANGE = range(227, 233)
+IMG_ID_RANGE = range(227, 256)
 IMG_NAME = 'frames/00{}.bmp'
-# REP_PER_TEST = 1
 
 
 def execute(compile_cmd):
@@ -94,26 +96,42 @@ def process(exp):
     return {'bbs': exp_bbs, 'writes': exp_wrt}
 
 
+def pool_job(img_num):
+    sleep(random() * 5)
+    img_a = IMG_NAME.format(str(img_num))
+    img_b = IMG_NAME.format(str(img_num + 1))
+    test_name = "{} vs {}".format(img_num, img_num + 1)
+    res_exp = run_sniper(img_a, img_b)
+    return test_name, res_exp
+
+
 if __name__ == "__main__":
     start_time = time.time()
+    m = mp.Manager()
+    lock = m.Lock()
+    pool = mp.Pool(processes=mp.cpu_count())
 
     execute('make clean')
     compiler("new changes in sniper", 'make -C ../../')
     compiler("new changes in motion", 'make motion')
 
     logger = Logger()
-
     pbar = tqdm(IMG_ID_RANGE, colour='green', leave=False)
-    try:
-        for i in pbar:
-            img_a = IMG_NAME.format(str(i))
-            img_b = IMG_NAME.format(str(i + 1))
-            test_name = "{} vs {}".format(i, i + 1)
-            pbar.set_postfix_str(test_name)
-            # res_golden = run_golden(img_a, img_b)
-            res_exp = run_sniper(img_a, img_b)
 
-            logger.log(test_name, res_exp)
+    try:
+        multiple_results = [pool.apply_async(pool_job, (i,)) for i in IMG_ID_RANGE]
+
+        done_cnt = 0
+        while done_cnt < len(IMG_ID_RANGE):
+            new_done_cnt = [res.ready() for res in multiple_results].count(True)
+            if done_cnt < new_done_cnt:
+                pbar.update(new_done_cnt - done_cnt)
+                done_cnt = new_done_cnt
+            sleep(5)
+
+        for res in multiple_results:
+            r = res.get()
+            logger.log(r[0], r[1])
 
     except KeyboardInterrupt:
         pass
