@@ -9,6 +9,7 @@ from random import random
 import multiprocessing as mp
 
 IMG_ID_RANGE = range(227, 256)
+# IMG_ID_RANGE = range(227, 228)
 IMG_NAME = 'frames/00{}.bmp'
 
 

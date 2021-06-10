@@ -42,6 +42,13 @@ void ChunkManager::update_table() {    // fixme: (JH) use properly
 
 //    printf("\n\nInside update========================================================\n");
     for(int i = 0; i < approx_table_max_entry; i++) {
+
+        double min = Sim()->approx_table[i].temp.min;
+        double max = Sim()->approx_table[i].temp.max;
+
+        if (temporal > max) Sim()->approx_table[i].temp.max = temporal;
+        if (temporal < min || min == -1) Sim()->approx_table[i].temp.min = temporal;
+
 //        double new_spat_qual = get_qual(Sim()->approx_table[i].spat.min, Sim()->approx_table[i].spat.max, spatial);
         double new_temp_qual = get_qual(Sim()->approx_table[i].temp.min, Sim()->approx_table[i].temp.max, temporal);
         if (new_temp_qual < Sim()->approx_table[i].quality_level_ref) {
