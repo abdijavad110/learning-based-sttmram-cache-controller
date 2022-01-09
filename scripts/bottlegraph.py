@@ -27,11 +27,11 @@ class BottleGraph:
       self.time_last = time
 
   def hook_roi_begin(self):
-    self.time_last = sim.stats.time()
+    self.time_last = sim.mpd.time()
     self.in_roi = True
 
   def hook_roi_end(self):
-    self.update(sim.stats.time())
+    self.update(sim.mpd.time())
     self.in_roi = False
 
   def hook_thread_start(self, threadid, time):

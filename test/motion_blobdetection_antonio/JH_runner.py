@@ -8,7 +8,7 @@ from time import sleep
 from random import random
 import multiprocessing as mp
 
-IMG_ID_RANGE = range(227, 256)
+IMG_ID_RANGE = [227]*24
 # IMG_ID_RANGE = range(227, 228)
 IMG_NAME = 'frames/00{}.bmp'
 
@@ -130,9 +130,9 @@ if __name__ == "__main__":
                 done_cnt = new_done_cnt
             sleep(5)
 
-        for res in multiple_results:
+        for i, res in enumerate(multiple_results):
             r = res.get()
-            logger.log(r[0], r[1])
+            logger.log(r[0] + "_" + str(i), r[1])
 
     except KeyboardInterrupt:
         pass

@@ -11,6 +11,7 @@ if __name__ == '__main__':
     ks = dic.keys()
     ks.sort()
     for k in ks:
+        print k,
         wrts = dic[k]['writes']
         if len(sys.argv) < 3:
             for b in bers:

@@ -2701,7 +2701,7 @@ class PstatsParser:
     def parse(self):
         self.profile[TIME] = 0.0
         self.profile[TOTAL_TIME] = self.stats.total_tt
-        for fn, (cc, nc, tt, ct, callers) in compat_iteritems(self.stats.stats):
+        for fn, (cc, nc, tt, ct, callers) in compat_iteritems(self.stats.mpd):
             callee = self.get_function(fn)
             callee.called = nc
             callee[TOTAL_TIME] = ct

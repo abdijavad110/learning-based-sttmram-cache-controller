@@ -16,12 +16,12 @@ class PowerTrace:
     if time <= 100:
       # ignore first callback which is at 100ns
       return
-    sim.stats.write(str(time)) # write to sim.stats with prefix 'time'
+    sim.mpd.write(str(time)) # write to sim.stats with prefix 'time'
     self.do_power(self.t_last, time)
     self.t_last = time
 
   def hook_roi_end(self):
-    self.t_roi_end = long(long(sim.stats.get('performance_model', 0, 'elapsed_time'))/1e6)
+    self.t_roi_end = long(long(sim.mpd.get('performance_model', 0, 'elapsed_time')) / 1e6)
 
   def hook_sim_end(self):
     self.do_power(self.t_last, None)

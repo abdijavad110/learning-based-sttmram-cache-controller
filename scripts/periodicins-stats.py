@@ -14,6 +14,6 @@ class PeriodicInsStats:
     sim.util.EveryIns(long(interval), self.periodicins, roi_only = True)
 
   def periodicins(self, ins, ins_delta):
-    sim.stats.write('periodicins-%d' % ins)
+    sim.mpd.write('periodicins-%d' % ins)
 
 sim.util.register(PeriodicInsStats())

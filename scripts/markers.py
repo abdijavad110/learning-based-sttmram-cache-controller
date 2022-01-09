@@ -16,7 +16,7 @@ class Marker:
         print 'b = %d' % b
 
     if self.write_markers:
-      sim.stats.marker(thread, core, a, b, s)
+      sim.mpd.marker(thread, core, a, b, s)
 
     # Pass in 'stats' as option to write out statistics at each magic marker
     # $ run-sniper -s markers:stats
@@ -24,6 +24,6 @@ class Marker:
     # $ tools/cpistack.py --partial=marker-1-4:marker-2-4
 
     if self.write_stats:
-      sim.stats.write('marker-%d-%d' % (a, b))
+      sim.mpd.write('marker-%d-%d' % (a, b))
 
 sim.util.register(Marker())

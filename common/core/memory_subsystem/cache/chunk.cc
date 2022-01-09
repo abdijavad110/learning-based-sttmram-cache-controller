@@ -3,6 +3,7 @@
 //
 
 #include <time.h>
+#include <stdio.h>
 #include "chunk.h"
 
 
@@ -38,7 +39,8 @@ Dens Chunk::calc_densities() {
     res.spatial = 0;
     res.temporal = 0;
     if (accesses > 2) {
-        if (addr.min != addr.max) res.spatial = accesses / (addr.max - addr.min);
+        if (addr.min != addr.max) res.spatial = (float) accesses / (addr.max - addr.min);
+//        printf("%lld\t%lld\t%d\n", addr.min, addr.max, accesses);
         if (time.start != time.end) res.temporal = accesses / (time.end - time.start);
     }
     return res;

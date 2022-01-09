@@ -76,12 +76,12 @@ class StopByIcount:
     if self.wait_for_app_roi:
       print '[STOPBYICOUNT] Application at ROI begin, fast-forwarding for', self.ninstrs_start, 'more instructions'
       self.wait_for_app_roi = False
-      self.ninstrs_start = sim.stats.icount() + self.ninstrs_start
+      self.ninstrs_start = sim.mpd.icount() + self.ninstrs_start
 
 
   def hook_roi_begin(self):
     if self.magic:
-      self.ninstrs_start = sim.stats.icount()
+      self.ninstrs_start = sim.mpd.icount()
       self.inroi = True
       print '[STOPBYICOUNT] Application ROI started, now simulating', self.ninstrs, 'in detail'
 

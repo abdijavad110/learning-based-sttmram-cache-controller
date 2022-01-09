@@ -10,7 +10,6 @@
 
 #define ToUnsignedInt(X) *((unsigned long long*)(&X))
 double ber[8] = {1e-5, 1e-5, 1e-4, 1e-5, 1e-4, 1e-4, 1e-7, 1e-9};
-//double ber[8] = {1e-5, 1e-5, 1e-3, 1e-5, 1e-3, 1e-3, 1e-7, 1e-9};
 //double ber[8] = {0, 0, 0, 0, 0, 0, 0, 0};
 //AMHM End
 
@@ -120,7 +119,7 @@ int main(int argc, char **argv) {
     AMHM_approx((long long int) &(bgImage.data[0]),
                 (long long int) (&bgImage.data[0] + sizeof(unsigned char) * bgImage.rows * bgImage.cols * 1 - 1));
     AMHM_qual(ToUnsignedInt(ber[ORIGINAL_IMAGEB]));
-//  JH_spat(ToUnsignedInt(0.001953), ToUnsignedInt(0.031250));
+    JH_spat(ToUnsignedInt(temporal_arr[BLOB_IMAGE][0]), ToUnsignedInt(temporal_arr[BLOB_IMAGE][0]));
     JH_temp(ToUnsignedInt(temporal_arr[ORIGINAL_IMAGEB][0]), ToUnsignedInt(temporal_arr[ORIGINAL_IMAGEB][1]));
     printf("-----------------------------------------------------------------\n");
     printf("bgImage start address is = %lld\n", (long long int) &(bgImage.data[0]));
@@ -130,7 +129,7 @@ int main(int argc, char **argv) {
                 (long long int) (&bgGreyImage.data[0] + sizeof(unsigned char) * bgImage.rows * bgImage.cols * 1 -
                                  1));
     AMHM_qual(ToUnsignedInt(ber[GREY_IMAGEB]));
-//    JH_spat(ToUnsignedInt(0.003497), ToUnsignedInt(0.016827));
+    JH_spat(ToUnsignedInt(temporal_arr[BLOB_IMAGE][0]), ToUnsignedInt(temporal_arr[BLOB_IMAGE][0]));
     JH_temp(ToUnsignedInt(temporal_arr[GREY_IMAGEB][0]), ToUnsignedInt(temporal_arr[GREY_IMAGEB][1]));
 
     //AMHM End
@@ -146,7 +145,7 @@ int main(int argc, char **argv) {
                 (long long int) (&originalImage.data[0] + sizeof(unsigned char) * bgImage.rows * bgImage.cols * 1 -
                                  1));
     AMHM_qual(ToUnsignedInt(ber[ORIGINAL_IMAGEF]));
-//    JH_spat(ToUnsignedInt(0.001736), ToUnsignedInt(0.018229));
+    JH_spat(ToUnsignedInt(temporal_arr[BLOB_IMAGE][0]), ToUnsignedInt(temporal_arr[BLOB_IMAGE][0]));
     JH_temp(ToUnsignedInt(temporal_arr[ORIGINAL_IMAGEF][0]), ToUnsignedInt(temporal_arr[ORIGINAL_IMAGEF][1]));
     printf("-----------------------------------------------------------------\n");
     printf("originalImage start address is = %lld\n", (long long int) &(originalImage.data[0]));
@@ -154,7 +153,7 @@ int main(int argc, char **argv) {
     AMHM_approx((long long int) &(greyImage.data[0]),
                 (long long int) (&greyImage.data[0] + sizeof(unsigned char) * bgImage.rows * bgImage.cols * 1 - 1));
     AMHM_qual(ToUnsignedInt(ber[GREY_IMAGEF]));
-//    JH_spat(ToUnsignedInt(0.001981), ToUnsignedInt(0.016304));
+    JH_spat(ToUnsignedInt(temporal_arr[BLOB_IMAGE][0]), ToUnsignedInt(temporal_arr[BLOB_IMAGE][0]));
     JH_temp(ToUnsignedInt(temporal_arr[GREY_IMAGEF][0]), ToUnsignedInt(temporal_arr[GREY_IMAGEF][1]));
     printf("-----------------------------------------------------------------\n");
     printf("greyImage start address is = %lld\n", (long long int) &(greyImage.data[0]));
@@ -183,7 +182,7 @@ int main(int argc, char **argv) {
                 (long long int) (&motionImage.data[0] + sizeof(unsigned char) * bgImage.rows * bgImage.cols * 1 -
                                  1));
     AMHM_qual(ToUnsignedInt(ber[MOTION_IMAGE]));
-//    JH_spat(ToUnsignedInt(0.003746), ToUnsignedInt(0.016059));
+    JH_spat(ToUnsignedInt(temporal_arr[BLOB_IMAGE][0]), ToUnsignedInt(temporal_arr[BLOB_IMAGE][0]));
     JH_temp(ToUnsignedInt(temporal_arr[MOTION_IMAGE][0]), ToUnsignedInt(temporal_arr[MOTION_IMAGE][1]));
     printf("-----------------------------------------------------------------\n");
     printf("motionImage start address is = %lld\n", (long long int) &(motionImage.data[0]));
@@ -205,7 +204,7 @@ int main(int argc, char **argv) {
                 (long long int) (&erosionImage.data[0] + sizeof(unsigned char) * bgImage.rows * bgImage.cols * 1 -
                                  1));
     AMHM_qual(ToUnsignedInt(ber[EROSION_IMAGE]));
-//    JH_spat(ToUnsignedInt(0.003581), ToUnsignedInt(0.027165));
+    JH_spat(ToUnsignedInt(temporal_arr[BLOB_IMAGE][0]), ToUnsignedInt(temporal_arr[BLOB_IMAGE][0]));
     JH_temp(ToUnsignedInt(temporal_arr[EROSION_IMAGE][0]), ToUnsignedInt(temporal_arr[EROSION_IMAGE][1]));
     printf("-----------------------------------------------------------------\n");
     printf("erosionImage start address is = %lld\n", (long long int) &(erosionImage.data[0]));
@@ -226,7 +225,7 @@ int main(int argc, char **argv) {
     AMHM_approx((long long int) &(blobImage.data[0]),
                 (long long int) (&blobImage.data[0] + sizeof(unsigned char) * bgImage.rows * bgImage.cols * 1 - 1));
     AMHM_qual(ToUnsignedInt(ber[BLOB_IMAGE]));
-//    JH_spat(ToUnsignedInt(0.002863), ToUnsignedInt(0.016085));
+    JH_spat(ToUnsignedInt(temporal_arr[BLOB_IMAGE][0]), ToUnsignedInt(temporal_arr[BLOB_IMAGE][0]));
     JH_temp(ToUnsignedInt(temporal_arr[BLOB_IMAGE][0]), ToUnsignedInt(temporal_arr[BLOB_IMAGE][1]));
     printf("-----------------------------------------------------------------\n");
     printf("blobImage start address is = %lld\n", (long long int) &(blobImage.data[0]));

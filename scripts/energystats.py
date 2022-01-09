@@ -47,16 +47,16 @@ class EnergyStats:
     self.energy = {}
     for metric in ('energy-static', 'energy-dynamic'):
       for core in range(sim.config.ncores):
-        sim.stats.register('core', core, metric, self.get_stat)
-        sim.stats.register('L1-I', core, metric, self.get_stat)
-        sim.stats.register('L1-D', core, metric, self.get_stat)
-        sim.stats.register('L2', core, metric, self.get_stat)
+        sim.mpd.register('core', core, metric, self.get_stat)
+        sim.mpd.register('L1-I', core, metric, self.get_stat)
+        sim.mpd.register('L1-D', core, metric, self.get_stat)
+        sim.mpd.register('L2', core, metric, self.get_stat)
       #sim.stats.register_per_thread('core-'+metric, 'core', metric)
       #sim.stats.register_per_thread('L1-I-'+metric, 'L1-I', metric)
       #sim.stats.register_per_thread('L1-D-'+metric, 'L1-D', metric)
       #sim.stats.register_per_thread('L2-'+metric, 'L2', metric)
-      sim.stats.register('processor', 0, metric, self.get_stat)
-      sim.stats.register('dram', 0, metric, self.get_stat)
+      sim.mpd.register('processor', 0, metric, self.get_stat)
+      sim.mpd.register('dram', 0, metric, self.get_stat)
 
   def periodic(self, time, time_delta):
     self.update()
@@ -70,15 +70,15 @@ class EnergyStats:
       sim.util.db_delete(self.name_last, True)
 
   def update(self):
-    if sim.stats.time() == self.time_last_power:
+    if sim.mpd.time() == self.time_last_power:
       # Time did not advance: don't recompute
       return
-    if not self.power or (sim.stats.time() - self.time_last_power >= 10 * sim.util.Time.US):
+    if not self.power or (sim.mpd.time() - self.time_last_power >= 10 * sim.util.Time.US):
       # Time advanced significantly, or no power result yet: compute power
       #   Save snapshot
       current = 'energystats-temp%s' % ('B' if self.name_last and self.name_last[-1] == 'A' else 'A')
       self.in_stats_write = True
-      sim.stats.write(current)
+      sim.mpd.write(current)
       self.in_stats_write = False
       #   If we also have a previous snapshot: update power
       if self.name_last:
@@ -89,7 +89,7 @@ class EnergyStats:
         sim.util.db_delete(self.name_last)
       #   Update new last
       self.name_last = current
-      self.time_last_power = sim.stats.time()
+      self.time_last_power = sim.mpd.time()
     # Increment energy
     self.update_energy()
 
@@ -110,12 +110,12 @@ class EnergyStats:
     self.power[('dram', 0)] = get_power(power['DRAM'])
 
   def update_energy(self):
-    if self.power and sim.stats.time() > self.time_last_energy:
-      time_delta = sim.stats.time() - self.time_last_energy
+    if self.power and sim.mpd.time() > self.time_last_energy:
+      time_delta = sim.mpd.time() - self.time_last_energy
       for (component, core), power in self.power.items():
         self.energy[(component, core, 'energy-static')] = self.energy.get((component, core, 'energy-static'), 0) + long(time_delta * power.s)
         self.energy[(component, core, 'energy-dynamic')] = self.energy.get((component, core, 'energy-dynamic'), 0) + long(time_delta * power.d)
-      self.time_last_energy = sim.stats.time()
+      self.time_last_energy = sim.mpd.time()
 
   def get_vdd_from_freq(self, f):
     # Assume self.dvfs_table is sorted from highest frequency to lowest

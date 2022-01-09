@@ -36,7 +36,7 @@ def createJSONData(resultsdir, outputdir, verbose = False):
     # Most accurate: ask the barrier
     time_begin = results['barrier.global_time_begin'][0]
     time_end = results['barrier.global_time_end'][0]
-  elif 'performance_model.elapsed_time_end' in self.stats:
+  elif 'performance_model.elapsed_time_end' in self.mpd:
     # Guess based on core that has the latest time (future wakeup is less common than sleep on futex)
     time_begin = max(results['performance_model.elapsed_time_begin'])
     time_end = max(results['performance_model.elapsed_time_end'])

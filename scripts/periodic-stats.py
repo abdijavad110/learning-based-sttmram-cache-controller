@@ -21,8 +21,8 @@ class PeriodicStats:
 
   def hook_roi_begin(self):
     self.in_roi = True
-    self.next_interval = sim.stats.time() + self.interval
-    sim.stats.write('periodic-0')
+    self.next_interval = sim.mpd.time() + self.interval
+    sim.mpd.write('periodic-0')
 
   def hook_roi_end(self):
     self.next_interval = float('inf')
@@ -37,7 +37,7 @@ class PeriodicStats:
 
     if time >= self.next_interval:
       self.num_snapshots += 1
-      sim.stats.write('periodic-%d' % (self.num_snapshots * self.interval))
+      sim.mpd.write('periodic-%d' % (self.num_snapshots * self.interval))
       self.next_interval += self.interval
 
 sim.util.register(PeriodicStats())

@@ -79,7 +79,7 @@ class StatsDelta:
 
     Do not instantiate directly, use StatsDelta.getter() instead."""
     def __init__(self, objectName, index, metricName):
-      self.getter = sim.stats.getter(objectName, index, metricName)
+      self.getter = sim.mpd.getter(objectName, index, metricName)
       self.last = None
       self.delta = None
 
@@ -95,7 +95,7 @@ class StatsDelta:
 
     Do not instantiate directly, use StatsDelta.get() instead."""
     def __init__(self, objectName, index, metricName):
-      self.get = lambda:sim.stats.get(objectName, index, metricName)
+      self.get = lambda:sim.mpd.get(objectName, index, metricName)
       self.last = None
       self.delta = None
 
@@ -146,10 +146,10 @@ class Every:
 
   def hook_roi_begin(self):
     self.in_roi = True
-    self.hook_periodic(sim.stats.time())
+    self.hook_periodic(sim.mpd.time())
 
   def hook_roi_end(self):
-    self.hook_periodic(sim.stats.time())
+    self.hook_periodic(sim.mpd.time())
     self.in_roi = False
 
   def hook_periodic(self, time):
@@ -198,12 +198,12 @@ class EveryIns:
 have_deleted_stats = False
 def db_delete(prefix, in_sim_end = False):
   global have_deleted_stats
-  cursor = sim.stats.db.cursor()
-  prefixid = sim.stats.db.execute('SELECT prefixid FROM prefixes WHERE prefixname = ?', (prefix,)).fetchall()
+  cursor = sim.mpd.db.cursor()
+  prefixid = sim.mpd.db.execute('SELECT prefixid FROM prefixes WHERE prefixname = ?', (prefix,)).fetchall()
   if prefixid:
     cursor.execute('DELETE FROM prefixes WHERE prefixid = ?', (prefixid[0][0],))
     cursor.execute('DELETE FROM `values` WHERE prefixid = ?', (prefixid[0][0],))
-  sim.stats.db.commit()
+  sim.mpd.db.commit()
   if not have_deleted_stats:
     if in_sim_end:
       # We shouldn't be registering a new sim_end hook while in sim_end
@@ -215,5 +215,5 @@ def db_delete(prefix, in_sim_end = False):
 
 def db_delete_sim_end_vacuum():
   # We have deleted entries from the database, reclaim free space now
-  sim.stats.db.cursor().execute('VACUUM')
-  sim.stats.db.commit()
+  sim.mpd.db.cursor().execute('VACUUM')
+  sim.mpd.db.commit()

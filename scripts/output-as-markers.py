@@ -20,6 +20,6 @@ class OutputAsMarkers:
       if fd == 1 or fd == 2:
         prefix = {1: 'stdout', 2: 'stderr'}[fd]
         data = sim.mem.read(coreid, ptr, size)
-        sim.stats.marker(threadid, coreid, self.value_a, self.value_b, '%s%s: %s' % (self.prefix, prefix, data))
+        sim.mpd.marker(threadid, coreid, self.value_a, self.value_b, '%s%s: %s' % (self.prefix, prefix, data))
 
 sim.util.register(OutputAsMarkers())

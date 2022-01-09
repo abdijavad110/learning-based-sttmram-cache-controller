@@ -25,7 +25,7 @@ class StatTrace:
     valid = False
     for core in range(sim.config.ncores):
       try:
-        sim.stats.get(stat_component, core, stat_name)
+        sim.mpd.get(stat_component, core, stat_name)
       except ValueError:
         continue
       else:

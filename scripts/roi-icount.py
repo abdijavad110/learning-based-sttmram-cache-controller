@@ -70,7 +70,7 @@ class RoiIcount:
   def hook_application_roi_begin(self):
     if self.state == 'preroi':
       self.state = 'init'
-      self.offset = sim.stats.icount()
+      self.offset = sim.mpd.icount()
       print '[ROI-ICOUNT] Icount = %d, Application ROI' % self.offset
 
   def periodic_ins(self, icount, icount_delta):

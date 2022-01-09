@@ -2,10 +2,10 @@ import sim
 
 
 def getScoreMetricTime(thread_id):
-  return long(sim.stats.get('thread', thread_id, 'nonidle_elapsed_time'))
+  return long(sim.mpd.get('thread', thread_id, 'nonidle_elapsed_time'))
 
 def getScoreMetricInstructions(thread_id):
-  return long(sim.stats.get('thread', thread_id, 'instruction_count'))
+  return long(sim.mpd.get('thread', thread_id, 'instruction_count'))
 
 
 class Thread:
@@ -70,10 +70,10 @@ class SchedulerLocality:
     self.threads[thread_id].runnable = True
     # Initial assignment: one thread per core until cores are exhausted
     if self.last_core < len(self.cores):
-      self.threads[thread_id].setCore(self.cores[self.last_core], sim.stats.time())
+      self.threads[thread_id].setCore(self.cores[self.last_core], sim.mpd.time())
       self.last_core += 1
     else:
-      self.threads[thread_id].setCore(None, sim.stats.time())
+      self.threads[thread_id].setCore(None, sim.mpd.time())
 
   def hook_thread_exit(self, thread_id, time):
     self.hook_thread_stall(thread_id, 'exit', time)
