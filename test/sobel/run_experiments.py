@@ -6,7 +6,7 @@ import math
 import time
 
 ## MPD == Min Pixel Difference
-MPD_THR = 0.01
+MPD_THR = 0.0001
 PRECISION_THR = .90
 RECALL_THR = .95
 
@@ -14,10 +14,11 @@ STEPS = 2
 QL_MAX = 8
 
 # IMG_ID_RANGE = [229, 235]
-IMG_ID_RANGE = [227, 256]
+IMG_ID_RANGE = [252, 256+1]
+# IMG_ID_RANGE = [227, 256+1]
 IMG_NAME = 'frames/00XXX.pgm'
 # NUM_INJ_PER_TEST = 10
-NUM_INJ_PER_TEST = 25
+NUM_INJ_PER_TEST = 1
 
 SEED = 0
 
@@ -44,7 +45,7 @@ def read_pgm(pgmf):
   return raster
 
 def analyze_output(output_id):
-  golden = read_pgm(open('golden_out.pgm', 'rb'))
+  golden = read_pgm(open('outs/golden_out.pgm', 'rb'))
   output = read_pgm(open('%d.pgm' % output_id, 'rb'))
 
   diff = [abs(golden[i] - output[i]) for i in range(len(golden))]

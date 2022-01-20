@@ -12,7 +12,7 @@
 #include "../../include/sim_api.h"
 #define ToUnsignedInt(X) *((unsigned long long*)(&X))
 
-double ber[2] = {1e-4, 1e-3};
+double ber[2] = {1e-5, 1e-4};
 double temporal_arr[2][2] = {{-1, -1},
                              {-1, -1}};
 double spatial_arr[2][2] = {{-1, -1},
