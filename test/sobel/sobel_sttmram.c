@@ -111,7 +111,7 @@ void sobel_filtering()
 
 int main(int argc, char* argv[]) {
     int seed = atoi(argv[4]);
-    we_setup(argv[3], seed, true);
+    we_setup(argv[3], NULL, true);
 
     blockSize = cm.getBlockSize(TARGET_CACHE_LEVEL);
     printf(">>>>>>>>>>>> %d", blockSize);

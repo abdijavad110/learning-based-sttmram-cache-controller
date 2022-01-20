@@ -35,7 +35,7 @@ ChunkManager::~ChunkManager() {
 }
 
 void ChunkManager::update_table() {    // fixme: (JH) use properly
-//    return;
+    return;
     Dens dens = current_chunk.calc_densities();
     float spatial = dens.spatial;
     float temporal = dens.temporal;

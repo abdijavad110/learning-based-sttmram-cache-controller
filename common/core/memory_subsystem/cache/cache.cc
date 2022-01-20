@@ -10,7 +10,7 @@ using namespace std;
 /////////////// JA codes start
 #include <time.h>
 #include "chunk_manager.h"
-#define EN_LOG 1
+//#define EN_LOG 1
 #define TIME double(clock())/CLOCKS_PER_SEC
 /////////////// end
 

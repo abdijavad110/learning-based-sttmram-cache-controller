@@ -1,24 +1,11 @@
-FILE = sobel.c
+TARGET=sobel
+include ../shared/Makefile.shared
 
-CC_ARM = arm-linux-gnueabi-gcc
-CC_FLAGS_ARM = -static -DAMHM_APPROXIMATION -O0
-ISA_FILE_ARM = ../../shared_lib/m5op_arm.S
-LDFLAGS_ARM =
+$(TARGET): $(TARGET).o
+	$(CC) $(TARGET).c -lstdc++ -lm $(SNIPER_LDFLAGS) -o $(TARGET)
 
-CC = gcc
-CC_FLAGS = -static
-LDFLAGS =
+run_$(TARGET):
+	$(MAKE) -C ../../
+	../../run-sniper -c base.cfg --cache-only -- ./$(TARGET) frames/00227.pgm frames/out.pgm
 
-BINDIR = ../../bin
-
-all: arm x86
-
-arm:
-	$(CC_ARM)  $(CC_FLAGS_ARM) $(FILE) -o $(BINDIR)/arm/sobel $(ISA_FILE_ARM) $(LDFLAGS_ARM)
-
-x86:
-	$(CC)  $(CC_FLAGS) $(FILE) -o $(BINDIR)/x86/sobel $(LDFLAGS)
-
-clean:
-	rm -rf $(BINDIR)/arm/sobel output*
-	rm -rf $(BINDIR)/x86/sobel output*
+#CLEAN_EXTRA=output.bmp output*

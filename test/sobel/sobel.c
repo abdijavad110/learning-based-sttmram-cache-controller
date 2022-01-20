@@ -10,7 +10,13 @@
 //#endif
 
 #include "../../include/sim_api.h"
-#define ToUnsignedInt(X) ((unsigned long long)(X))
+#define ToUnsignedInt(X) *((unsigned long long*)(&X))
+
+double ber[2] = {1e-4, 1e-3};
+double temporal_arr[2][2] = {{-1, -1},
+                             {-1, -1}};
+double spatial_arr[2][2] = {{-1, -1},
+                             {-1, -1}};
 
 void sobel_filtering( )
 /* Spatial filtering of image data */
@@ -72,11 +78,14 @@ int main(int argc, const char** argv)
 {
 
 //#ifdef AMHM_APPROXIMATION
-    unsigned int reliability_level = ToUnsignedInt(1e-7);
     AMHM_approx((long long int) &image1[0][0], (long long int) (&image1[MAX_IMAGESIZE-1][MAX_IMAGESIZE-1]));
-    AMHM_qual(reliability_level);
+    AMHM_qual(ToUnsignedInt(ber[0]));
+    JH_spat(spatial_arr[0][0], spatial_arr[0][1]);
+    JH_temp(temporal_arr[0][0], temporal_arr[0][1]);
     AMHM_approx((long long int) &image2[0][0], (long long int) (&image2[MAX_IMAGESIZE-1][MAX_IMAGESIZE-1]));
-    AMHM_qual(reliability_level);
+    AMHM_qual(ToUnsignedInt(ber[1]));
+    JH_spat(spatial_arr[1][0], spatial_arr[1][1]);
+    JH_temp(temporal_arr[1][0], temporal_arr[1][1]);
 //  m5_add_approx(  (uint32_t)&image1[0][0], (uint32_t)(&image1[MAX_IMAGESIZE-1][MAX_IMAGESIZE-1]), reliability_level);
 //  m5_add_approx(  (uint32_t)&image2[0][0], (uint32_t)(&image2[MAX_IMAGESIZE-1][MAX_IMAGESIZE-1]), reliability_level);
 //#endif
