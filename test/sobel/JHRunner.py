@@ -78,9 +78,12 @@ class Logger:
             self.raw_file.write(t + "\n")
 
     def _pretty(self, test, exp):
-        self.dict[test] = process(test, exp)
-        self.processed_file.seek(0)
-        self.processed_file.write(json.dumps(self.dict))
+        try:
+            self.dict[test] = process(test, exp)
+            self.processed_file.seek(0)
+            self.processed_file.write(json.dumps(self.dict))
+        except Exception as e:
+            pass
 
     def log(self, name, res):
         self._raw(name, res)
@@ -151,6 +154,7 @@ if __name__ == "__main__":
 
     logger = Logger()
     pbar = tqdm(IMG_ID_RANGE, colour='green', leave=False)
+    multiple_results = None
 
     try:
         multiple_results = [pool.apply_async(pool_job, (i,)) for i in IMG_ID_RANGE]
@@ -162,12 +166,13 @@ if __name__ == "__main__":
                 pbar.update(new_done_cnt - done_cnt)
                 done_cnt = new_done_cnt
             sleep(5)
-
-        for i, res in enumerate(multiple_results):
-            r = res.get()
-            logger.log(r[0], r[1])
-            # logger.log(r[0] + "_" + str(i), r[1])
-        logger.spit_it_out()
     except KeyboardInterrupt:
         pass
+
+    if multiple_results:
+        for i, res in enumerate(multiple_results):
+            if res.ready():
+                r = res.get()
+                logger.log(r[0], r[1])
+        logger.spit_it_out()
     pbar.close()

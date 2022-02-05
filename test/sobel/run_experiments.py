@@ -6,7 +6,7 @@ import math
 import time
 
 ## MPD == Min Pixel Difference
-MPD_THR = 0.0001
+MPD_THR = 0.001
 PRECISION_THR = .90
 RECALL_THR = .95
 
@@ -45,7 +45,7 @@ def read_pgm(pgmf):
   return raster
 
 def analyze_output(output_id):
-  golden = read_pgm(open('outs/golden_out.pgm', 'rb'))
+  golden = read_pgm(open('golden_out.pgm', 'rb'))
   output = read_pgm(open('%d.pgm' % output_id, 'rb'))
 
   diff = [abs(golden[i] - output[i]) for i in range(len(golden))]

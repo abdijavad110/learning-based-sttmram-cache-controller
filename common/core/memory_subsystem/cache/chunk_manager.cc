@@ -42,35 +42,38 @@ void ChunkManager::update_table() {    // fixme: (JH) use properly
 
 //    printf("\n\nInside update========================================================\n");
     for(int i = 0; i < approx_table_max_entry; i++) {
+        if (Sim()->approx_table[i].start_address == 0) continue;
 
-        double min = Sim()->approx_table[i].spat.min;
-        double max = Sim()->approx_table[i].spat.max;
-
-        if (spatial > max) Sim()->approx_table[i].spat.max = spatial;
-        if (spatial < min || min == -1) Sim()->approx_table[i].spat.min = spatial;
-
-        double new_spat_qual = get_qual(Sim()->approx_table[i].spat.min, Sim()->approx_table[i].spat.max, spatial);
-//        printf(">>> %f: %f\n", spatial, new_spat_qual);
-        if (new_spat_qual < Sim()->approx_table[i].quality_level_ref) {
-            Sim()->approx_table[i].quality_level = Sim()->approx_table[i].quality_level_ref;
-            continue;
-        }
+//        double min = Sim()->approx_table[i].spat.min;
+//        double max = Sim()->approx_table[i].spat.max;
+//
+//        if (spatial > max) Sim()->approx_table[i].spat.max = spatial;
+//        if (spatial < min || min == -1) Sim()->approx_table[i].spat.min = spatial;
+//
+//        double new_spat_qual = get_qual(Sim()->approx_table[i].spat.min, Sim()->approx_table[i].spat.max, spatial);
+////        printf(">>> %f: %f\n", spatial, new_spat_qual);
+//        if (new_spat_qual < Sim()->approx_table[i].quality_level_ref) {
+//            Sim()->approx_table[i].quality_level = Sim()->approx_table[i].quality_level_ref;
+//            continue;
+//        }
 //        Sim()->approx_table[i].quality_level = new_spat_qual;
-        min = Sim()->approx_table[i].temp.min;
-        max = Sim()->approx_table[i].temp.max;
+        double min = Sim()->approx_table[i].temp.min;
+        double max = Sim()->approx_table[i].temp.max;
+        double ql = Sim()->approx_table[i].quality_level;
 
         if (temporal > max) Sim()->approx_table[i].temp.max = temporal;
         if (temporal < min || min == -1) Sim()->approx_table[i].temp.min = temporal;
 
         double new_temp_qual = get_qual(Sim()->approx_table[i].temp.min, Sim()->approx_table[i].temp.max, temporal);
-        if (new_temp_qual < Sim()->approx_table[i].quality_level_ref) {
-            Sim()->approx_table[i].quality_level = Sim()->approx_table[i].quality_level_ref;
-            continue;
-        }
+
+//        if (new_temp_qual < Sim()->approx_table[i].quality_level_ref) {
+//            Sim()->approx_table[i].quality_level = Sim()->approx_table[i].quality_level_ref;
+////            printf("FAIL: want to write better\n");
+//            continue;
+//        }
 //        Sim()->approx_table[i].quality_level = new_temp_qual>new_spat_qual?new_temp_qual:new_spat_qual;
         Sim()->approx_table[i].quality_level = new_temp_qual;
-//        printf("%.9f -> ", Sim()->approx_table[i].quality_level);
-//        printf("%.9f\t", Sim()->approx_table[i].quality_level);
+//        if (ql != new_temp_qual) printf(" >> changed QL from %.9f to %.9f \n", ql, new_temp_qual);
     }
 //    printf("========================================================\n");
     current_chunk.reset();
@@ -90,15 +93,15 @@ ChunkManager::get_qual(float min, float max, float current){
         return qual_array[qual_arr_size-1];
     else {
         float gap = max - min;
-        float map_level = (current - min)/(gap);
-        int idx = map_level*qual_arr_size;
-        return qual_array[idx];
-//        float map_level = (current - min)/(gap) * 14;
-//        if (map_level < 5) return qual_array[0];
-//        else if (map_level < 9) return qual_array[1];
-//        else if (map_level < 12) return qual_array[2];
-//        else if (map_level < 14) return qual_array[3];
-//        else return qual_array[4];
+//        float map_level = (current - min)/(gap);
+//        int idx = map_level*qual_arr_size;
+//        return qual_array[idx];
+        float map_level = (current - min)/(gap) * 14;
+        if (map_level < 5) return qual_array[0];
+        else if (map_level < 9) return qual_array[1];
+        else if (map_level < 12) return qual_array[2];
+        else if (map_level < 14) return qual_array[3];
+        else return qual_array[4];
 //        float map_level = (current - min)/(gap) * 31;
 //        if (map_level < 16) return qual_array[0];
 //        else if (map_level < 24) return qual_array[1];
